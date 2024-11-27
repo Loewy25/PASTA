@@ -13,8 +13,8 @@
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02
 
-#SBATCH --output=./slurm-%A_%a.out
-#SBATCH --error=./slurm-%A_%a.err
+#SBATCH --output=./home/l.peiwang/slurm-%A_%a.out
+#SBATCH --error=./home/l.peiwang/slurm-%A_%a.err
 
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
