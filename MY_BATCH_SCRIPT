@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #SBATCH --job-name=test #Assign a descriptive job name
 
 #SBATCH -N 1                    # Request 1 node
@@ -14,13 +13,8 @@
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02
 
-
-##SBATCH --array=0-7              # Array of 8 tasks (0 to 7)
-
-# Output and error filenames based on job ID and task ID
-#SBATCH --output=slurm-%A_%a.out 
-#SBATCH --error=slurm-%A_%a.err 
-
+#SBATCH --output=./slurm-%A_%a.out
+#SBATCH --error=./slurm-%A_%a.err
 
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
@@ -29,19 +23,10 @@ conda activate myenv
 module load cuda
 module load cudnn
 
-
-
 #python ViT_dm_mri.py
 #python keras_u-net_dm_mri.py
 #python cbam_cd_mri.py
 #python cbam_full_cd_mri.py
 #python base2.py
 python create.py
-# List of Python scripts you want to run (internal array)
-#scripts=("deep_learning_cd_MRI.py" "deep_learning_cd_PET.py" "deep_learning_cm_MRI.py" "deep_learning_cm_PET.py" "deep_learning_dm_MRI.py" "deep_learning_dm_PET.py" "deep_learning_pc_MRI.py" "deep_learning_pc_PET.py")
 
-# Select the Python script to run based on the SLURM_ARRAY_TASK_ID
-#script=${scripts[$SLURM_ARRAY_TASK_ID]}
-
-# Run the corresponding Python script for this task
-#srun python $script
