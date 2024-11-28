@@ -45,7 +45,7 @@ data_dir: "/path/to/MRI_PET_"
 train_batch_size: 1
 train_lr: !!float 5e-4
 weight_decay: !!float 1e-6
-train_num_steps: 80000
+train_num_steps: 800
 save_and_sample_every: 5
 num_samples: 16
 gradient_accumulate_every: 1
