@@ -27,7 +27,7 @@ cond_apply_method: 'ada'
 
 timestep_respacing: ddim100
 beta_schedule: cosine
-timesteps: 1000
+timesteps: 20
 objective: START_X
 model_var_type: FIXED_LARGE
 gen_type: ddim
@@ -42,10 +42,10 @@ rescale_intensity: True # rescale intensity to [-1, 1] during training
 
 input_slice_channel: 15
 data_dir: "/path/to/MRI_PET_"
-train_batch_size: 1
+train_batch_size: 2
 train_lr: !!float 5e-4
 weight_decay: !!float 1e-6
-train_num_steps: 800
+train_num_steps: 30
 save_and_sample_every: 5
 num_samples: 16
 gradient_accumulate_every: 1
