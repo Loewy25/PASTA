@@ -15,7 +15,7 @@
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 
-conda env create -n pasta --file requirements.yaml
+source /home/l.peiwang/.bashrc  # Load Conda into the current shell
 conda activate pasta
 
 
