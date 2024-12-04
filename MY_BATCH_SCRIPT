@@ -12,8 +12,8 @@
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02
 
-#SBATCH --output=./home/l.peiwang/slurm-%A_%a.out
-#SBATCH --error=./home/l.peiwang/slurm-%A_%a.err
+#SBATCH --output=slurm-%A_%a.out
+#SBATCH --error=slurm-%A_%a.err
 
 conda env create -n pasta --file requirements.yaml
 conda activate pasta
