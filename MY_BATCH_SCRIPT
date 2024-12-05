@@ -3,26 +3,26 @@
 #SBATCH --job-name=test             # Assign a descriptive job name
 #SBATCH -N 1                        # Request 1 node
 #SBATCH --mem=100G                  # Request 100GB memory
-#SBATCH -t 5:50:00                  # Set maximum time
+#SBATCH -t 5:50:00                  # Set maximum time limit
 #SBATCH --gres=gpu:1                # Request 1 GPU
 #SBATCH --partition=tier2_gpu       # Specify GPU partition
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02             # Exclude specific nodes
 
-#SBATCH --output=slurm-%A_%a.out
-#SBATCH --error=slurm-%A_%a.err
-
-set -e  # Exit immediately if a command exits with a non-zero status
-set -x  # Print commands and their arguments as they are executed
+#SBATCH --output=slurm-%A_%a.out    # Standard output file
+#SBATCH --error=slurm-%A_%a.err     # Standard error file
 
 # Load Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
-# Initialize Conda for use in non-interactive shell
+# Initialize Conda for non-interactive shell
 eval "$(conda shell.bash hook)"
 
-# Define environment name
-ENV_NAME="pasta_env"
+# Define a unique environment name to avoid conflicts
+ENV_NAME="pasta_env_$(date +%Y%m%d%H%M%S)"
+
+# Create the Conda environment from the YAML file
+conda env create -n $ENV_NAME --file /home/l.peiwang/PASTA/requirements.yaml
 
 # Activate the Conda environment
 conda activate $ENV_NAME
@@ -30,10 +30,10 @@ conda activate $ENV_NAME
 # Verify which Python is being used
 echo "Using Python from: $(which python)"
 
-# Verify installation
+# Verify installations
 python -c "import sys; print('Python:', sys.version)"
 python -c "import numpy; print('NumPy:', numpy.__version__)"
-python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available())"
+python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
 python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
@@ -52,4 +52,8 @@ python /home/l.peiwang/PASTA/train_mri2pet.py \
     --results_folder /scratch/l.peiwang/results/ \
     --eval_mode True \
     --synthesis True
+
+# Deactivate and remove the Conda environment to avoid clutter
+conda deactivate
+conda env remove -n $ENV_NAME
 
