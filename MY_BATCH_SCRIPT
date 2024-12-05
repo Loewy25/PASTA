@@ -8,16 +8,14 @@
 #SBATCH --partition=tier2_gpu       # Specify GPU partition
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02             # Exclude specific nodes
-#SBATCH --output=/home/l.peiwang/slurm-%A_%a.out
-#SBATCH --error=/home/l.peiwang/slurm-%A_%a.err
+
+#SBATCH --output=slurm-%A_%a.out
+#SBATCH --error=slurm-%A_%a.err
+
 
 # Load Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
-# Create and activate the Conda environment
-if [ ! -d "/home/l.peiwang/miniconda3/envs/pasta" ]; then
-    conda env create -n pasta --file /home/l.peiwang/PASTA/requirements.yaml
-fi
 conda activate pasta
 
 # Install additional dependencies (if not already installed)
