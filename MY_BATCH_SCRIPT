@@ -23,7 +23,7 @@ source /home/l.peiwang/.bashrc
 # Activate the Conda environment
 conda activate pasta
 
-conda install -c conda-forge torchio
+conda install torchio
 
 #module load cuda/11.8
 #module load cudnn/8.1.1
