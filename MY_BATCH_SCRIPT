@@ -17,13 +17,11 @@
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 
-# Load Conda into the shell
-source /home/l.peiwang/.bashrc
+source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
-# Activate the Conda environment
-conda activate pasta
+conda activate myenv
 
-conda install torchio
+
 
 #module load cuda/11.8
 #module load cudnn/8.1.1
