@@ -18,6 +18,7 @@
 source /home/l.peiwang/.bashrc  # Load Conda into the current shell
 conda activate pasta
 
+conda install pytorch torchvision torchaudio pytorch-cuda=10.2 -c pytorch -c nvidia
 
 module load cuda
 module load cudnn
