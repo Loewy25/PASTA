@@ -15,10 +15,11 @@
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 
-source /home/l.peiwang/.bashrc  # Load Conda into the current shell
-conda activate pasta
+source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
-conda install pytorch torchvision torchaudio pytorch-cuda=10.2 -c pytorch -c nvidia
+conda activate myenv
+
+
 
 module load cuda
 module load cudnn
