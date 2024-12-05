@@ -15,15 +15,17 @@
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 
-source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
+# Load Conda into the shell
+source /home/l.peiwang/.bashrc
 
-conda activate myenv
+# Activate the Conda environment
+conda activate pasta
 
 conda install -c conda-forge torchio
 
+module load cuda/11.8
+module load cudnn/8.1.1
 
-module load cuda
-module load cudnn
 
 data:
   train: /scratch/l.peiwang/cd_dataset.h5
