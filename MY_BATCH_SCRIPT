@@ -1,38 +1,45 @@
 #!/bin/bash
 
-#SBATCH --job-name=test #Assign a descriptive job name
-
-#SBATCH -N 1                    # Request 1 node
-#SBATCH --mem=100G               # Request 400GB memory
-#SBATCH -t 5:50:00             # Set maximum time
-
-
-#SBATCH --gres=gpu:1
-##SBATCH --gres=gpu:nvidia_a100_80:1
-##SBATCH --partition=tier2_gpu_dev
-#SBATCH --partition=tier2_gpu
+#SBATCH --job-name=test             # Assign a descriptive job name
+#SBATCH -N 1                        # Request 1 node
+#SBATCH --mem=100G                  # Request 100GB memory
+#SBATCH -t 5:50:00                  # Set maximum time
+#SBATCH --gres=gpu:1                # Request 1 GPU
+#SBATCH --partition=tier2_gpu       # Specify GPU partition
 #SBATCH --account=aristeidis_sotiras
-#SBATCH --exclude=gpu02
+#SBATCH --exclude=gpu02             # Exclude specific nodes
+#SBATCH --output=/home/l.peiwang/slurm-%A_%a.out
+#SBATCH --error=/home/l.peiwang/slurm-%A_%a.err
 
-#SBATCH --output=slurm-%A_%a.out
-#SBATCH --error=slurm-%A_%a.err
-
+# Load Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
-conda activate myenv
+# Create and activate the Conda environment
+if [ ! -d "/home/l.peiwang/miniconda3/envs/pasta" ]; then
+    conda env create -n pasta --file /home/l.peiwang/PASTA/requirements.yaml
+fi
+conda activate pasta
 
+# Install additional dependencies (if not already installed)
+conda install -c conda-forge torchio libjpeg libpng --yes
 
+# Load CUDA and cuDNN modules (if required)
+module load cuda/11.8 || export PATH=/usr/local/cuda-11.8/bin:$PATH
+module load cudnn/8.1.1 || export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH
 
-#module load cuda/11.8
-#module load cudnn/8.1.1
+# Verify installation
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available())"
+python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
+python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
-python train_mri2pet.py \
-    --data_dir /scratch/l.peiwang/cd_dataset.h5 \
+# Run training
+python /home/l.peiwang/PASTA/train_mri2pet.py \
+    --data_dir /scratch/l.peiwang/ \
     --results_folder /scratch/l.peiwang/results/
 
 # Run evaluation
-python train_mri2pet.py \
-    --data_dir /scratch/l.peiwang/cd_dataset.h5 \
+python /home/l.peiwang/PASTA/train_mri2pet.py \
+    --data_dir /scratch/l.peiwang/ \
     --results_folder /scratch/l.peiwang/results/ \
     --eval_mode True \
     --synthesis True
