@@ -1,0 +1,111 @@
+/home/l.peiwang/miniconda3/lib/python3.12/argparse.py:2006: FutureWarning: `remote_definition` is deprecated and will be removed in 25.9. Use `conda env create --file=URL` instead.
+  action(self, namespace, argument_values, option_string)
+
+------------------------------ /opt/modulefiles -------------------------------
+   cuda/6.0    cuda/10.1          cuda/11.1    cuda/12.1
+   cuda/7.5    cuda/10.2 (L,D)    cuda/11.2    cuda/12.2
+   cuda/9.1    cuda/11.0          cuda/11.3
+
+  Where:
+   D:  Default Module
+   L:  Module is loaded
+
+If the avail list is too long consider trying:
+
+"module --default avail" or "ml -d av" to just list the default modules.
+"module overview" or "ml ov" to display the number of modules for each name.
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
+
+
+
+------------------------------ /opt/modulefiles -------------------------------
+   cudnn/7.6.5    cudnn/8.1.1 (L,D)
+
+  Where:
+   D:  Default Module
+   L:  Module is loaded
+
+If the avail list is too long consider trying:
+
+"module --default avail" or "ml -d av" to just list the default modules.
+"module overview" or "ml ov" to display the number of modules for each name.
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
+
+
+2024-12-05 00:54:01.297810: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-05 00:54:02.998591: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-05 00:54:24.329974: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:79 in main                            │
+│                                                                              │
+│    76 │                                                                      │
+│    77 │   # spaced diffusion for ddim                                        │
+│    78 │   diffusion = SpacedDiffusion(                                       │
+│ ❱  79 │   │   use_timesteps = space_timesteps(args.timesteps, args.timestep_ │
+│    80 │   │   model = model,                                                 │
+│    81 │   │   encoder = encoder,                                             │
+│    82 │   │   beta_schedule=args.beta_schedule,                              │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/diffusion/respace.py:35 in space_timesteps         │
+│                                                                              │
+│    32 │   │   │   for i in range(1, num_timesteps):                          │
+│    33 │   │   │   │   if len(range(0, num_timesteps, i)) == desired_count:   │
+│    34 │   │   │   │   │   return set(range(0, num_timesteps, i))             │
+│ ❱  35 │   │   │   raise ValueError(                                          │
+│    36 │   │   │   │   f"cannot create exactly {num_timesteps} steps with an  │
+│    37 │   │   │   )                                                          │
+│    38 │   │   section_counts = [int(x) for x in section_counts.split(",")]   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ValueError: cannot create exactly 20 steps with an integer stride
+2024-12-05 00:55:12.708205: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-05 00:55:12.756034: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-05 00:55:13.411036: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:79 in main                            │
+│                                                                              │
+│    76 │                                                                      │
+│    77 │   # spaced diffusion for ddim                                        │
+│    78 │   diffusion = SpacedDiffusion(                                       │
+│ ❱  79 │   │   use_timesteps = space_timesteps(args.timesteps, args.timestep_ │
+│    80 │   │   model = model,                                                 │
+│    81 │   │   encoder = encoder,                                             │
+│    82 │   │   beta_schedule=args.beta_schedule,                              │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/diffusion/respace.py:35 in space_timesteps         │
+│                                                                              │
+│    32 │   │   │   for i in range(1, num_timesteps):                          │
+│    33 │   │   │   │   if len(range(0, num_timesteps, i)) == desired_count:   │
+│    34 │   │   │   │   │   return set(range(0, num_timesteps, i))             │
+│ ❱  35 │   │   │   raise ValueError(                                          │
+│    36 │   │   │   │   f"cannot create exactly {num_timesteps} steps with an  │
+│    37 │   │   │   )                                                          │
+│    38 │   │   section_counts = [int(x) for x in section_counts.split(",")]   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ValueError: cannot create exactly 20 steps with an integer stride
+
+CondaSystemExit: Exiting.
+
