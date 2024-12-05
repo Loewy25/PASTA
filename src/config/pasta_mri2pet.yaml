@@ -25,7 +25,7 @@ cond_apply_method: 'ada'
 
 ##### Diffusion config ####
 
-timestep_respacing: ddim100
+timestep_respacing: 5
 beta_schedule: cosine
 timesteps: 20
 objective: START_X
