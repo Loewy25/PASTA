@@ -26,6 +26,7 @@ conda env create -n $ENV_NAME --file /home/l.peiwang/PASTA/requirements.yaml
 
 # Activate the Conda environment
 conda activate $ENV_NAME
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
 
 # Verify which Python is being used
 echo "Using Python from: $(which python)"
@@ -38,8 +39,9 @@ python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
 # Load CUDA modules if required (adjust versions as needed)
-module avail cuda
-module avail cudnn
+module load cuda/11.3
+module load cudnn/8.1.1
+
 
 # Run training
 python /home/l.peiwang/PASTA/train_mri2pet.py \
