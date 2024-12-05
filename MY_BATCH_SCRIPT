@@ -26,14 +26,13 @@ conda activate myenv
 #module load cuda/11.8
 #module load cudnn/8.1.1
 
+python train_mri2pet.py \
+    --data_dir /scratch/l.peiwang/cd_dataset.h5 \
+    --results_folder /scratch/l.peiwang/results/
 
-data:
-  train: /scratch/l.peiwang/cd_dataset.h5
-  validation: /scratch/l.peiwang/cd_dataset.h5
-  test: /scratch/l.peiwang/cd_dataset.h5
-
-output:
-  path: /scratch/l.peiwang/results/
-
-python train_mri2pet.py --data_dir /scratch/l.peiwang/ --results_folder /scratch/l.peiwang/results/
-python train_mri2pet.py --data_dir /scratch/l.peiwang/ --results_folder /scratch/l.peiwang/results/ --eval_mode True --synthesis True
+# Run evaluation
+python train_mri2pet.py \
+    --data_dir /scratch/l.peiwang/cd_dataset.h5 \
+    --results_folder /scratch/l.peiwang/results/ \
+    --eval_mode True \
+    --synthesis True
