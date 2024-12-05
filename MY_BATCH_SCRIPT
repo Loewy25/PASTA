@@ -19,6 +19,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
 conda activate myenv
 
+conda install -c conda-forge torchio
 
 
 module load cuda
