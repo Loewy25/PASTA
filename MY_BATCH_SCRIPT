@@ -28,6 +28,7 @@ else
     conda activate $ENV_NAME
 fi
 
+conda install -n $ENV_NAME -c conda-forge numpy torch torchvision torchaudio torchio libjpeg libpng --yes
 
 # Load CUDA and cuDNN modules (if required)
 #module load cuda/11.8 
