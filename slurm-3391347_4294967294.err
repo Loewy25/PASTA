@@ -1,0 +1,99 @@
+/home/l.peiwang/miniconda3/lib/python3.12/argparse.py:2006: FutureWarning: `remote_definition` is deprecated and will be removed in 25.9. Use `conda env create --file=URL` instead.
+  action(self, namespace, argument_values, option_string)
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda/11.7"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda/11.7"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"cudnn/8.5.0"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cudnn/8.5.0"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+2024-12-04 23:35:45.725313: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-04 23:35:47.437112: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 23:36:09.462590: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:141 in <module>                       │
+│                                                                              │
+│   138                                                                        │
+│   139 if __name__ == "__main__":                                             │
+│   140 │   set_seed_everywhere(666)                                           │
+│ ❱ 141 │   main()                                                             │
+│   142                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:21 in main                            │
+│                                                                              │
+│    18 config_path = os.path.join(config_root, config_file)                   │
+│    19                                                                        │
+│    20 def main():                                                            │
+│ ❱  21 │   args = load_config_from_yaml(config_path)                          │
+│    22 │   args_dict = args.__dict__                                          │
+│    23 │                                                                      │
+│    24 │   if not os.path.exists(args_dict['results_folder']):                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/utils/utils.py:11 in load_config_from_yaml         │
+│                                                                              │
+│     8 # helpers functions                                                    │
+│     9                                                                        │
+│    10 def load_config_from_yaml(config_file_path):                           │
+│ ❱  11 │   with open(config_file_path, 'r') as f:                             │
+│    12 │   │   config_data = yaml.safe_load(f)                                │
+│    13 │                                                                      │
+│    14 │   args = argparse.Namespace(**config_data)                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/home/yitong/PASTA/src/config/pasta_mri2pet.yaml'
+2024-12-04 23:36:52.129863: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-04 23:36:52.180041: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 23:36:52.854177: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:141 in <module>                       │
+│                                                                              │
+│   138                                                                        │
+│   139 if __name__ == "__main__":                                             │
+│   140 │   set_seed_everywhere(666)                                           │
+│ ❱ 141 │   main()                                                             │
+│   142                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:21 in main                            │
+│                                                                              │
+│    18 config_path = os.path.join(config_root, config_file)                   │
+│    19                                                                        │
+│    20 def main():                                                            │
+│ ❱  21 │   args = load_config_from_yaml(config_path)                          │
+│    22 │   args_dict = args.__dict__                                          │
+│    23 │                                                                      │
+│    24 │   if not os.path.exists(args_dict['results_folder']):                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/utils/utils.py:11 in load_config_from_yaml         │
+│                                                                              │
+│     8 # helpers functions                                                    │
+│     9                                                                        │
+│    10 def load_config_from_yaml(config_file_path):                           │
+│ ❱  11 │   with open(config_file_path, 'r') as f:                             │
+│    12 │   │   config_data = yaml.safe_load(f)                                │
+│    13 │                                                                      │
+│    14 │   args = argparse.Namespace(**config_data)                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/home/yitong/PASTA/src/config/pasta_mri2pet.yaml'
+
+CondaSystemExit: Exiting.
+

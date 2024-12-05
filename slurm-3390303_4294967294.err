@@ -1,0 +1,41 @@
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - torch
+  - libjpeg
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'torchvision'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'torchio'
+Traceback (most recent call last):
+  File "/home/l.peiwang/PASTA/train_mri2pet.py", line 4, in <module>
+    from src.diffusion.gaussian_diffusion import GaussianDiffusion, ModelMeanType, ModelVarType, LossType
+  File "/home/l.peiwang/PASTA/src/diffusion/gaussian_diffusion.py", line 9, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+Traceback (most recent call last):
+  File "/home/l.peiwang/PASTA/train_mri2pet.py", line 4, in <module>
+    from src.diffusion.gaussian_diffusion import GaussianDiffusion, ModelMeanType, ModelVarType, LossType
+  File "/home/l.peiwang/PASTA/src/diffusion/gaussian_diffusion.py", line 9, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'

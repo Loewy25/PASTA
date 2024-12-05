@@ -1,0 +1,44 @@
+/var/spool/slurmd/job3355976/slurm_script: line 18: conda: command not found
+/var/spool/slurmd/job3355976/slurm_script: line 19: conda: command not found
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"cudnn"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cudnn"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/var/spool/slurmd/job3355976/slurm_script: line 25: data:: command not found
+/var/spool/slurmd/job3355976/slurm_script: line 26: train:: command not found
+/var/spool/slurmd/job3355976/slurm_script: line 27: validation:: command not found
+/var/spool/slurmd/job3355976/slurm_script: line 28: test:: command not found
+/var/spool/slurmd/job3355976/slurm_script: line 30: output:: command not found
+/var/spool/slurmd/job3355976/slurm_script: line 31: path:: command not found
+Traceback (most recent call last):
+  File "/ceph/chpc/home-ceph/l.peiwang/PASTA/train_mri2pet.py", line 4, in <module>
+    from src.diffusion.gaussian_diffusion import GaussianDiffusion, ModelMeanType, ModelVarType, LossType
+  File "/ceph/chpc/home-ceph/l.peiwang/PASTA/src/diffusion/gaussian_diffusion.py", line 10, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "/ceph/chpc/home-ceph/l.peiwang/PASTA/train_mri2pet.py", line 4, in <module>
+    from src.diffusion.gaussian_diffusion import GaussianDiffusion, ModelMeanType, ModelVarType, LossType
+  File "/ceph/chpc/home-ceph/l.peiwang/PASTA/src/diffusion/gaussian_diffusion.py", line 10, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

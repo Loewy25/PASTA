@@ -1,0 +1,233 @@
++ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
+++ CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
+++ '[' -z x ']'
+++ conda shell.bash hook
+++ local cmd=shell.bash
+++ case "$cmd" in
+++ __conda_exe shell.bash hook
+++ /home/l.peiwang/miniconda3/bin/conda shell.bash hook
++ eval 'export CONDA_EXE='\''/home/l.peiwang/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/l.peiwang/miniconda3/bin/python'\''
+
+# Copyright (C) 2012 Anaconda, Inc
+# SPDX-License-Identifier: BSD-3-Clause
+__conda_exe() (
+    "$CONDA_EXE" $_CE_M $_CE_CONDA "$@"
+)
+
+__conda_hashr() {
+    if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi
+}
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix "$@")" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix reactivate)" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+conda() {
+    \local cmd="${1-__missing__}"
+    case "$cmd" in
+        activate|deactivate)
+            __conda_activate "$@"
+            ;;
+        install|update|upgrade|remove|uninstall)
+            __conda_exe "$@" || \return
+            __conda_reactivate
+            ;;
+        *)
+            __conda_exe "$@"
+            ;;
+    esac
+}
+
+if [ -z "${CONDA_SHLVL+x}" ]; then
+    \export CONDA_SHLVL=0
+    # In dev-mode CONDA_EXE is python.exe and on Windows
+    # it is in a different relative location to condabin.
+    if [ -n "${_CE_CONDA:+x}" ] && [ -n "${WINDIR+x}" ]; then
+        PATH="$(\dirname "$CONDA_EXE")/condabin${PATH:+":${PATH}"}"
+    else
+        PATH="$(\dirname "$(\dirname "$CONDA_EXE")")/condabin${PATH:+":${PATH}"}"
+    fi
+    \export PATH
+
+    # We'\''re not allowing PS1 to be unbound. It must at least be set.
+    # However, we'\''re not exporting it, which can cause problems when starting a second shell
+    # via a first shell (i.e. starting zsh from bash).
+    if [ -z "${PS1+x}" ]; then
+        PS1=
+    fi
+fi
+
+conda activate base'
+++ export CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
+++ CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
+++ '[' -z x ']'
+++ conda activate base
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate base
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate base
++++ /home/l.peiwang/miniconda3/bin/conda shell.posix activate base
+++ ask_conda='. "/home/l.peiwang/miniconda3/envs/pasta/etc/conda/deactivate.d/libglib_deactivate.sh"
+PS1='\''(base) '\''
+export PATH='\''/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin'\''
+export CONDA_PREFIX='\''/home/l.peiwang/miniconda3'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_3='\''/home/l.peiwang/miniconda3/envs/pasta'\''
+export CONDA_EXE='\''/home/l.peiwang/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/l.peiwang/miniconda3/bin/python'\'''
+++ eval '. "/home/l.peiwang/miniconda3/envs/pasta/etc/conda/deactivate.d/libglib_deactivate.sh"
+PS1='\''(base) '\''
+export PATH='\''/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin'\''
+export CONDA_PREFIX='\''/home/l.peiwang/miniconda3'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_3='\''/home/l.peiwang/miniconda3/envs/pasta'\''
+export CONDA_EXE='\''/home/l.peiwang/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/l.peiwang/miniconda3/bin/python'\'''
++++ . /home/l.peiwang/miniconda3/envs/pasta/etc/conda/deactivate.d/libglib_deactivate.sh
+++++ export GSETTINGS_SCHEMA_DIR=
+++++ GSETTINGS_SCHEMA_DIR=
+++++ unset GSETTINGS_SCHEMA_DIR_CONDA_BACKUP
+++++ '[' -z ']'
+++++ unset GSETTINGS_SCHEMA_DIR
++++ PS1='(base) '
++++ export PATH=/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
++++ PATH=/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
++++ export CONDA_PREFIX=/home/l.peiwang/miniconda3
++++ CONDA_PREFIX=/home/l.peiwang/miniconda3
++++ export CONDA_SHLVL=4
++++ CONDA_SHLVL=4
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_3=/home/l.peiwang/miniconda3/envs/pasta
++++ CONDA_PREFIX_3=/home/l.peiwang/miniconda3/envs/pasta
++++ export CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
++++ CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ ENV_NAME=pasta_env
++ conda activate pasta_env
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate pasta_env
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate pasta_env
+++ /home/l.peiwang/miniconda3/bin/conda shell.posix activate pasta_env
++ ask_conda='PS1='\''(pasta_env) '\''
+export PATH='\''/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/envs/pasta_env/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin'\''
+export CONDA_PREFIX='\''/home/l.peiwang/miniconda3/envs/pasta_env'\''
+export CONDA_SHLVL='\''5'\''
+export CONDA_DEFAULT_ENV='\''pasta_env'\''
+export CONDA_PROMPT_MODIFIER='\''(pasta_env) '\''
+export CONDA_PREFIX_4='\''/home/l.peiwang/miniconda3'\''
+export CONDA_EXE='\''/home/l.peiwang/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/l.peiwang/miniconda3/bin/python'\'''
++ eval 'PS1='\''(pasta_env) '\''
+export PATH='\''/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/envs/pasta_env/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin'\''
+export CONDA_PREFIX='\''/home/l.peiwang/miniconda3/envs/pasta_env'\''
+export CONDA_SHLVL='\''5'\''
+export CONDA_DEFAULT_ENV='\''pasta_env'\''
+export CONDA_PROMPT_MODIFIER='\''(pasta_env) '\''
+export CONDA_PREFIX_4='\''/home/l.peiwang/miniconda3'\''
+export CONDA_EXE='\''/home/l.peiwang/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/l.peiwang/miniconda3/bin/python'\'''
+++ PS1='(pasta_env) '
+++ export PATH=/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/envs/pasta_env/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+++ PATH=/export/cuda/cuda-10.2/bin:/home/l.peiwang/miniconda3/envs/pasta_env/bin:/export/anaconda/anaconda3/anaconda3-2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+++ export CONDA_PREFIX=/home/l.peiwang/miniconda3/envs/pasta_env
+++ CONDA_PREFIX=/home/l.peiwang/miniconda3/envs/pasta_env
+++ export CONDA_SHLVL=5
+++ CONDA_SHLVL=5
+++ export CONDA_DEFAULT_ENV=pasta_env
+++ CONDA_DEFAULT_ENV=pasta_env
+++ export 'CONDA_PROMPT_MODIFIER=(pasta_env) '
+++ CONDA_PROMPT_MODIFIER='(pasta_env) '
+++ export CONDA_PREFIX_4=/home/l.peiwang/miniconda3
+++ CONDA_PREFIX_4=/home/l.peiwang/miniconda3
+++ export CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
+++ CONDA_EXE=/home/l.peiwang/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/l.peiwang/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
+++ which python
+++ alias
+++ /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot python
+++ eval declare -f
++++ declare -f
++ echo 'Using Python from: /home/l.peiwang/miniconda3/envs/pasta_env/bin/python'
++ python -c 'import sys; print('\''Python:'\'', sys.version)'
++ python -c 'import numpy; print('\''NumPy:'\'', numpy.__version__)'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'numpy'

@@ -1,0 +1,74 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"cudnn"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cudnn"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/var/spool/slurmd/job3384483/slurm_script: line 28: data:: command not found
+/var/spool/slurmd/job3384483/slurm_script: line 29: train:: command not found
+/var/spool/slurmd/job3384483/slurm_script: line 30: validation:: command not found
+/var/spool/slurmd/job3384483/slurm_script: line 31: test:: command not found
+/var/spool/slurmd/job3384483/slurm_script: line 33: output:: command not found
+/var/spool/slurmd/job3384483/slurm_script: line 34: path:: command not found
+/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+Traceback (most recent call last):
+  File "train_mri2pet.py", line 6, in <module>
+    from src.trainer.trainer import Trainer
+  File "/home/l.peiwang/PASTA/src/trainer/trainer.py", line 13, in <module>
+    import torchio as tio
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/__init__.py", line 8, in <module>
+    from . import datasets
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/datasets/__init__.py", line 1, in <module>
+    from .bite import BITE3
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/datasets/bite.py", line 5, in <module>
+    from ..data import Image
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/data/__init__.py", line 1, in <module>
+    from .dataset import SubjectsDataset
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/data/dataset.py", line 11, in <module>
+    from ..utils import get_subjects_from_batch
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/utils.py", line 27, in <module>
+    from .typing import TypeNumber
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/typing.py", line 13, in <module>
+    TypeKeys = Optional[Sequence[str]]
+TypeError: 'ABCMeta' object is not subscriptable
+/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+Traceback (most recent call last):
+  File "train_mri2pet.py", line 6, in <module>
+    from src.trainer.trainer import Trainer
+  File "/home/l.peiwang/PASTA/src/trainer/trainer.py", line 13, in <module>
+    import torchio as tio
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/__init__.py", line 8, in <module>
+    from . import datasets
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/datasets/__init__.py", line 1, in <module>
+    from .bite import BITE3
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/datasets/bite.py", line 5, in <module>
+    from ..data import Image
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/data/__init__.py", line 1, in <module>
+    from .dataset import SubjectsDataset
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/data/dataset.py", line 11, in <module>
+    from ..utils import get_subjects_from_batch
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/utils.py", line 27, in <module>
+    from .typing import TypeNumber
+  File "/home/l.peiwang/.conda/envs/myenv/lib/python3.8/site-packages/torchio/typing.py", line 13, in <module>
+    TypeKeys = Optional[Sequence[str]]
+TypeError: 'ABCMeta' object is not subscriptable

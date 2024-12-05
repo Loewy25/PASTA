@@ -1,0 +1,34 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Wed Dec  4 22:20:18 CST 2024 1733372418
+Job ID:		3387785
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Wed Dec  4 22:20:18 CST 2024 1733372418
+--------------------------------------------------------------
+--------------------------------------------------------------
+Begin Slurm Epilogue Wed Dec  4 22:20:48 CST 2024 1733372448
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpu08
+Cores               : 9
+State               : FAILED
+Submit              : 2024-12-04T22:20:09
+Start               : 2024-12-04T22:20:18
+End                 : 2024-12-04T22:20:45
+Reserved Walltime   : 05:50:00
+Used Walltime       : 00:00:27
+Used CPU Time       : 00:00:05
+% User (Computation): 73.89%
+% System (I/O)      : 26.11%
+Mem Reserved        : 100G
+Max Mem Used        : 52.00K (53248.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : gpu08
+Max-Disk-Write Node : gpu08
+Max-Disk-Read Node  : gpu08
+Tesla T4
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Wed Dec  4 22:20:48 CST 2024 1733372448
+--------------------------------------------------------------

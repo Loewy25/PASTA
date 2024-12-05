@@ -1,0 +1,215 @@
+
+EnvironmentNameNotFound: Could not find conda environment: pasta
+You can list all discoverable environments with `conda info --envs`.
+
+
+
+# >>>>>>>>>>>>>>>>>>>>>> ERROR REPORT <<<<<<<<<<<<<<<<<<<<<<
+
+    Traceback (most recent call last):
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/exception_handler.py", line 17, in __call__
+        return func(*args, **kwargs)
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/cli/main.py", line 83, in main_subshell
+        exit_code = do_call(args, parser)
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/cli/conda_argparse.py", line 164, in do_call
+        result = getattr(module, func_name)(args, parser)
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/notices/core.py", line 124, in wrapper
+        return func(*args, **kwargs)
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/cli/main_install.py", line 26, in execute
+        install(args, parser, "install")
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/cli/install.py", line 360, in install
+        unlink_link_transaction = solver.solve_for_transaction(
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/core/solve.py", line 139, in solve_for_transaction
+        unlink_precs, link_precs = self.solve_for_diff(
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/core/solve.py", line 200, in solve_for_diff
+        final_precs = self.solve_final_state(
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda_libmamba_solver/solver.py", line 204, in solve_final_state
+        index = IndexHelper(
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda_libmamba_solver/index.py", line 127, in __init__
+        self._index = self._load_channels()
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda_libmamba_solver/index.py", line 304, in _load_channels
+        jsons = {url: str(path) for (url, path) in executor.map(self._fetch_channel, urls)}
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda_libmamba_solver/index.py", line 304, in <dictcomp>
+        jsons = {url: str(path) for (url, path) in executor.map(self._fetch_channel, urls)}
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+        yield _result_or_cancel(fs.pop())
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+        return fut.result(timeout)
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+        return self.__get_result()
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+        raise self._exception
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+        result = self.fn(*self.args, **self.kwargs)
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda_libmamba_solver/index.py", line 233, in _fetch_channel
+        json_path, _ = subdir_data.repo_fetch.fetch_latest_path()
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/gateways/repodata/__init__.py", line 728, in fetch_latest_path
+        _, state = self.fetch_latest()
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/gateways/repodata/__init__.py", line 768, in fetch_latest
+        cache.load_state()
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/gateways/repodata/__init__.py", line 581, in load_state
+        self.load(state_only=True)
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/site-packages/conda/gateways/repodata/__init__.py", line 528, in load
+        with self.cache_path_state.open("r+") as state_file, lock(state_file):
+      File "/export/anaconda/anaconda3/anaconda3-2023.03/lib/python3.10/pathlib.py", line 1119, in open
+        return self._accessor.open(self, mode, buffering, encoding, errors,
+    PermissionError: [Errno 13] Permission denied: '/export/anaconda/anaconda3/anaconda3-2023.03/pkgs/cache/497deca9.info.json'
+
+`$ /export/anaconda/anaconda3/anaconda3-2023.03/bin/conda install -c conda-forge torchio`
+
+  environment variables:
+                 CIO_TEST=<not set>
+   CONDA_BACKUP_ADDR2LINE=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-addr2line
+          CONDA_BACKUP_AR=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-ar
+          CONDA_BACKUP_AS=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-as
+       CONDA_BACKUP_BUILD=x86_64-conda-linux-gnu
+          CONDA_BACKUP_CC=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-cc
+CONDA_BACKUP_CC_FOR_BUILD=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-cc
+      CONDA_BACKUP_CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-
+                          strong -fno-plt -O2 -ffunction-sections -pipe -isystem
+                          /home/l.peiwang/.conda/envs/myenv/include
+CONDA_BACKUP_CMAKE_PREFIX_PATH=/home/l.peiwang/.conda/envs/myenv:/home/l.peiwang/.conda/envs/myenv/x8
+                          6_64-conda-linux-gnu/sysroot/usr
+CONDA_BACKUP_CONDA_BUILD_SYSROOT=/home/l.peiwang/.conda/envs/myenv/x86_64-conda-linux-gnu/sysroot
+         CONDA_BACKUP_CPP=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-cpp
+    CONDA_BACKUP_CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem
+                          /home/l.peiwang/.conda/envs/myenv/include
+         CONDA_BACKUP_CXX=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-c++
+     CONDA_BACKUP_CXXFILT=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-c++filt
+    CONDA_BACKUP_CXXFLAGS=-fvisibility-inlines-hidden -std=c++17 -fmessage-length=0
+                          -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-
+                          strong -fno-plt -O2 -ffunction-sections -pipe -isystem
+                          /home/l.peiwang/.conda/envs/myenv/include
+CONDA_BACKUP_CXX_FOR_BUILD=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-c++
+CONDA_BACKUP_DEBUG_CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-
+                          all -fno-plt -Og -g -Wall -Wextra -fvar-tracking-assignments
+                          -ffunction-sections -pipe -isystem
+                          /home/l.peiwang/.conda/envs/myenv/include
+CONDA_BACKUP_DEBUG_CPPFLAGS=-D_DEBUG -D_FORTIFY_SOURCE=2 -Og -isystem
+                          /home/l.peiwang/.conda/envs/myenv/include
+CONDA_BACKUP_DEBUG_CXXFLAGS=-fvisibility-inlines-hidden -std=c++17 -fmessage-length=0
+                          -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-
+                          all -fno-plt -Og -g -Wall -Wextra -fvar-tracking-assignments
+                          -ffunction-sections -pipe -isystem
+                          /home/l.peiwang/.conda/envs/myenv/include
+     CONDA_BACKUP_ELFEDIT=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-elfedit
+         CONDA_BACKUP_GCC=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-gcc
+      CONDA_BACKUP_GCC_AR=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-gcc-ar
+      CONDA_BACKUP_GCC_NM=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-gcc-nm
+  CONDA_BACKUP_GCC_RANLIB=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-gcc-
+                          ranlib
+       CONDA_BACKUP_GPROF=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-gprof
+         CONDA_BACKUP_GXX=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-g++
+        CONDA_BACKUP_HOST=x86_64-conda-linux-gnu
+          CONDA_BACKUP_LD=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-ld
+     CONDA_BACKUP_LDFLAGS=-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,
+                          --disable-new-dtags -Wl,--gc-sections
+                          -Wl,-rpath,/home/l.peiwang/.conda/envs/myenv/lib -Wl,-rpath-
+                          link,/home/l.peiwang/.conda/envs/myenv/lib
+                          -L/home/l.peiwang/.conda/envs/myenv/lib
+     CONDA_BACKUP_LD_GOLD=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-ld.gold
+          CONDA_BACKUP_NM=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-nm
+     CONDA_BACKUP_OBJCOPY=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-objcopy
+     CONDA_BACKUP_OBJDUMP=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-objdump
+      CONDA_BACKUP_RANLIB=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-ranlib
+     CONDA_BACKUP_READELF=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-readelf
+        CONDA_BACKUP_SIZE=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-size
+     CONDA_BACKUP_STRINGS=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-strings
+       CONDA_BACKUP_STRIP=/home/l.peiwang/.conda/envs/myenv/bin/x86_64-conda-linux-gnu-strip
+ CONDA_BACKUP_build_alias=x86_64-conda-linux-gnu
+  CONDA_BACKUP_host_alias=x86_64-conda-linux-gnu
+        CONDA_DEFAULT_ENV=base
+                CONDA_EXE=/export/anaconda/anaconda3/anaconda3-2023.03/bin/conda
+             CONDA_PREFIX=/export/anaconda/anaconda3/anaconda3-2023.03
+           CONDA_PREFIX_1=/export/anaconda/anaconda3/anaconda3-2023.03
+           CONDA_PREFIX_2=/home/l.peiwang/.conda/envs/myenv
+           CONDA_PREFIX_3=/home/l.peiwang/miniconda3/envs/pasta
+    CONDA_PROMPT_MODIFIER=(base)
+         CONDA_PYTHON_EXE=/export/anaconda/anaconda3/anaconda3-2023.03/bin/python
+               CONDA_ROOT=/export/anaconda/anaconda3/anaconda3-2023.03
+              CONDA_SHLVL=4
+           CURL_CA_BUNDLE=<not set>
+                    FPATH=/usr/share/lmod/lmod/init/ksh_funcs:/usr/share/lmod/lmod/init/ksh_func
+                          s:/usr/share/lmod/lmod/init/ksh_funcs
+          LD_LIBRARY_PATH=/export/cudnn/cudnn-8.1.1/lib64:/export/cuda/cuda-10.2/lib64
+               LD_PRELOAD=<not set>
+                  MANPATH=/usr/share/lmod/lmod/share/man:
+               MODULEPATH=/etc/scl/modulefiles:/etc/scl/modulefiles:/etc/modulefiles:/usr/share/
+                          modulefiles:/opt/modulefiles
+                     PATH=/export/cuda/cuda-10.2/bin:/export/anaconda/anaconda3/anaconda3-
+                          2023.03/bin:/export/anaconda/anaconda3/anaconda3-
+                          2023.03/condabin:/home/l.peiwang/.local/bin:/home/l.peiwang/bin:/usr/l
+                          ocal/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/cuda/bin
+       REQUESTS_CA_BUNDLE=<not set>
+            SSL_CERT_FILE=<not set>
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/export/cudnn/cudnn-8.1.1/lib64:1;/export/cuda/cuda-10.2/lib64:1
+__LMOD_REF_COUNT_MODULEPATH=/etc/scl/modulefiles:1;/etc/modulefiles:1;/usr/share/modulefiles:1;/op
+                          t/modulefiles:1
+    __LMOD_REF_COUNT_PATH=/export/cuda/cuda-
+                          10.2/bin:1;/home/l.peiwang/.conda/envs/myenv/bin:1;/export/anaconda/an
+                          aconda3/anaconda3-
+                          2023.03/condabin:1;/home/l.peiwang/.local/bin:1;/home/l.peiwang/bin:1;
+                          /usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1
+
+     active environment : base
+    active env location : /export/anaconda/anaconda3/anaconda3-2023.03
+            shell level : 4
+       user config file : /home/l.peiwang/.condarc
+ populated config files : 
+          conda version : 23.10.0
+    conda-build version : 3.23.3
+         python version : 3.10.13.final.0
+       virtual packages : __archspec=1=cascadelake
+                          __cuda=12.6=0
+                          __glibc=2.28=0
+                          __linux=4.18.0=0
+                          __unix=0=0
+       base environment : /export/anaconda/anaconda3/anaconda3-2023.03  (writable)
+      conda av data dir : /export/anaconda/anaconda3/anaconda3-2023.03/etc/conda
+  conda av metadata url : None
+           channel URLs : https://conda.anaconda.org/conda-forge/linux-64
+                          https://conda.anaconda.org/conda-forge/noarch
+                          https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /export/anaconda/anaconda3/anaconda3-2023.03/pkgs
+                          /home/l.peiwang/.conda/pkgs
+       envs directories : /export/anaconda/anaconda3/anaconda3-2023.03/envs
+                          /home/l.peiwang/.conda/envs
+               platform : linux-64
+             user-agent : conda/23.10.0 requests/2.31.0 CPython/3.10.13 Linux/4.18.0-553.16.1.el8_10.x86_64 rocky/8.10 glibc/2.28 solver/libmamba conda-libmamba-solver/23.11.0 libmambapy/1.5.3
+                UID:GID : 2035263:1000070
+             netrc file : None
+           offline mode : False
+
+
+An unexpected error has occurred. Conda has prepared the above report.
+If you suspect this error is being caused by a malfunctioning plugin,
+consider using the --no-plugins option to turn off plugins.
+
+Example: conda --no-plugins install <package>
+
+Alternatively, you can set the CONDA_NO_PLUGINS environment variable on
+the command line to run the command without plugins enabled.
+
+Example: CONDA_NO_PLUGINS=true conda install <package>
+
+bash: data:: command not found
+bash: train:: command not found
+bash: validation:: command not found
+bash: test:: command not found
+bash: output:: command not found
+bash: path:: command not found
+Traceback (most recent call last):
+  File "/home/l.peiwang/PASTA/train_mri2pet.py", line 6, in <module>
+    from src.trainer.trainer import Trainer
+  File "/home/l.peiwang/PASTA/src/trainer/trainer.py", line 13, in <module>
+    import torchio as tio
+ModuleNotFoundError: No module named 'torchio'
+Traceback (most recent call last):
+  File "/home/l.peiwang/PASTA/train_mri2pet.py", line 6, in <module>
+    from src.trainer.trainer import Trainer
+  File "/home/l.peiwang/PASTA/src/trainer/trainer.py", line 13, in <module>
+    import torchio as tio
+ModuleNotFoundError: No module named 'torchio'

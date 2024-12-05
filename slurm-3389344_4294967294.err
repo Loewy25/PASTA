@@ -1,0 +1,147 @@
+warning  libmamba Added empty dependency for problem type SOLVER_RULE_UPDATE
+
+LibMambaUnsatisfiableError: Encountered problems while solving:
+  - nothing provides requested libjpeg
+  - nothing provides _python_rc needed by python-3.13.0rc1-h3b4618f_0_cp313t
+
+Could not solve for environment specs
+The following packages are incompatible
+├─ lerc 3.0.*  is requested and can be installed;
+├─ libjpeg does not exist (perhaps a typo or a missing channel);
+├─ libtiff 4.5.0.*  is not installable because there are no viable options
+│  ├─ libtiff [4.4.0|4.5.0|4.5.1|4.6.0|4.7.0] would require
+│  │  └─ lerc >=4.0.0,<5.0a0 , which conflicts with any installable versions previously reported;
+│  └─ libtiff 4.5.0 conflicts with any installable versions previously reported;
+├─ pin-1 is installable and it requires
+│  └─ python 3.10.* , which can be installed;
+└─ torchio is installable with the potential options
+   ├─ torchio [0.18.29|0.18.30|...|0.20.2] would require
+   │  └─ simpleitk [ |!=2.0.* |!=2.0.*,!=2.1.1.1 ] with the potential options
+   │     ├─ simpleitk [1.2.2|1.2.3|1.2.4] would require
+   │     │  └─ python >=2.7,<2.8.0a0 , which conflicts with any installable versions previously reported;
+   │     ├─ simpleitk [1.2.2|1.2.3|1.2.4|2.0.2|2.1.0] would require
+   │     │  └─ python >=3.6,<3.7.0a0 , which conflicts with any installable versions previously reported;
+   │     ├─ simpleitk [1.2.2|1.2.3|...|2.1.1.1] would require
+   │     │  └─ python >=3.7,<3.8.0a0 , which conflicts with any installable versions previously reported;
+   │     ├─ simpleitk [1.2.3|1.2.4|...|2.4.0] would require
+   │     │  └─ python >=3.8,<3.9.0a0 , which conflicts with any installable versions previously reported;
+   │     ├─ simpleitk [2.0.2|2.1.0|...|2.4.0] would require
+   │     │  └─ python >=3.9,<3.10.0a0 , which conflicts with any installable versions previously reported;
+   │     ├─ simpleitk [2.1.0|2.1.1] would require
+   │     │  └─ libitk-devel [5.2.0 h6eb4826_4|5.2.1 h6eb4826_1], which requires
+   │     │     └─ libitk [5.2.0 hdddff26_4|5.2.1 h6d27e4b_1], which requires
+   │     │        └─ libtiff >=4.3.0,<4.5.0a0  with the potential options
+   │     │           ├─ libtiff 4.3.0, which can be installed;
+   │     │           ├─ libtiff [4.4.0|4.5.0|4.5.1|4.6.0|4.7.0], which cannot be installed (as previously explained);
+   │     │           └─ libtiff 4.4.0, which can be installed;
+   │     ├─ simpleitk [2.1.1.1|2.2.1] would require
+   │     │  └─ libitk [5.2.1 hcedbc38_6|5.3.0 hcedbc38_0], which requires
+   │     │     └─ libtiff >=4.4.0,<4.5.0a0  with the potential options
+   │     │        ├─ libtiff [4.4.0|4.5.0|4.5.1|4.6.0|4.7.0], which cannot be installed (as previously explained);
+   │     │        └─ libtiff 4.4.0, which can be installed;
+   │     ├─ simpleitk [2.1.1.1|2.2.1|2.3.0|2.3.1|2.4.0] would require
+   │     │  └─ python >=3.11,<3.12.0a0 , which conflicts with any installable versions previously reported;
+   │     ├─ simpleitk 2.3.0 would require
+   │     │  └─ libitk 5.3.0 h75c54af_6, which requires
+   │     │     └─ libtiff >=4.5.1,<4.6.0a0  with the potential options
+   │     │        ├─ libtiff [4.4.0|4.5.0|4.5.1|4.6.0|4.7.0], which cannot be installed (as previously explained);
+   │     │        └─ libtiff 4.5.1, which can be installed;
+   │     ├─ simpleitk [2.3.0|2.3.1|2.4.0] would require
+   │     │  └─ python >=3.12,<3.13.0a0 , which conflicts with any installable versions previously reported;
+   │     ├─ simpleitk [2.3.1|2.4.0] would require
+   │     │  └─ libitk [5.3.0 h0dad300_7|5.3.0 h26001f5_8|>=5.4.0,<5.5.0a0 ], which requires
+   │     │     └─ libtiff [>=4.6.0,<4.8.0a0 |>=4.7.0,<4.8.0a0 ], which cannot be installed (as previously explained);
+   │     └─ simpleitk 2.4.0 would require
+   │        └─ python >=3.13.0rc1,<3.14.0a0  but there are no viable options
+   │           ├─ python 3.13.0 conflicts with any installable versions previously reported;
+   │           └─ python [3.13.0rc1|3.13.0rc2|3.13.0rc3] would require
+   │              └─ _python_rc, which does not exist (perhaps a missing channel);
+   └─ torchio [0.18.30|0.18.31|...|0.18.77] would require
+      └─ simpleitk <2 , which cannot be installed (as previously explained).
+
+Pins seem to be involved in the conflict. Currently pinned specs:
+ - python 3.10.* (labeled as 'pin-1')
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda/11.8"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda/11.8"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+2024-12-04 22:47:46.118450: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-04 22:47:46.172956: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 22:47:46.851532: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:141 in <module>                       │
+│                                                                              │
+│   138                                                                        │
+│   139 if __name__ == "__main__":                                             │
+│   140 │   set_seed_everywhere(666)                                           │
+│ ❱ 141 │   main()                                                             │
+│   142                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:21 in main                            │
+│                                                                              │
+│    18 config_path = os.path.join(config_root, config_file)                   │
+│    19                                                                        │
+│    20 def main():                                                            │
+│ ❱  21 │   args = load_config_from_yaml(config_path)                          │
+│    22 │   args_dict = args.__dict__                                          │
+│    23 │                                                                      │
+│    24 │   if not os.path.exists(args_dict['results_folder']):                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/utils/utils.py:11 in load_config_from_yaml         │
+│                                                                              │
+│     8 # helpers functions                                                    │
+│     9                                                                        │
+│    10 def load_config_from_yaml(config_file_path):                           │
+│ ❱  11 │   with open(config_file_path, 'r') as f:                             │
+│    12 │   │   config_data = yaml.safe_load(f)                                │
+│    13 │                                                                      │
+│    14 │   args = argparse.Namespace(**config_data)                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/home/yitong/PASTA/src/config/pasta_mri2pet.yaml'
+2024-12-04 22:47:52.176191: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-04 22:47:52.230481: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 22:47:52.913121: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:141 in <module>                       │
+│                                                                              │
+│   138                                                                        │
+│   139 if __name__ == "__main__":                                             │
+│   140 │   set_seed_everywhere(666)                                           │
+│ ❱ 141 │   main()                                                             │
+│   142                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:21 in main                            │
+│                                                                              │
+│    18 config_path = os.path.join(config_root, config_file)                   │
+│    19                                                                        │
+│    20 def main():                                                            │
+│ ❱  21 │   args = load_config_from_yaml(config_path)                          │
+│    22 │   args_dict = args.__dict__                                          │
+│    23 │                                                                      │
+│    24 │   if not os.path.exists(args_dict['results_folder']):                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/utils/utils.py:11 in load_config_from_yaml         │
+│                                                                              │
+│     8 # helpers functions                                                    │
+│     9                                                                        │
+│    10 def load_config_from_yaml(config_file_path):                           │
+│ ❱  11 │   with open(config_file_path, 'r') as f:                             │
+│    12 │   │   config_data = yaml.safe_load(f)                                │
+│    13 │                                                                      │
+│    14 │   args = argparse.Namespace(**config_data)                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/home/yitong/PASTA/src/config/pasta_mri2pet.yaml'

@@ -1,0 +1,42 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"cudnn"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cudnn"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/var/spool/slurmd/job3384205/slurm_script: line 27: data:: command not found
+/var/spool/slurmd/job3384205/slurm_script: line 28: train:: command not found
+/var/spool/slurmd/job3384205/slurm_script: line 29: validation:: command not found
+/var/spool/slurmd/job3384205/slurm_script: line 30: test:: command not found
+/var/spool/slurmd/job3384205/slurm_script: line 32: output:: command not found
+/var/spool/slurmd/job3384205/slurm_script: line 33: path:: command not found
+Traceback (most recent call last):
+  File "train_mri2pet.py", line 6, in <module>
+    from src.trainer.trainer import Trainer
+  File "/home/l.peiwang/PASTA/src/trainer/trainer.py", line 13, in <module>
+    import torchio as tio
+ModuleNotFoundError: No module named 'torchio'
+Traceback (most recent call last):
+  File "train_mri2pet.py", line 6, in <module>
+    from src.trainer.trainer import Trainer
+  File "/home/l.peiwang/PASTA/src/trainer/trainer.py", line 13, in <module>
+    import torchio as tio
+ModuleNotFoundError: No module named 'torchio'

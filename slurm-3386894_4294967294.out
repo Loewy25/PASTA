@@ -1,0 +1,38 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Wed Dec  4 22:05:18 CST 2024 1733371518
+Job ID:		3386894
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Wed Dec  4 22:05:18 CST 2024 1733371518
+--------------------------------------------------------------
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... failed
+--------------------------------------------------------------
+Begin Slurm Epilogue Wed Dec  4 22:05:50 CST 2024 1733371550
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpu08
+Cores               : 9
+State               : FAILED
+Submit              : 2024-12-04T22:04:51
+Start               : 2024-12-04T22:05:18
+End                 : 2024-12-04T22:05:48
+Reserved Walltime   : 05:50:00
+Used Walltime       : 00:00:30
+Used CPU Time       : 00:00:09
+% User (Computation): 66.53%
+% System (I/O)      : 33.46%
+Mem Reserved        : 100G
+Max Mem Used        : 167.71M (175853568.0)
+Max Disk Write      : 8.17M (8566865.92)
+Max Disk Read       : 94.76M (99363061.76)
+Max-Mem-Used Node   : gpu08
+Max-Disk-Write Node : gpu08
+Max-Disk-Read Node  : gpu08
+Tesla T4
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Wed Dec  4 22:05:50 CST 2024 1733371550
+--------------------------------------------------------------
