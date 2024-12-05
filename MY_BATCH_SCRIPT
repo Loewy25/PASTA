@@ -12,7 +12,6 @@
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 
-
 # Load Conda
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 
@@ -23,22 +22,22 @@ ENV_NAME="pasta_env"
 if [ ! -d "/home/l.peiwang/miniconda3/envs/$ENV_NAME" ]; then
     conda create -n $ENV_NAME python=3.9 -y
     conda activate $ENV_NAME
-    conda env update --file /home/l.peiwang/PASTA/requirements.yaml --prune
+
+    # Install PyTorch with CUDA
+    conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
+
+    # Install other dependencies
+    conda install -c conda-forge numpy torchio libjpeg-turbo libpng -y
 else
     conda activate $ENV_NAME
 fi
-
-conda install -n $ENV_NAME -c conda-forge numpy torch torchvision torchaudio torchio libjpeg libpng --yes
-
-# Load CUDA and cuDNN modules (if required)
-#module load cuda/11.8 
-#module load cudnn/8.1.1 
 
 # Verify installation
 python -c "import sys; print('Python:', sys.version)"
 python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available())"
 python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
+python -c "import numpy; print('NumPy:', numpy.__version__)"
 
 # Run training
 python /home/l.peiwang/PASTA/train_mri2pet.py \
