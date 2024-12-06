@@ -126,7 +126,7 @@ def main():
         if args.synthesis:
             synth_folder = os.path.join(trainer.results_folder, 'syn_pet')
             eval_model = os.path.join(trainer.results_folder, 'model.pt')
-            trainer.evaluate(eval_model, synth_folder, synthesis=True, synthesis_folder = synth_folder, get_ROI_loss=True)
+            trainer.evaluate(eval_model, synth_folder, synthesis=True, synthesis_folder = synth_folder, get_ROI_loss=False)
         else:
             eval_folder = os.path.join(trainer.results_folder, 'eval')
             eval_model = os.path.join(trainer.results_folder, 'model.pt')
