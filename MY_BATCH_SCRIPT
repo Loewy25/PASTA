@@ -21,7 +21,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 eval "$(conda shell.bash hook)"
 
 # Fixed environment name
-ENV_NAME="pasta_env"
+ENV_NAME="pasta_env_new"
 
 # Check if the environment already exists
 conda env list | grep -q "$ENV_NAME"
