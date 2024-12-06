@@ -56,7 +56,7 @@ calculate_fid: true
 dataset: MRI2PET
 image_direction: axial
 num_slices: 96
-ROI_mask: '/home/yitong/dementia_ROI/5xenlarged_warped_ROIs.nii.gz'
+ROI_mask: null
 # '/path/to/ROIs.nii.gz'
 model_cycling: true
 with_DTI: false
