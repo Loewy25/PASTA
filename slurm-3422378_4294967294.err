@@ -1,0 +1,150 @@
+2024-12-06 10:25:55.506265: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 10:25:57.576812: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 10:26:23.066156: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+  0%|          | 0/64 [00:00<?, ?it/s]  2%|▏         | 1/64 [00:00<00:15,  4.17it/s]  3%|▎         | 2/64 [00:00<00:09,  6.20it/s]  5%|▍         | 3/64 [00:00<00:08,  7.02it/s]  6%|▋         | 4/64 [00:00<00:08,  7.29it/s]  8%|▊         | 5/64 [00:00<00:08,  7.15it/s] 11%|█         | 7/64 [00:00<00:06,  9.41it/s] 14%|█▍        | 9/64 [00:01<00:05,  9.35it/s] 16%|█▌        | 10/64 [00:01<00:06,  8.96it/s] 19%|█▉        | 12/64 [00:01<00:05,  9.95it/s] 22%|██▏       | 14/64 [00:01<00:04, 10.58it/s] 25%|██▌       | 16/64 [00:01<00:04, 11.09it/s] 28%|██▊       | 18/64 [00:01<00:04, 10.31it/s] 31%|███▏      | 20/64 [00:02<00:04, 10.70it/s] 34%|███▍      | 22/64 [00:02<00:04,  9.73it/s] 38%|███▊      | 24/64 [00:02<00:03, 10.87it/s] 41%|████      | 26/64 [00:02<00:03, 11.66it/s] 44%|████▍     | 28/64 [00:02<00:02, 12.02it/s] 47%|████▋     | 30/64 [00:02<00:02, 11.48it/s] 50%|█████     | 32/64 [00:03<00:02, 12.18it/s] 53%|█████▎    | 34/64 [00:03<00:02, 12.25it/s] 56%|█████▋    | 36/64 [00:03<00:03,  8.21it/s] 59%|█████▉    | 38/64 [00:03<00:02,  9.08it/s] 62%|██████▎   | 40/64 [00:04<00:02,  9.88it/s] 66%|██████▌   | 42/64 [00:04<00:02, 10.70it/s] 69%|██████▉   | 44/64 [00:04<00:01, 11.07it/s] 72%|███████▏  | 46/64 [00:04<00:01, 10.94it/s] 75%|███████▌  | 48/64 [00:04<00:01, 11.36it/s] 78%|███████▊  | 50/64 [00:04<00:01, 11.65it/s] 81%|████████▏ | 52/64 [00:05<00:00, 12.37it/s] 84%|████████▍ | 54/64 [00:05<00:00, 11.46it/s] 88%|████████▊ | 56/64 [00:05<00:00, 11.90it/s] 91%|█████████ | 58/64 [00:05<00:00, 11.55it/s] 94%|█████████▍| 60/64 [00:05<00:00, 10.29it/s] 97%|█████████▋| 62/64 [00:05<00:00, 10.61it/s]100%|██████████| 64/64 [00:06<00:00, 10.58it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/n │
+│ ibabel/loadsave.py:100 in load                                               │
+│                                                                              │
+│    97 │                                                                      │
+│    98 │   # Check file exists and is not empty                               │
+│    99 │   try:                                                               │
+│ ❱ 100 │   │   stat_result = os.stat(filename)                                │
+│   101 │   except OSError:                                                    │
+│   102 │   │   raise FileNotFoundError(f"No such file or no access: '{filenam │
+│   103 │   if stat_result.st_size <= 0:                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/home/yitong/dementia_ROI/5xenlarged_warped_ROIs.nii.gz'
+
+During handling of the above exception, another exception occurred:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:129 in main                           │
+│                                                                              │
+│   126 │   │   if args.synthesis:                                             │
+│   127 │   │   │   synth_folder = os.path.join(trainer.results_folder, 'syn_p │
+│   128 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│ ❱ 129 │   │   │   trainer.evaluate(eval_model, synth_folder, synthesis=True, │
+│   130 │   │   else:                                                          │
+│   131 │   │   │   eval_folder = os.path.join(trainer.results_folder, 'eval') │
+│   132 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│                                                                              │
+│ /home/l.peiwang/.local/lib/python3.10/site-packages/torch/utils/_contextlib. │
+│ py:115 in decorate_context                                                   │
+│                                                                              │
+│   112 │   @functools.wraps(func)                                             │
+│   113 │   def decorate_context(*args, **kwargs):                             │
+│   114 │   │   with ctx_factory():                                            │
+│ ❱ 115 │   │   │   return func(*args, **kwargs)                               │
+│   116 │                                                                      │
+│   117 │   return decorate_context                                            │
+│   118                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:551 in evaluate                 │
+│                                                                              │
+│   548 │   │                                                                  │
+│   549 │   │   if get_ROI_loss:                                               │
+│   550 │   │   │   assert self.ROI_mask is not None, 'ROI_mask is None'       │
+│ ❱ 551 │   │   │   self.ROI_mask = nib.load(self.ROI_mask).get_fdata()        │
+│   552 │   │   │   self.ROI_mask = tio.CropOrPad(self.eval_resolution)(self.R │
+│   553 │   │   │   print('use ROI loss, ROI_mask_shape:', self.ROI_mask.shape │
+│   554                                                                        │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/n │
+│ ibabel/loadsave.py:102 in load                                               │
+│                                                                              │
+│    99 │   try:                                                               │
+│   100 │   │   stat_result = os.stat(filename)                                │
+│   101 │   except OSError:                                                    │
+│ ❱ 102 │   │   raise FileNotFoundError(f"No such file or no access: '{filenam │
+│   103 │   if stat_result.st_size <= 0:                                       │
+│   104 │   │   raise ImageFileError(f"Empty file: '{filename}'")              │
+│   105                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: No such file or no access: 
+'/home/yitong/dementia_ROI/5xenlarged_warped_ROIs.nii.gz'
+2024-12-06 10:28:22.723652: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 10:28:22.992975: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 10:28:23.657038: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+  0%|          | 0/64 [00:00<?, ?it/s]  3%|▎         | 2/64 [00:00<00:04, 14.93it/s]  6%|▋         | 4/64 [00:00<00:04, 14.90it/s]  9%|▉         | 6/64 [00:00<00:03, 14.94it/s] 12%|█▎        | 8/64 [00:00<00:03, 14.96it/s] 16%|█▌        | 10/64 [00:00<00:03, 15.05it/s] 19%|█▉        | 12/64 [00:00<00:03, 14.89it/s] 22%|██▏       | 14/64 [00:00<00:03, 15.00it/s] 25%|██▌       | 16/64 [00:01<00:03, 15.14it/s] 28%|██▊       | 18/64 [00:01<00:03, 15.16it/s] 31%|███▏      | 20/64 [00:01<00:02, 15.30it/s] 34%|███▍      | 22/64 [00:01<00:02, 15.16it/s] 38%|███▊      | 24/64 [00:01<00:02, 15.19it/s] 41%|████      | 26/64 [00:01<00:02, 15.16it/s] 44%|████▍     | 28/64 [00:01<00:02, 15.07it/s] 47%|████▋     | 30/64 [00:01<00:02, 15.02it/s] 50%|█████     | 32/64 [00:02<00:02, 15.00it/s] 53%|█████▎    | 34/64 [00:02<00:02, 15.00it/s] 56%|█████▋    | 36/64 [00:02<00:01, 14.89it/s] 59%|█████▉    | 38/64 [00:02<00:01, 14.90it/s] 62%|██████▎   | 40/64 [00:02<00:01, 15.00it/s] 66%|██████▌   | 42/64 [00:02<00:01, 14.92it/s] 69%|██████▉   | 44/64 [00:02<00:01, 14.99it/s] 72%|███████▏  | 46/64 [00:03<00:01, 15.06it/s] 75%|███████▌  | 48/64 [00:03<00:01, 15.02it/s] 78%|███████▊  | 50/64 [00:03<00:00, 15.01it/s] 81%|████████▏ | 52/64 [00:03<00:00, 15.06it/s] 84%|████████▍ | 54/64 [00:03<00:00, 14.96it/s] 88%|████████▊ | 56/64 [00:03<00:00, 14.84it/s] 91%|█████████ | 58/64 [00:03<00:00, 14.74it/s] 94%|█████████▍| 60/64 [00:04<00:00, 14.75it/s] 97%|█████████▋| 62/64 [00:04<00:00, 14.69it/s]100%|██████████| 64/64 [00:04<00:00, 15.21it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/n │
+│ ibabel/loadsave.py:100 in load                                               │
+│                                                                              │
+│    97 │                                                                      │
+│    98 │   # Check file exists and is not empty                               │
+│    99 │   try:                                                               │
+│ ❱ 100 │   │   stat_result = os.stat(filename)                                │
+│   101 │   except OSError:                                                    │
+│   102 │   │   raise FileNotFoundError(f"No such file or no access: '{filenam │
+│   103 │   if stat_result.st_size <= 0:                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/home/yitong/dementia_ROI/5xenlarged_warped_ROIs.nii.gz'
+
+During handling of the above exception, another exception occurred:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:129 in main                           │
+│                                                                              │
+│   126 │   │   if args.synthesis:                                             │
+│   127 │   │   │   synth_folder = os.path.join(trainer.results_folder, 'syn_p │
+│   128 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│ ❱ 129 │   │   │   trainer.evaluate(eval_model, synth_folder, synthesis=True, │
+│   130 │   │   else:                                                          │
+│   131 │   │   │   eval_folder = os.path.join(trainer.results_folder, 'eval') │
+│   132 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│                                                                              │
+│ /home/l.peiwang/.local/lib/python3.10/site-packages/torch/utils/_contextlib. │
+│ py:115 in decorate_context                                                   │
+│                                                                              │
+│   112 │   @functools.wraps(func)                                             │
+│   113 │   def decorate_context(*args, **kwargs):                             │
+│   114 │   │   with ctx_factory():                                            │
+│ ❱ 115 │   │   │   return func(*args, **kwargs)                               │
+│   116 │                                                                      │
+│   117 │   return decorate_context                                            │
+│   118                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:551 in evaluate                 │
+│                                                                              │
+│   548 │   │                                                                  │
+│   549 │   │   if get_ROI_loss:                                               │
+│   550 │   │   │   assert self.ROI_mask is not None, 'ROI_mask is None'       │
+│ ❱ 551 │   │   │   self.ROI_mask = nib.load(self.ROI_mask).get_fdata()        │
+│   552 │   │   │   self.ROI_mask = tio.CropOrPad(self.eval_resolution)(self.R │
+│   553 │   │   │   print('use ROI loss, ROI_mask_shape:', self.ROI_mask.shape │
+│   554                                                                        │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/n │
+│ ibabel/loadsave.py:102 in load                                               │
+│                                                                              │
+│    99 │   try:                                                               │
+│   100 │   │   stat_result = os.stat(filename)                                │
+│   101 │   except OSError:                                                    │
+│ ❱ 102 │   │   raise FileNotFoundError(f"No such file or no access: '{filenam │
+│   103 │   if stat_result.st_size <= 0:                                       │
+│   104 │   │   raise ImageFileError(f"Empty file: '{filename}'")              │
+│   105                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: No such file or no access: 
+'/home/yitong/dementia_ROI/5xenlarged_warped_ROIs.nii.gz'
