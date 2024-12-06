@@ -1,0 +1,80 @@
+2024-12-06 11:50:00.712287: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 11:50:02.898052: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 11:50:27.417617: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+  0%|          | 0/64 [00:00<?, ?it/s]  2%|▏         | 1/64 [00:00<00:21,  2.96it/s]  5%|▍         | 3/64 [00:00<00:09,  6.32it/s]  6%|▋         | 4/64 [00:00<00:08,  6.70it/s]  8%|▊         | 5/64 [00:00<00:08,  7.10it/s] 11%|█         | 7/64 [00:00<00:06,  9.28it/s] 14%|█▍        | 9/64 [00:01<00:05,  9.66it/s] 17%|█▋        | 11/64 [00:01<00:05,  9.78it/s] 20%|██        | 13/64 [00:01<00:05,  9.64it/s] 23%|██▎       | 15/64 [00:01<00:04, 10.23it/s] 27%|██▋       | 17/64 [00:01<00:04, 11.16it/s] 30%|██▉       | 19/64 [00:02<00:04, 10.41it/s] 33%|███▎      | 21/64 [00:02<00:03, 10.96it/s] 36%|███▌      | 23/64 [00:02<00:03, 11.42it/s] 39%|███▉      | 25/64 [00:02<00:03, 12.50it/s] 42%|████▏     | 27/64 [00:02<00:02, 12.62it/s] 45%|████▌     | 29/64 [00:02<00:02, 12.90it/s] 48%|████▊     | 31/64 [00:02<00:02, 12.96it/s] 52%|█████▏    | 33/64 [00:03<00:02, 13.55it/s] 55%|█████▍    | 35/64 [00:03<00:03,  8.85it/s] 58%|█████▊    | 37/64 [00:03<00:02,  9.87it/s] 61%|██████    | 39/64 [00:03<00:02, 10.68it/s] 64%|██████▍   | 41/64 [00:03<00:01, 11.50it/s] 67%|██████▋   | 43/64 [00:04<00:01, 11.13it/s] 70%|███████   | 45/64 [00:04<00:02,  8.17it/s] 73%|███████▎  | 47/64 [00:04<00:01,  8.78it/s] 77%|███████▋  | 49/64 [00:04<00:01, 10.03it/s] 80%|███████▉  | 51/64 [00:04<00:01, 11.24it/s] 83%|████████▎ | 53/64 [00:05<00:00, 11.14it/s] 86%|████████▌ | 55/64 [00:05<00:00, 10.93it/s] 89%|████████▉ | 57/64 [00:05<00:00, 11.21it/s] 92%|█████████▏| 59/64 [00:05<00:00, 11.00it/s] 95%|█████████▌| 61/64 [00:05<00:00, 10.51it/s] 98%|█████████▊| 63/64 [00:06<00:00, 11.37it/s]100%|██████████| 64/64 [00:06<00:00, 10.52it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:129 in main                           │
+│                                                                              │
+│   126 │   │   if args.synthesis:                                             │
+│   127 │   │   │   synth_folder = os.path.join(trainer.results_folder, 'syn_p │
+│   128 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│ ❱ 129 │   │   │   trainer.evaluate(eval_model, synth_folder, synthesis=True, │
+│   130 │   │   else:                                                          │
+│   131 │   │   │   eval_folder = os.path.join(trainer.results_folder, 'eval') │
+│   132 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│                                                                              │
+│ /home/l.peiwang/.local/lib/python3.10/site-packages/torch/utils/_contextlib. │
+│ py:115 in decorate_context                                                   │
+│                                                                              │
+│   112 │   @functools.wraps(func)                                             │
+│   113 │   def decorate_context(*args, **kwargs):                             │
+│   114 │   │   with ctx_factory():                                            │
+│ ❱ 115 │   │   │   return func(*args, **kwargs)                               │
+│   116 │                                                                      │
+│   117 │   return decorate_context                                            │
+│   118                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:557 in evaluate                 │
+│                                                                              │
+│   554 │   │   │                                                              │
+│   555 │   │   │   roi_losses = []                                            │
+│   556 │   │                                                                  │
+│ ❱ 557 │   │   data = torch.load(checkpoint, map_location = self.device)      │
+│   558 │   │                                                                  │
+│   559 │   │   msg = self.model.load_state_dict(data['model'], strict=False)  │
+│   560 │   │   print('======load pretrained model successfully========')      │
+│                                                                              │
+│ /home/l.peiwang/.local/lib/python3.10/site-packages/torch/serialization.py:7 │
+│ 91 in load                                                                   │
+│                                                                              │
+│    788 │   if 'encoding' not in pickle_load_args.keys():                     │
+│    789 │   │   pickle_load_args['encoding'] = 'utf-8'                        │
+│    790 │                                                                     │
+│ ❱  791 │   with _open_file_like(f, 'rb') as opened_file:                     │
+│    792 │   │   if _is_zipfile(opened_file):                                  │
+│    793 │   │   │   # The zipfile reader is going to advance the current file │
+│    794 │   │   │   # If we want to actually tail call to torch.jit.load, we  │
+│                                                                              │
+│ /home/l.peiwang/.local/lib/python3.10/site-packages/torch/serialization.py:2 │
+│ 71 in _open_file_like                                                        │
+│                                                                              │
+│    268                                                                       │
+│    269 def _open_file_like(name_or_buffer, mode):                            │
+│    270 │   if _is_path(name_or_buffer):                                      │
+│ ❱  271 │   │   return _open_file(name_or_buffer, mode)                       │
+│    272 │   else:                                                             │
+│    273 │   │   if 'w' in mode:                                               │
+│    274 │   │   │   return _open_buffer_writer(name_or_buffer)                │
+│                                                                              │
+│ /home/l.peiwang/.local/lib/python3.10/site-packages/torch/serialization.py:2 │
+│ 52 in __init__                                                               │
+│                                                                              │
+│    249                                                                       │
+│    250 class _open_file(_opener):                                            │
+│    251 │   def __init__(self, name, mode):                                   │
+│ ❱  252 │   │   super().__init__(open(name, mode))                            │
+│    253 │                                                                     │
+│    254 │   def __exit__(self, *args):                                        │
+│    255 │   │   self.file_like.close()                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/scratch/l.peiwang/model.pt'
