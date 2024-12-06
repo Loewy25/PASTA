@@ -12,21 +12,34 @@
 #SBATCH --output=slurm-%A_%a.out    # Standard output file
 #SBATCH --error=slurm-%A_%a.err     # Standard error file
 
-# Load Conda
-source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
+# Load required modules first (if applicable)
+module load cuda/11.3
+module load cudnn/8.1.1
 
-# Initialize Conda for non-interactive shell
+# Source Conda
+source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 eval "$(conda shell.bash hook)"
 
-# Define a unique environment name to avoid conflicts
-ENV_NAME="pasta_env_$(date +%Y%m%d%H%M%S)"
+# Fixed environment name
+ENV_NAME="pasta_env"
 
-# Create the Conda environment from the YAML file
-conda env create -n $ENV_NAME --file /home/l.peiwang/PASTA/requirements.yaml
+# Check if the environment already exists
+conda env list | grep -q "$ENV_NAME"
+ENV_EXISTS=$?
 
-# Activate the Conda environment
-conda activate $ENV_NAME
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+if [ $ENV_EXISTS -ne 0 ]; then
+    echo "Conda environment $ENV_NAME does not exist. Creating it..."
+    # Create the Conda environment from the YAML file
+    conda env create -n $ENV_NAME --file /home/l.peiwang/PASTA/requirements.yaml
+
+    # Activate the Conda environment
+    conda activate $ENV_NAME
+    # Install PyTorch and related packages as needed
+    conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+else
+    echo "Conda environment $ENV_NAME already exists. Activating it..."
+    conda activate $ENV_NAME
+fi
 
 # Verify which Python is being used
 echo "Using Python from: $(which python)"
@@ -37,11 +50,6 @@ python -c "import numpy; print('NumPy:', numpy.__version__)"
 python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
 python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
-
-# Load CUDA modules if required (adjust versions as needed)
-module load cuda/11.3
-module load cudnn/8.1.1
-
 
 # Run training
 python /home/l.peiwang/PASTA/train_mri2pet.py \
@@ -54,8 +62,4 @@ python /home/l.peiwang/PASTA/train_mri2pet.py \
     --results_folder /scratch/l.peiwang/results/ \
     --eval_mode True \
     --synthesis True
-
-# Deactivate and remove the Conda environment to avoid clutter
-conda deactivate
-conda env remove -n $ENV_NAME
 
