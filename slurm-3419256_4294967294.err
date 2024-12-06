@@ -1,0 +1,170 @@
+/home/l.peiwang/miniconda3/lib/python3.12/argparse.py:2006: FutureWarning: `remote_definition` is deprecated and will be removed in 25.9. Use `conda env create --file=URL` instead.
+  action(self, namespace, argument_values, option_string)
+2024-12-05 23:12:45.234583: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-05 23:12:46.952458: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-05 23:13:09.084708: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:95 in main                            │
+│                                                                              │
+│    92 │   │   rescale_intensity = args.rescale_intensity,                    │
+│    93 │   )                                                                  │
+│    94 │                                                                      │
+│ ❱  95 │   trainer = Trainer(                                                 │
+│    96 │   │   diffusion,                                                     │
+│    97 │   │   folder = args.data_dir,                                        │
+│    98 │   │   input_slice_channel = args.input_slice_channel,                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:153 in __init__                 │
+│                                                                              │
+│   150 │   │   │   │   if self.eval_dataset == 'ADNI':                        │
+│   151 │   │   │   │   │   self.test_data = folder + 'test.h5' ###            │
+│   152 │   │   │   │   │   # use whole scan per iteration                     │
+│ ❱ 153 │   │   │   │   │   ds_test = SlicedScanMRI2PETDataset(eval_resolution │
+│   154 │   │   │   │   │   │   direction = image_direction, random_flip=None, │
+│   155 │   │   │   │   │   │   dx_labels = dx_labels)                         │
+│   156 │   │   │   │   else:                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:64 in __init__                 │
+│                                                                              │
+│    61 │   │   self.resample_mri = resample_mri                               │
+│    62 │   │   self.dx_labels = dx_labels                                     │
+│    63 │   │                                                                  │
+│ ❱  64 │   │   self._load()                                                   │
+│    65 │                                                                      │
+│    66 │   def _load(self):                                                   │
+│    67 │   │   mri_data = []                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:78 in _load                    │
+│                                                                              │
+│    75 │   │                                                                  │
+│    76 │   │   if self.data_path is not None and 'h5' in self.data_path:      │
+│    77 │   │   │   print('loaded from h5 file')                               │
+│ ❱  78 │   │   │   with h5py.File(self.data_path, mode='r') as file:          │
+│    79 │   │   │   │   for name, group in tqdm(file.items(), total=len(file)) │
+│    80 │   │   │   │   │   if name == "stats":                                │
+│    81 │   │   │   │   │   │   self.tabular_mean = group["tabular/mean"][:]   │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/h │
+│ 5py/_hl/files.py:567 in __init__                                             │
+│                                                                              │
+│   564 │   │   │   │   fcpl = make_fcpl(track_order=track_order, fs_strategy= │
+│   565 │   │   │   │   │   │   │   │    fs_persist=fs_persist, fs_threshold=f │
+│   566 │   │   │   │   │   │   │   │    fs_page_size=fs_page_size)            │
+│ ❱ 567 │   │   │   │   fid = make_fid(name, mode, userblock_size, fapl, fcpl, │
+│   568 │   │   │                                                              │
+│   569 │   │   │   if isinstance(libver, tuple):                              │
+│   570 │   │   │   │   self._libver = libver                                  │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/h │
+│ 5py/_hl/files.py:231 in make_fid                                             │
+│                                                                              │
+│   228 │   │   flags = h5f.ACC_RDONLY                                         │
+│   229 │   │   if swmr and swmr_support:                                      │
+│   230 │   │   │   flags |= h5f.ACC_SWMR_READ                                 │
+│ ❱ 231 │   │   fid = h5f.open(name, flags, fapl=fapl)                         │
+│   232 │   elif mode == 'r+':                                                 │
+│   233 │   │   fid = h5f.open(name, h5f.ACC_RDWR, fapl=fapl)                  │
+│   234 │   elif mode in ['w-', 'x']:                                          │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ in h5py.h5f.open:106                                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] Unable to open file (unable to open file: name = 
+'/scratch/l.peiwang/cd_dataset.h5test.h5', errno = 2, error message = 'No such 
+file or directory', flags = 0, o_flags = 0)
+2024-12-05 23:14:15.471490: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-05 23:14:15.518767: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-05 23:14:16.177014: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:95 in main                            │
+│                                                                              │
+│    92 │   │   rescale_intensity = args.rescale_intensity,                    │
+│    93 │   )                                                                  │
+│    94 │                                                                      │
+│ ❱  95 │   trainer = Trainer(                                                 │
+│    96 │   │   diffusion,                                                     │
+│    97 │   │   folder = args.data_dir,                                        │
+│    98 │   │   input_slice_channel = args.input_slice_channel,                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:153 in __init__                 │
+│                                                                              │
+│   150 │   │   │   │   if self.eval_dataset == 'ADNI':                        │
+│   151 │   │   │   │   │   self.test_data = folder + 'test.h5' ###            │
+│   152 │   │   │   │   │   # use whole scan per iteration                     │
+│ ❱ 153 │   │   │   │   │   ds_test = SlicedScanMRI2PETDataset(eval_resolution │
+│   154 │   │   │   │   │   │   direction = image_direction, random_flip=None, │
+│   155 │   │   │   │   │   │   dx_labels = dx_labels)                         │
+│   156 │   │   │   │   else:                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:64 in __init__                 │
+│                                                                              │
+│    61 │   │   self.resample_mri = resample_mri                               │
+│    62 │   │   self.dx_labels = dx_labels                                     │
+│    63 │   │                                                                  │
+│ ❱  64 │   │   self._load()                                                   │
+│    65 │                                                                      │
+│    66 │   def _load(self):                                                   │
+│    67 │   │   mri_data = []                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:78 in _load                    │
+│                                                                              │
+│    75 │   │                                                                  │
+│    76 │   │   if self.data_path is not None and 'h5' in self.data_path:      │
+│    77 │   │   │   print('loaded from h5 file')                               │
+│ ❱  78 │   │   │   with h5py.File(self.data_path, mode='r') as file:          │
+│    79 │   │   │   │   for name, group in tqdm(file.items(), total=len(file)) │
+│    80 │   │   │   │   │   if name == "stats":                                │
+│    81 │   │   │   │   │   │   self.tabular_mean = group["tabular/mean"][:]   │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/h │
+│ 5py/_hl/files.py:567 in __init__                                             │
+│                                                                              │
+│   564 │   │   │   │   fcpl = make_fcpl(track_order=track_order, fs_strategy= │
+│   565 │   │   │   │   │   │   │   │    fs_persist=fs_persist, fs_threshold=f │
+│   566 │   │   │   │   │   │   │   │    fs_page_size=fs_page_size)            │
+│ ❱ 567 │   │   │   │   fid = make_fid(name, mode, userblock_size, fapl, fcpl, │
+│   568 │   │   │                                                              │
+│   569 │   │   │   if isinstance(libver, tuple):                              │
+│   570 │   │   │   │   self._libver = libver                                  │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/h │
+│ 5py/_hl/files.py:231 in make_fid                                             │
+│                                                                              │
+│   228 │   │   flags = h5f.ACC_RDONLY                                         │
+│   229 │   │   if swmr and swmr_support:                                      │
+│   230 │   │   │   flags |= h5f.ACC_SWMR_READ                                 │
+│ ❱ 231 │   │   fid = h5f.open(name, flags, fapl=fapl)                         │
+│   232 │   elif mode == 'r+':                                                 │
+│   233 │   │   fid = h5f.open(name, h5f.ACC_RDWR, fapl=fapl)                  │
+│   234 │   elif mode in ['w-', 'x']:                                          │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ in h5py.h5f.open:106                                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] Unable to open file (unable to open file: name = 
+'/scratch/l.peiwang/cd_dataset.h5test.h5', errno = 2, error message = 'No such 
+file or directory', flags = 0, o_flags = 0)

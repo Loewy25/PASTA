@@ -1,0 +1,38 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Thu Dec  5 22:21:07 CST 2024 1733458867
+Job ID:		3418898
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Thu Dec  5 22:21:07 CST 2024 1733458867
+--------------------------------------------------------------
+Conda environment pasta_env already exists. Activating it...
+Using Python from: /home/l.peiwang/miniconda3/envs/pasta_env/bin/python
+Python: 3.9.20 (main, Oct  3 2024, 07:27:41) 
+[GCC 11.2.0]
+--------------------------------------------------------------
+Begin Slurm Epilogue Thu Dec  5 22:21:32 CST 2024 1733458892
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpu08
+Cores               : 9
+State               : FAILED
+Submit              : 2024-12-05T22:21:06
+Start               : 2024-12-05T22:21:07
+End                 : 2024-12-05T22:21:30
+Reserved Walltime   : 05:50:00
+Used Walltime       : 00:00:23
+Used CPU Time       : 00:00:02
+% User (Computation): 72.00%
+% System (I/O)      :  0.00%
+Mem Reserved        : 100G
+Max Mem Used        : 60.00K (61440.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : gpu08
+Max-Disk-Write Node : gpu08
+Max-Disk-Read Node  : gpu08
+Tesla T4
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Thu Dec  5 22:21:32 CST 2024 1733458892
+--------------------------------------------------------------
