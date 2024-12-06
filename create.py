@@ -255,7 +255,7 @@ def load_mri_pet_data(task):
 def create_hdf5(task="cd"):
     """
     Create three separate HDF5 files (train, validation, and test) from MRI and PET data 
-    with random tabular data and store them in the repository.
+    with random tabular data and store them in the specified scratch directory.
     """
     # Load MRI, PET, and labels
     mri_data, pet_data, labels = load_mri_pet_data(task)
@@ -275,8 +275,8 @@ def create_hdf5(task="cd"):
     mean_tabular = np.mean(tabular_data, axis=0)
     std_tabular = np.std(tabular_data, axis=0)
 
-    # Define output directory
-    output_dir = os.path.join(os.getcwd(), "datasets")
+    # Define output directory in scratch
+    output_dir = os.path.join("/scratch/l.peiwang", "datasets")  # Replace with your scratch directory if needed
     os.makedirs(output_dir, exist_ok=True)
 
     # Split the dataset into train, val, test (70%, 15%, 15%)
@@ -317,7 +317,7 @@ def create_hdf5(task="cd"):
 
         print(f"HDF5 file created and saved to {file_path} with {len(indices)} subjects.")
 
-    # Write train, val, test files using fixed filenames
+    # Write train, val, test files using fixed filenames in the scratch directory
     train_file_path = os.path.join(output_dir, "train.h5")
     val_file_path = os.path.join(output_dir, "val.h5")
     test_file_path = os.path.join(output_dir, "test.h5")
@@ -329,4 +329,3 @@ def create_hdf5(task="cd"):
 
 # Run the modified function
 create_hdf5(task="cd")
-
