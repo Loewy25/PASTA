@@ -51,15 +51,8 @@ python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:',
 python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
-# Run training
+
 python /home/l.peiwang/PASTA/train_mri2pet.py \
     --data_dir /scratch/l.peiwang/ \
     --results_folder /scratch/l.peiwang/results/
-
-# Run evaluation
-python /home/l.peiwang/PASTA/train_mri2pet.py \
-    --data_dir /scratch/l.peiwang/ \
-    --results_folder /scratch/l.peiwang/results/ \
-    --eval_mode True \
-    --synthesis True
 
