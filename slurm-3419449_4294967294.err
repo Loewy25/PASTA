@@ -1,0 +1,152 @@
+2024-12-06 01:02:17.944766: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 01:02:19.818502: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 01:02:42.692585: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+  0%|          | 0/64 [00:00<?, ?it/s]  0%|          | 0/64 [00:00<?, ?it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:95 in main                            │
+│                                                                              │
+│    92 │   │   rescale_intensity = args.rescale_intensity,                    │
+│    93 │   )                                                                  │
+│    94 │                                                                      │
+│ ❱  95 │   trainer = Trainer(                                                 │
+│    96 │   │   diffusion,                                                     │
+│    97 │   │   folder = args.data_dir,                                        │
+│    98 │   │   input_slice_channel = args.input_slice_channel,                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:153 in __init__                 │
+│                                                                              │
+│   150 │   │   │   │   if self.eval_dataset == 'ADNI':                        │
+│   151 │   │   │   │   │   self.test_data = folder + 'test.h5' ###            │
+│   152 │   │   │   │   │   # use whole scan per iteration                     │
+│ ❱ 153 │   │   │   │   │   ds_test = SlicedScanMRI2PETDataset(eval_resolution │
+│   154 │   │   │   │   │   │   direction = image_direction, random_flip=None, │
+│   155 │   │   │   │   │   │   dx_labels = dx_labels)                         │
+│   156 │   │   │   │   else:                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:64 in __init__                 │
+│                                                                              │
+│    61 │   │   self.resample_mri = resample_mri                               │
+│    62 │   │   self.dx_labels = dx_labels                                     │
+│    63 │   │                                                                  │
+│ ❱  64 │   │   self._load()                                                   │
+│    65 │                                                                      │
+│    66 │   def _load(self):                                                   │
+│    67 │   │   mri_data = []                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:93 in _load                    │
+│                                                                              │
+│    90 │   │   │   │   │   │   │   MRI_shape = PET_shape                      │
+│    91 │   │   │   │   │   │   │   assert input_mri_data.shape == PET_shape   │
+│    92 │   │   │   │   │   │   else:                                          │
+│ ❱  93 │   │   │   │   │   │   │   input_mri_data = group['MRI/T1/data'][:]   │
+│    94 │   │   │   │   │   │                                                  │
+│    95 │   │   │   │   │   │   _pet_data = group['PET/FDG/data'][:]           │
+│    96 │   │   │   │   │   │   _mri_data = input_mri_data                     │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/h │
+│ 5py/_hl/group.py:357 in __getitem__                                          │
+│                                                                              │
+│   354 │   │   │   if oid is None:                                            │
+│   355 │   │   │   │   raise ValueError("Invalid HDF5 object reference")      │
+│   356 │   │   elif isinstance(name, (bytes, str)):                           │
+│ ❱ 357 │   │   │   oid = h5o.open(self.id, self._e(name), lapl=self._lapl)    │
+│   358 │   │   else:                                                          │
+│   359 │   │   │   raise TypeError("Accessing a group is done with bytes or s │
+│   360 │   │   │   │   │   │   │   "not {}".format(type(name)))               │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ in h5py.h5o.open:190                                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+KeyError: 'Unable to open object (message type not found)'
+2024-12-06 01:04:13.771668: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 01:04:13.821321: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 01:04:14.498770: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+  0%|          | 0/64 [00:00<?, ?it/s]  0%|          | 0/64 [00:00<?, ?it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:95 in main                            │
+│                                                                              │
+│    92 │   │   rescale_intensity = args.rescale_intensity,                    │
+│    93 │   )                                                                  │
+│    94 │                                                                      │
+│ ❱  95 │   trainer = Trainer(                                                 │
+│    96 │   │   diffusion,                                                     │
+│    97 │   │   folder = args.data_dir,                                        │
+│    98 │   │   input_slice_channel = args.input_slice_channel,                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:153 in __init__                 │
+│                                                                              │
+│   150 │   │   │   │   if self.eval_dataset == 'ADNI':                        │
+│   151 │   │   │   │   │   self.test_data = folder + 'test.h5' ###            │
+│   152 │   │   │   │   │   # use whole scan per iteration                     │
+│ ❱ 153 │   │   │   │   │   ds_test = SlicedScanMRI2PETDataset(eval_resolution │
+│   154 │   │   │   │   │   │   direction = image_direction, random_flip=None, │
+│   155 │   │   │   │   │   │   dx_labels = dx_labels)                         │
+│   156 │   │   │   │   else:                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:64 in __init__                 │
+│                                                                              │
+│    61 │   │   self.resample_mri = resample_mri                               │
+│    62 │   │   self.dx_labels = dx_labels                                     │
+│    63 │   │                                                                  │
+│ ❱  64 │   │   self._load()                                                   │
+│    65 │                                                                      │
+│    66 │   def _load(self):                                                   │
+│    67 │   │   mri_data = []                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:93 in _load                    │
+│                                                                              │
+│    90 │   │   │   │   │   │   │   MRI_shape = PET_shape                      │
+│    91 │   │   │   │   │   │   │   assert input_mri_data.shape == PET_shape   │
+│    92 │   │   │   │   │   │   else:                                          │
+│ ❱  93 │   │   │   │   │   │   │   input_mri_data = group['MRI/T1/data'][:]   │
+│    94 │   │   │   │   │   │                                                  │
+│    95 │   │   │   │   │   │   _pet_data = group['PET/FDG/data'][:]           │
+│    96 │   │   │   │   │   │   _mri_data = input_mri_data                     │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new/lib/python3.10/site-packages/h │
+│ 5py/_hl/group.py:357 in __getitem__                                          │
+│                                                                              │
+│   354 │   │   │   if oid is None:                                            │
+│   355 │   │   │   │   raise ValueError("Invalid HDF5 object reference")      │
+│   356 │   │   elif isinstance(name, (bytes, str)):                           │
+│ ❱ 357 │   │   │   oid = h5o.open(self.id, self._e(name), lapl=self._lapl)    │
+│   358 │   │   else:                                                          │
+│   359 │   │   │   raise TypeError("Accessing a group is done with bytes or s │
+│   360 │   │   │   │   │   │   │   "not {}".format(type(name)))               │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ in h5py.h5o.open:190                                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+KeyError: 'Unable to open object (message type not found)'
