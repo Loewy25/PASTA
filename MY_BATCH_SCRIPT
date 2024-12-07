@@ -3,7 +3,7 @@
 #SBATCH --job-name=test             # Assign a descriptive job name
 #SBATCH -N 1                        # Request 1 node
 #SBATCH --mem=100G                  # Request 100GB memory
-#SBATCH -t 50:50:00                  # Set maximum time limit
+#SBATCH -t 40:50:00                  # Set maximum time limit
 #SBATCH --gres=gpu:nvidia_a100_80:1                # Request 1 GPU
 #SBATCH --partition=tier2_gpu_dev       # Specify GPU partition
 #SBATCH --account=aristeidis_sotiras
