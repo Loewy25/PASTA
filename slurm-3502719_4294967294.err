@@ -1,0 +1,85 @@
+2024-12-06 18:19:31.933994: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-06 18:19:33.792559: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-06 18:19:56.084103: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+  0%|          | 0/290 [00:00<?, ?it/s]  0%|          | 0/290 [00:00<?, ?it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/PASTA/train_mri2pet.py:139 in <module>                       │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/train_mri2pet.py:95 in main                            │
+│                                                                              │
+│    92 │   │   rescale_intensity = args.rescale_intensity,                    │
+│    93 │   )                                                                  │
+│    94 │                                                                      │
+│ ❱  95 │   trainer = Trainer(                                                 │
+│    96 │   │   diffusion,                                                     │
+│    97 │   │   folder = args.data_dir,                                        │
+│    98 │   │   input_slice_channel = args.input_slice_channel,                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/trainer/trainer.py:136 in __init__                 │
+│                                                                              │
+│   133 │   │   │   │   train_data = folder + 'train.h5'                       │
+│   134 │   │   │   │   valid_data = folder + 'valid.h5'                       │
+│   135 │   │   │   │                                                          │
+│ ❱ 136 │   │   │   │   self.ds = MRI2PET_2_5D_Dataset(self.image_size, data_p │
+│   137 │   │   │   │   │   direction = image_direction, num_slices = num_slic │
+│   138 │   │   │   │   │   random_flip = False, random_affine = False,        │
+│   139 │   │   │   │   │   ROI_mask = ROI_mask, dx_labels = dx_labels)        │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:278 in __init__                │
+│                                                                              │
+│   275 │   │   self.ROI_mask = ROI_mask                                       │
+│   276 │   │   self.dx_labels = dx_labels                                     │
+│   277 │   │                                                                  │
+│ ❱ 278 │   │   self._load()                                                   │
+│   279 │                                                                      │
+│   280 │   def _load(self):                                                   │
+│   281 │   │   mri_data = []                                                  │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/datasets/dataset.py:456 in _load                   │
+│                                                                              │
+│   453 │   │   │   │   │   │   │                                              │
+│   454 │   │   │   │   │   │   │   else:                                      │
+│   455 │   │   │   │   │   │   │   │   for i in range(-self.num_slices // 2,  │
+│ ❱ 456 │   │   │   │   │   │   │   │   │   _mri_data = get_neighboring_slices │
+│   457 │   │   │   │   │   │   │   │   │   _pet_data = get_neighboring_slices │
+│   458 │   │   │   │   │   │   │   │   │   _tabular_data = group['tabular'][: │
+│   459 │   │   │   │   │   │   │   │   │   _diagnosis = group.attrs['DX']     │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/utils/data_utils.py:215 in get_neighboring_slices  │
+│                                                                              │
+│   212 │   │   neighboring_slices = pad_slices(neighboring_slices, padding_be │
+│   213 │                                                                      │
+│   214 │   if padding_after > 0:                                              │
+│ ❱ 215 │   │   neighboring_slices = pad_slices(neighboring_slices, padding_af │
+│   216 │                                                                      │
+│   217 │   # Stack the slices to form the image with output_dim channels      │
+│   218 │   _output_data = np.stack(neighboring_slices, axis=0)                │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/utils/data_utils.py:173 in pad_slices              │
+│                                                                              │
+│   170 │   Helper function to pad the given slices_list with zeros.           │
+│   171 │   """                                                                │
+│   172 │   # Create the zero slices                                           │
+│ ❱ 173 │   zero_slices = [np.zeros_like(slices_list[0]) for _ in range(num_sl │
+│   174 │                                                                      │
+│   175 │   # Add the zero slices to the given list                            │
+│   176 │   if at_beginning:                                                   │
+│                                                                              │
+│ /home/l.peiwang/PASTA/src/utils/data_utils.py:173 in <listcomp>              │
+│                                                                              │
+│   170 │   Helper function to pad the given slices_list with zeros.           │
+│   171 │   """                                                                │
+│   172 │   # Create the zero slices                                           │
+│ ❱ 173 │   zero_slices = [np.zeros_like(slices_list[0]) for _ in range(num_sl │
+│   174 │                                                                      │
+│   175 │   # Add the zero slices to the given list                            │
+│   176 │   if at_beginning:                                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+IndexError: list index out of range
