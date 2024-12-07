@@ -318,8 +318,8 @@ class MRI2PET_2_5D_Dataset(Dataset):
                         if self.direction == 'coronal':
                             max_slice_index = PET_shape[1] - 1
                             if self.num_slices == 1:
-                                _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2 + 1, input_mri_data)
-                                _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2 + 1, input_pet_data)
+                                _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2 , input_mri_data)
+                                _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2 , input_pet_data)
                                 _tabular_data = group['tabular'][:]
                                 _diagnosis = group.attrs['DX']
 
@@ -329,7 +329,7 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                 tabular_data.append(_tabular_data)
                                 diagnosis.append(_diagnosis)
                                 mri_uid.append(name)
-                                slice_index.append(PET_shape[1] // 2 + 1)
+                                slice_index.append(PET_shape[1] // 2 )
 
                             elif self.num_slices == 'all':
                                 for i in range(PET_shape[1]):
@@ -351,8 +351,8 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                     slice_index.append(i)
                             else:
                                 for i in range(-self.num_slices // 2, self.num_slices // 2):
-                                    _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2 + 1 + i, input_mri_data)
-                                    _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2 + 1 + i, input_pet_data)
+                                    _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2  + i, input_mri_data)
+                                    _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[1] // 2  + i, input_pet_data)
                                     _tabular_data = group['tabular'][:]
                                     _diagnosis = group.attrs['DX']
 
@@ -365,13 +365,13 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                     tabular_data.append(_tabular_data)
                                     diagnosis.append(_diagnosis)
                                     mri_uid.append(name)
-                                    slice_index.append(PET_shape[1] // 2 + 1 + i)
+                                    slice_index.append(PET_shape[1] // 2 + i)
                         
                         elif self.direction == 'sagittal':
                             max_slice_index = PET_shape[0] - 1
                             if self.num_slices == 1:
-                                _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2 + 1, input_mri_data)
-                                _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2 + 1, input_pet_data)
+                                _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2 , input_mri_data)
+                                _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2 , input_pet_data)
                                 _tabular_data = group['tabular'][:]
                                 _diagnosis = group.attrs['DX']
 
@@ -381,7 +381,7 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                 tabular_data.append(_tabular_data)
                                 diagnosis.append(_diagnosis)
                                 mri_uid.append(name)
-                                slice_index.append(PET_shape[0] // 2 + 1)
+                                slice_index.append(PET_shape[0] // 2)
                                 
                             elif self.num_slices == 'all':
                                 for i in range(PET_shape[0]):
@@ -401,8 +401,8 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                     slice_index.append(i)
                             else:
                                 for i in range(-self.num_slices // 2, self.num_slices // 2):
-                                    _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2 + 1 + i, input_mri_data)
-                                    _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2 + 1 + i, input_pet_data)
+                                    _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2  + i, input_mri_data)
+                                    _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[0] // 2 + i, input_pet_data)
                                     _tabular_data = group['tabular'][:]
                                     _diagnosis = group.attrs['DX']
 
@@ -414,13 +414,13 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                     tabular_data.append(_tabular_data)
                                     diagnosis.append(_diagnosis)
                                     mri_uid.append(name)
-                                    slice_index.append(PET_shape[0] // 2 + 1 + i)
+                                    slice_index.append(PET_shape[0] // 2 + i)
                         
                         elif self.direction == 'axial':
                             max_slice_index = PET_shape[2] - 1
                             if self.num_slices == 1:
-                                _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2 + 1, input_mri_data)
-                                _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2 + 1, input_pet_data) 
+                                _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2 , input_mri_data)
+                                _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2 , input_pet_data) 
                                 _tabular_data = group['tabular'][:]
                                 _diagnosis = group.attrs['DX']
 
@@ -430,7 +430,7 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                 tabular_data.append(_tabular_data)
                                 diagnosis.append(_diagnosis)
                                 mri_uid.append(name)
-                                slice_index.append(PET_shape[2] // 2 + 1)
+                                slice_index.append(PET_shape[2] // 2 )
 
                             elif self.num_slices == 'all':
                                 for i in range(PET_shape[2]):
@@ -453,8 +453,8 @@ class MRI2PET_2_5D_Dataset(Dataset):
 
                             else:
                                 for i in range(-self.num_slices // 2, self.num_slices // 2):
-                                    _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2 + 1 + i, input_mri_data)
-                                    _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2 + 1 + i, input_pet_data)
+                                    _mri_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2  + i, input_mri_data)
+                                    _pet_data = get_neighboring_slices(self.output_dim, self.direction, PET_shape[2] // 2 + i, input_pet_data)
                                     _tabular_data = group['tabular'][:]
                                     _diagnosis = group.attrs['DX']
 
@@ -467,7 +467,7 @@ class MRI2PET_2_5D_Dataset(Dataset):
                                     tabular_data.append(_tabular_data)
                                     diagnosis.append(_diagnosis)
                                     mri_uid.append(name)
-                                    slice_index.append(PET_shape[2] // 2 + 1 + i)
+                                    slice_index.append(PET_shape[2] // 2  + i)
                                  
                         
 
