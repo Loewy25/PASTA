@@ -206,7 +206,13 @@ def get_neighboring_slices(output_dim, direction, slice_num, scan):
         neighboring_slices = [scan[:, :, idx] for idx in range(start_idx, end_idx)]
         padding_before = (output_dim - len(neighboring_slices)) if start_idx == 0 else 0
         padding_after = (output_dim - len(neighboring_slices) - padding_before) if end_idx == scan_shape[2] else 0
-    
+
+    print("direction:", direction)
+    print("slice_num:", slice_num)
+    print("scan_shape:", scan.shape)
+    print("start_idx:", start_idx, "end_idx:", end_idx)
+    print("neighboring_slices before padding:", len(neighboring_slices))
+
     
     if padding_before > 0:
         neighboring_slices = pad_slices(neighboring_slices, padding_before, at_beginning=True)
@@ -216,7 +222,7 @@ def get_neighboring_slices(output_dim, direction, slice_num, scan):
 
     # Stack the slices to form the image with output_dim channels      
     _output_data = np.stack(neighboring_slices, axis=0)
-
+    
     return _output_data
 
 
