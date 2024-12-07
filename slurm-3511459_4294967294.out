@@ -1,0 +1,372 @@
+Conda environment pasta_env_new already exists. Activating it...
+Using Python from: /home/l.peiwang/miniconda3/envs/pasta_env_new/bin/python
+Python: 3.10.11 (main, Apr 20 2023, 19:02:41) [GCC 11.2.0]
+NumPy: 1.26.1
+PyTorch: 2.0.1+cu117 CUDA available: True
+TorchVision: 0.15.2+cu117
+TorchIO: 0.18.91
+Calculated beta available
+loaded from h5 file
+2024-12-06 21:11:12,522 - DATASET: /scratch/l.peiwang/datasets/train.h5
+2024-12-06 21:11:12,536 - SAMPLES: 27744
+2024-12-06 21:11:12,536 - Input Shape: (15, 96, 112)
+2024-12-06 21:11:12,544 - Classes: CN          25248
+Dementia     2496
+dtype: int64
+loaded from h5 file
+2024-12-06 21:11:41,904 - DATASET: /scratch/l.peiwang/datasets/valid.h5
+2024-12-06 21:11:41,918 - SAMPLES: 5952
+2024-12-06 21:11:41,918 - Input Shape: (15, 96, 112)
+2024-12-06 21:11:41,920 - Classes: Dementia    5952
+dtype: int64
+Number of parameters: 89095710
+model size: 339.873MB
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+valid loss: 3.023422
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.308453
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.390839
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.076702
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.073499
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 2.881282
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.232455
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.239093
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.049257
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.374035
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.237024
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+data_shape: torch.Size([330, 1, 96, 112])
+all_images_shape: torch.Size([330, 1, 96, 112])
+valid recon L2 loss: 1.21325
+valid recon L1 loss: 1.02382
+fid_score: 423.08506155378785
+psnr_score: -0.5402499
+ssim_score: -0.12260518
+mse_score: tensor([1.3539, 1.1945, 1.0411, 0.9295, 0.8674, 0.8639, 0.8803, 0.9104, 0.9442,
+        0.9738, 0.9949, 1.0050, 1.0067, 1.0049, 1.0009, 0.9715, 0.9861, 1.0115,
+        1.0462, 1.0820, 1.1138, 1.1429, 1.1715, 1.1973, 1.2151, 1.2172, 1.2011,
+        1.1760, 1.1575, 1.1550, 1.3775, 1.3892, 1.3904, 1.3830, 1.3718, 1.3625,
+        1.3581, 1.3594, 1.3668, 1.3835, 1.4117, 1.4464, 1.4825, 1.5180, 1.5524,
+        1.4483, 1.4952, 1.5447, 1.5828, 1.5959, 1.5756, 1.5210, 1.4430, 1.3577,
+        1.2803, 1.2200, 1.1778, 1.1518, 1.1391, 1.1359, 1.3733, 1.3651, 1.3520,
+        1.3387, 1.3291, 1.3121, 1.2956, 1.2831, 1.2732, 1.2728, 1.2775, 1.2825,
+        1.2909, 1.3004, 1.3140, 1.4515, 1.4594, 1.4616, 1.4629, 1.4688, 1.4799,
+        1.4891, 1.4857, 1.4630, 1.4213, 1.3683, 1.3161, 1.2749, 1.2465, 1.2256,
+        0.2500, 0.2503, 0.2505, 0.2508, 0.2514, 0.2517, 1.0793, 1.0610, 1.0518,
+        1.0327, 1.0100, 0.9916, 0.9835, 0.9898, 1.0054, 1.4449, 1.4553, 1.4625,
+        1.4664, 1.4640, 1.4514, 1.4299, 1.4056, 1.3841, 1.3672, 1.3534, 1.3395,
+        1.3245, 1.3091, 1.2953, 0.2500, 0.2503, 0.2505, 0.2508, 0.2514, 0.2518,
+        1.5780, 1.3451, 1.0176, 0.8372, 0.8158, 0.8074, 0.8099, 0.8328, 0.8682,
+        1.2992, 1.3277, 1.3550, 1.3780, 1.3976, 1.4154, 1.4289, 1.4516, 1.5174,
+        1.5695, 1.5754, 1.5762, 1.5764, 1.5768, 0.2555, 0.2501, 0.2504, 1.1869,
+        0.8881, 0.8958, 0.9006, 0.8994, 0.9004, 0.9020, 0.9082, 0.9230, 0.9448,
+        0.9695, 0.9925, 1.0103, 1.6422, 1.5260, 1.3425, 1.0990, 0.8826, 0.7923,
+        0.7985, 0.8191, 0.8418, 0.8632, 0.8830, 0.9007, 0.9134, 0.9154, 0.9063,
+        1.5279, 1.5565, 1.5780, 1.5856, 1.5752, 1.5462, 1.5021, 1.4513, 1.4044,
+        1.3665, 1.3374, 1.3148, 1.2973, 1.2851, 1.2787, 1.6398, 1.6405, 1.6410,
+        1.6418, 1.6432, 1.6442, 1.6452, 1.6466, 1.6481, 1.6498, 1.6519, 0.2551,
+        0.2552, 0.2554, 0.2555, 1.0415, 1.0548, 1.0892, 1.1377, 1.1837, 1.2162,
+        1.2362, 1.2528, 1.2733, 1.2982, 1.3223, 1.3383, 1.3407, 1.3293, 1.3092,
+        1.4195, 1.4415, 1.4654, 1.5004, 1.5648, 1.6069, 1.6157, 1.6176, 1.6190,
+        1.6207, 1.6228, 1.6236, 0.2553, 0.2554, 0.2556, 1.4345, 1.4471, 1.4664,
+        1.4895, 1.5063, 1.5045, 1.4760, 1.4245, 1.3622, 1.3046, 1.2630, 1.2390,
+        1.2271, 1.2202, 1.2140, 1.0635, 1.0488, 1.0266, 1.0065, 0.9945, 0.9892,
+        0.9858, 0.9803, 0.9715, 0.9605, 0.9496, 0.9407, 0.9373, 0.9435, 0.9619,
+        1.4034, 1.4042, 1.4041, 1.4049, 1.4049, 1.4013, 1.3912, 1.3736, 1.3507,
+        1.3282, 1.3126, 1.3064, 1.3058, 1.3051, 1.3018, 1.3015, 1.2877, 1.2956,
+        1.3212, 1.3567, 1.3926, 1.4196, 1.4395, 1.5089, 1.5877, 1.6175, 1.6191,
+        1.6193, 1.6197, 1.6201, 1.3494, 1.3066, 1.2732, 1.2504, 1.2393, 1.2399,
+        1.2506, 1.2672, 1.2865, 1.3081, 1.3333, 1.3639, 1.3979, 1.4289, 1.4525,
+        1.2310, 1.2414, 1.2543, 1.2715, 1.2918, 1.3094, 1.3183, 1.3164, 1.3059,
+        1.2922, 1.2777, 1.2632, 1.2535, 1.2548, 1.2700], device='cuda:0')
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+valid loss: 3.008429
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.360709
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.154691
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.291000
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.048485
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.429163
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.191164
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.532841
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.010648
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.164325
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 3.305172
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+data_shape: torch.Size([330, 1, 96, 112])
+all_images_shape: torch.Size([330, 1, 96, 112])
+valid recon L2 loss: 1.26966
+valid recon L1 loss: 1.04883
+fid_score: 435.7354473683015
+psnr_score: -0.926369
+ssim_score: -0.102750495
+mse_score: tensor([1.3178, 1.2791, 1.2440, 1.2101, 1.1802, 1.1581, 1.1452, 1.1406, 1.1423,
+        1.1472, 1.1509, 1.1502, 1.1462, 1.1435, 1.1469, 1.0206, 1.0158, 1.0111,
+        1.0064, 1.0012, 0.9953, 0.9918, 0.9969, 1.0155, 1.0465, 1.0802, 1.1052,
+        1.1177, 1.1234, 1.1322, 1.2744, 1.2824, 1.3005, 1.3304, 1.3684, 1.4069,
+        1.4431, 1.4792, 1.5156, 1.5547, 1.6693, 1.8329, 1.8499, 1.8502, 1.8507,
+        1.4495, 1.3989, 1.3493, 1.3064, 1.2730, 1.2503, 1.2391, 1.2398, 1.2506,
+        1.2672, 1.2866, 1.3080, 1.3329, 1.3634, 1.3974, 1.0459, 1.0481, 1.0610,
+        1.0901, 1.1363, 1.1924, 1.2461, 1.2858, 1.3085, 1.3241, 1.3501, 1.3975,
+        1.4602, 1.5185, 1.5544, 1.1984, 1.2077, 1.2111, 1.2106, 1.2111, 1.2173,
+        1.2302, 1.2469, 1.2603, 1.2636, 1.2538, 1.2346, 1.2110, 1.1871, 1.1673,
+        1.6381, 1.6713, 1.6992, 1.7200, 1.7317, 1.7314, 1.7185, 1.6968, 1.6696,
+        1.6374, 1.5971, 1.5483, 1.4933, 1.4393, 1.3977, 0.9776, 0.9847, 1.0056,
+        1.0354, 1.0645, 1.0829, 1.0862, 1.0773, 1.0632, 1.0497, 1.0390, 1.0288,
+        1.0173, 1.0028, 0.9845, 1.2358, 1.0598, 0.9639, 0.9552, 0.9590, 0.9649,
+        0.9838, 1.0048, 1.0233, 1.0362, 1.0418, 1.0402, 1.0340, 1.0262, 1.0182,
+        1.4668, 1.5380, 1.6170, 1.6228, 1.6242, 1.6251, 1.6262, 1.6276, 1.6291,
+        1.6308, 0.2549, 0.2552, 0.2553, 0.2554, 0.2556, 1.2722, 1.2663, 1.2616,
+        1.2612, 1.2718, 1.2961, 1.3320, 1.3735, 1.4177, 1.4934, 1.6030, 1.6583,
+        1.6612, 1.6615, 1.6619, 1.4681, 1.4547, 1.4352, 1.4190, 1.4093, 1.4061,
+        1.4083, 1.4130, 1.4139, 1.4025, 1.3731, 1.3291, 1.2793, 1.2325, 1.1966,
+        1.0279, 1.0227, 1.0157, 1.0093, 1.0052, 1.0026, 1.0000, 0.9972, 0.9985,
+        1.0124, 1.0452, 1.0935, 1.1470, 1.1932, 1.2247, 1.2240, 1.2351, 1.2534,
+        1.2779, 1.3056, 1.3329, 1.3594, 1.3871, 1.4168, 1.4456, 1.4690, 1.4848,
+        1.4959, 1.5061, 1.5156, 1.3606, 1.3935, 1.4236, 1.4443, 1.4511, 1.4437,
+        1.4236, 1.3951, 1.3637, 1.3340, 1.3091, 1.2910, 1.2800, 1.2758, 1.2797,
+        1.3295, 1.5048, 1.6322, 1.6348, 1.6362, 1.6371, 1.6381, 1.6396, 1.6411,
+        1.6428, 1.6449, 1.6457, 1.6459, 1.6463, 1.6467, 0.9483, 0.9419, 0.9403,
+        0.9458, 0.9592, 0.9811, 1.0142, 1.0601, 1.1162, 1.1755, 1.2301, 1.2739,
+        1.3022, 1.3154, 1.3194, 1.0187, 1.0256, 1.0317, 1.0371, 1.0406, 1.0400,
+        1.0350, 1.0265, 1.0170, 1.0092, 1.0047, 1.0017, 0.9979, 0.9913, 0.9820,
+        1.3655, 1.3317, 1.3019, 1.2822, 1.2714, 1.2629, 1.2514, 1.2383, 1.2291,
+        1.2280, 1.2343, 1.2439, 1.2550, 1.2690, 1.2884, 1.1518, 1.1875, 1.2368,
+        1.2922, 1.3422, 1.3794, 1.4028, 1.4182, 1.4325, 1.4478, 1.4613, 1.4677,
+        1.4609, 1.4363, 1.3921, 1.3394, 1.3116, 1.3009, 1.2914, 1.2723, 1.2456,
+        1.2221, 1.2110, 1.2116, 1.2171, 1.2227, 1.2282, 1.2390, 1.2607, 1.2913,
+        1.2674, 1.2577, 1.2462, 1.2366, 1.2336, 1.2398, 1.2574, 1.2842, 1.3138,
+        1.3400, 1.3595, 1.3714, 1.3787, 1.3879, 1.4013], device='cuda:0')
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
