@@ -45,7 +45,7 @@ data_dir: "/scratch/l.peiwang/datasets/"
 train_batch_size: 2
 train_lr: !!float 5e-4
 weight_decay: !!float 1e-6
-train_num_steps: 72000
+train_num_steps: 35000
 save_and_sample_every: 5
 num_samples: 16
 gradient_accumulate_every: 1
