@@ -58,4 +58,9 @@ python /home/l.peiwang/PASTA/train_mri2pet.py \
     --synthesis false
 
 
+python /home/l.peiwang/PASTA/train_mri2pet.py \
+    --data_dir /scratch/l.peiwang/ \
+    --results_folder /scratch/l.peiwang/results/ \
+    --eval_mode True \
+    --synthesis True
 
