@@ -285,8 +285,8 @@ class MRI2PET_2_5D_Dataset(Dataset):
         slice_index = []
         mri_uid = []
 
-        PET_shape = (113, 137, 113)
-        MRI_shape = (113, 137, 113)
+        PET_shape = (96, 112, 96)
+        MRI_shape = (96, 112, 96)
 
         flag = 0
 
