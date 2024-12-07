@@ -1,0 +1,1056 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Dec  6 20:33:09 CST 2024 1733538789
+Job ID:		3509831
+Username:	l.peiwang
+Partition:	tier2_gpu_dev
+End Slurm Prologue Fri Dec  6 20:33:09 CST 2024 1733538789
+--------------------------------------------------------------
+Conda environment pasta_env_new already exists. Activating it...
+Using Python from: /home/l.peiwang/miniconda3/envs/pasta_env_new/bin/python
+Python: 3.10.11 (main, Apr 20 2023, 19:02:41) [GCC 11.2.0]
+NumPy: 1.26.1
+PyTorch: 2.0.1+cu117 CUDA available: True
+TorchVision: 0.15.2+cu117
+TorchIO: 0.18.91
+Calculated beta available
+loaded from h5 file
+direction: axial
+slice_num: 9
+scan_shape: (96, 112, 96)
+start_idx: 2 end_idx: 17
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 9
+scan_shape: (96, 112, 96)
+start_idx: 2 end_idx: 17
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 10
+scan_shape: (96, 112, 96)
+start_idx: 3 end_idx: 18
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 10
+scan_shape: (96, 112, 96)
+start_idx: 3 end_idx: 18
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 11
+scan_shape: (96, 112, 96)
+start_idx: 4 end_idx: 19
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 11
+scan_shape: (96, 112, 96)
+start_idx: 4 end_idx: 19
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 12
+scan_shape: (96, 112, 96)
+start_idx: 5 end_idx: 20
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 12
+scan_shape: (96, 112, 96)
+start_idx: 5 end_idx: 20
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 13
+scan_shape: (96, 112, 96)
+start_idx: 6 end_idx: 21
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 13
+scan_shape: (96, 112, 96)
+start_idx: 6 end_idx: 21
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 14
+scan_shape: (96, 112, 96)
+start_idx: 7 end_idx: 22
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 14
+scan_shape: (96, 112, 96)
+start_idx: 7 end_idx: 22
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 15
+scan_shape: (96, 112, 96)
+start_idx: 8 end_idx: 23
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 15
+scan_shape: (96, 112, 96)
+start_idx: 8 end_idx: 23
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 16
+scan_shape: (96, 112, 96)
+start_idx: 9 end_idx: 24
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 16
+scan_shape: (96, 112, 96)
+start_idx: 9 end_idx: 24
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 17
+scan_shape: (96, 112, 96)
+start_idx: 10 end_idx: 25
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 17
+scan_shape: (96, 112, 96)
+start_idx: 10 end_idx: 25
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 18
+scan_shape: (96, 112, 96)
+start_idx: 11 end_idx: 26
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 18
+scan_shape: (96, 112, 96)
+start_idx: 11 end_idx: 26
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 19
+scan_shape: (96, 112, 96)
+start_idx: 12 end_idx: 27
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 19
+scan_shape: (96, 112, 96)
+start_idx: 12 end_idx: 27
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 20
+scan_shape: (96, 112, 96)
+start_idx: 13 end_idx: 28
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 20
+scan_shape: (96, 112, 96)
+start_idx: 13 end_idx: 28
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 21
+scan_shape: (96, 112, 96)
+start_idx: 14 end_idx: 29
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 21
+scan_shape: (96, 112, 96)
+start_idx: 14 end_idx: 29
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 22
+scan_shape: (96, 112, 96)
+start_idx: 15 end_idx: 30
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 22
+scan_shape: (96, 112, 96)
+start_idx: 15 end_idx: 30
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 23
+scan_shape: (96, 112, 96)
+start_idx: 16 end_idx: 31
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 23
+scan_shape: (96, 112, 96)
+start_idx: 16 end_idx: 31
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 24
+scan_shape: (96, 112, 96)
+start_idx: 17 end_idx: 32
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 24
+scan_shape: (96, 112, 96)
+start_idx: 17 end_idx: 32
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 25
+scan_shape: (96, 112, 96)
+start_idx: 18 end_idx: 33
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 25
+scan_shape: (96, 112, 96)
+start_idx: 18 end_idx: 33
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 26
+scan_shape: (96, 112, 96)
+start_idx: 19 end_idx: 34
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 26
+scan_shape: (96, 112, 96)
+start_idx: 19 end_idx: 34
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 27
+scan_shape: (96, 112, 96)
+start_idx: 20 end_idx: 35
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 27
+scan_shape: (96, 112, 96)
+start_idx: 20 end_idx: 35
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 28
+scan_shape: (96, 112, 96)
+start_idx: 21 end_idx: 36
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 28
+scan_shape: (96, 112, 96)
+start_idx: 21 end_idx: 36
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 29
+scan_shape: (96, 112, 96)
+start_idx: 22 end_idx: 37
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 29
+scan_shape: (96, 112, 96)
+start_idx: 22 end_idx: 37
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 30
+scan_shape: (96, 112, 96)
+start_idx: 23 end_idx: 38
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 30
+scan_shape: (96, 112, 96)
+start_idx: 23 end_idx: 38
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 31
+scan_shape: (96, 112, 96)
+start_idx: 24 end_idx: 39
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 31
+scan_shape: (96, 112, 96)
+start_idx: 24 end_idx: 39
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 32
+scan_shape: (96, 112, 96)
+start_idx: 25 end_idx: 40
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 32
+scan_shape: (96, 112, 96)
+start_idx: 25 end_idx: 40
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 33
+scan_shape: (96, 112, 96)
+start_idx: 26 end_idx: 41
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 33
+scan_shape: (96, 112, 96)
+start_idx: 26 end_idx: 41
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 34
+scan_shape: (96, 112, 96)
+start_idx: 27 end_idx: 42
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 34
+scan_shape: (96, 112, 96)
+start_idx: 27 end_idx: 42
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 35
+scan_shape: (96, 112, 96)
+start_idx: 28 end_idx: 43
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 35
+scan_shape: (96, 112, 96)
+start_idx: 28 end_idx: 43
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 36
+scan_shape: (96, 112, 96)
+start_idx: 29 end_idx: 44
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 36
+scan_shape: (96, 112, 96)
+start_idx: 29 end_idx: 44
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 37
+scan_shape: (96, 112, 96)
+start_idx: 30 end_idx: 45
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 37
+scan_shape: (96, 112, 96)
+start_idx: 30 end_idx: 45
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 38
+scan_shape: (96, 112, 96)
+start_idx: 31 end_idx: 46
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 38
+scan_shape: (96, 112, 96)
+start_idx: 31 end_idx: 46
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 39
+scan_shape: (96, 112, 96)
+start_idx: 32 end_idx: 47
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 39
+scan_shape: (96, 112, 96)
+start_idx: 32 end_idx: 47
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 40
+scan_shape: (96, 112, 96)
+start_idx: 33 end_idx: 48
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 40
+scan_shape: (96, 112, 96)
+start_idx: 33 end_idx: 48
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 41
+scan_shape: (96, 112, 96)
+start_idx: 34 end_idx: 49
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 41
+scan_shape: (96, 112, 96)
+start_idx: 34 end_idx: 49
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 42
+scan_shape: (96, 112, 96)
+start_idx: 35 end_idx: 50
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 42
+scan_shape: (96, 112, 96)
+start_idx: 35 end_idx: 50
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 43
+scan_shape: (96, 112, 96)
+start_idx: 36 end_idx: 51
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 43
+scan_shape: (96, 112, 96)
+start_idx: 36 end_idx: 51
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 44
+scan_shape: (96, 112, 96)
+start_idx: 37 end_idx: 52
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 44
+scan_shape: (96, 112, 96)
+start_idx: 37 end_idx: 52
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 45
+scan_shape: (96, 112, 96)
+start_idx: 38 end_idx: 53
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 45
+scan_shape: (96, 112, 96)
+start_idx: 38 end_idx: 53
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 46
+scan_shape: (96, 112, 96)
+start_idx: 39 end_idx: 54
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 46
+scan_shape: (96, 112, 96)
+start_idx: 39 end_idx: 54
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 47
+scan_shape: (96, 112, 96)
+start_idx: 40 end_idx: 55
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 47
+scan_shape: (96, 112, 96)
+start_idx: 40 end_idx: 55
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 48
+scan_shape: (96, 112, 96)
+start_idx: 41 end_idx: 56
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 48
+scan_shape: (96, 112, 96)
+start_idx: 41 end_idx: 56
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 49
+scan_shape: (96, 112, 96)
+start_idx: 42 end_idx: 57
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 49
+scan_shape: (96, 112, 96)
+start_idx: 42 end_idx: 57
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 50
+scan_shape: (96, 112, 96)
+start_idx: 43 end_idx: 58
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 50
+scan_shape: (96, 112, 96)
+start_idx: 43 end_idx: 58
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 51
+scan_shape: (96, 112, 96)
+start_idx: 44 end_idx: 59
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 51
+scan_shape: (96, 112, 96)
+start_idx: 44 end_idx: 59
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 52
+scan_shape: (96, 112, 96)
+start_idx: 45 end_idx: 60
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 52
+scan_shape: (96, 112, 96)
+start_idx: 45 end_idx: 60
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 53
+scan_shape: (96, 112, 96)
+start_idx: 46 end_idx: 61
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 53
+scan_shape: (96, 112, 96)
+start_idx: 46 end_idx: 61
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 54
+scan_shape: (96, 112, 96)
+start_idx: 47 end_idx: 62
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 54
+scan_shape: (96, 112, 96)
+start_idx: 47 end_idx: 62
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 55
+scan_shape: (96, 112, 96)
+start_idx: 48 end_idx: 63
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 55
+scan_shape: (96, 112, 96)
+start_idx: 48 end_idx: 63
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 56
+scan_shape: (96, 112, 96)
+start_idx: 49 end_idx: 64
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 56
+scan_shape: (96, 112, 96)
+start_idx: 49 end_idx: 64
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 57
+scan_shape: (96, 112, 96)
+start_idx: 50 end_idx: 65
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 57
+scan_shape: (96, 112, 96)
+start_idx: 50 end_idx: 65
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 58
+scan_shape: (96, 112, 96)
+start_idx: 51 end_idx: 66
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 58
+scan_shape: (96, 112, 96)
+start_idx: 51 end_idx: 66
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 59
+scan_shape: (96, 112, 96)
+start_idx: 52 end_idx: 67
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 59
+scan_shape: (96, 112, 96)
+start_idx: 52 end_idx: 67
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 60
+scan_shape: (96, 112, 96)
+start_idx: 53 end_idx: 68
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 60
+scan_shape: (96, 112, 96)
+start_idx: 53 end_idx: 68
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 61
+scan_shape: (96, 112, 96)
+start_idx: 54 end_idx: 69
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 61
+scan_shape: (96, 112, 96)
+start_idx: 54 end_idx: 69
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 62
+scan_shape: (96, 112, 96)
+start_idx: 55 end_idx: 70
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 62
+scan_shape: (96, 112, 96)
+start_idx: 55 end_idx: 70
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 63
+scan_shape: (96, 112, 96)
+start_idx: 56 end_idx: 71
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 63
+scan_shape: (96, 112, 96)
+start_idx: 56 end_idx: 71
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 64
+scan_shape: (96, 112, 96)
+start_idx: 57 end_idx: 72
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 64
+scan_shape: (96, 112, 96)
+start_idx: 57 end_idx: 72
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 65
+scan_shape: (96, 112, 96)
+start_idx: 58 end_idx: 73
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 65
+scan_shape: (96, 112, 96)
+start_idx: 58 end_idx: 73
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 66
+scan_shape: (96, 112, 96)
+start_idx: 59 end_idx: 74
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 66
+scan_shape: (96, 112, 96)
+start_idx: 59 end_idx: 74
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 67
+scan_shape: (96, 112, 96)
+start_idx: 60 end_idx: 75
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 67
+scan_shape: (96, 112, 96)
+start_idx: 60 end_idx: 75
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 68
+scan_shape: (96, 112, 96)
+start_idx: 61 end_idx: 76
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 68
+scan_shape: (96, 112, 96)
+start_idx: 61 end_idx: 76
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 69
+scan_shape: (96, 112, 96)
+start_idx: 62 end_idx: 77
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 69
+scan_shape: (96, 112, 96)
+start_idx: 62 end_idx: 77
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 70
+scan_shape: (96, 112, 96)
+start_idx: 63 end_idx: 78
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 70
+scan_shape: (96, 112, 96)
+start_idx: 63 end_idx: 78
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 71
+scan_shape: (96, 112, 96)
+start_idx: 64 end_idx: 79
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 71
+scan_shape: (96, 112, 96)
+start_idx: 64 end_idx: 79
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 72
+scan_shape: (96, 112, 96)
+start_idx: 65 end_idx: 80
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 72
+scan_shape: (96, 112, 96)
+start_idx: 65 end_idx: 80
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 73
+scan_shape: (96, 112, 96)
+start_idx: 66 end_idx: 81
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 73
+scan_shape: (96, 112, 96)
+start_idx: 66 end_idx: 81
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 74
+scan_shape: (96, 112, 96)
+start_idx: 67 end_idx: 82
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 74
+scan_shape: (96, 112, 96)
+start_idx: 67 end_idx: 82
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 75
+scan_shape: (96, 112, 96)
+start_idx: 68 end_idx: 83
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 75
+scan_shape: (96, 112, 96)
+start_idx: 68 end_idx: 83
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 76
+scan_shape: (96, 112, 96)
+start_idx: 69 end_idx: 84
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 76
+scan_shape: (96, 112, 96)
+start_idx: 69 end_idx: 84
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 77
+scan_shape: (96, 112, 96)
+start_idx: 70 end_idx: 85
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 77
+scan_shape: (96, 112, 96)
+start_idx: 70 end_idx: 85
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 78
+scan_shape: (96, 112, 96)
+start_idx: 71 end_idx: 86
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 78
+scan_shape: (96, 112, 96)
+start_idx: 71 end_idx: 86
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 79
+scan_shape: (96, 112, 96)
+start_idx: 72 end_idx: 87
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 79
+scan_shape: (96, 112, 96)
+start_idx: 72 end_idx: 87
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 80
+scan_shape: (96, 112, 96)
+start_idx: 73 end_idx: 88
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 80
+scan_shape: (96, 112, 96)
+start_idx: 73 end_idx: 88
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 81
+scan_shape: (96, 112, 96)
+start_idx: 74 end_idx: 89
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 81
+scan_shape: (96, 112, 96)
+start_idx: 74 end_idx: 89
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 82
+scan_shape: (96, 112, 96)
+start_idx: 75 end_idx: 90
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 82
+scan_shape: (96, 112, 96)
+start_idx: 75 end_idx: 90
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 83
+scan_shape: (96, 112, 96)
+start_idx: 76 end_idx: 91
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 83
+scan_shape: (96, 112, 96)
+start_idx: 76 end_idx: 91
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 84
+scan_shape: (96, 112, 96)
+start_idx: 77 end_idx: 92
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 84
+scan_shape: (96, 112, 96)
+start_idx: 77 end_idx: 92
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 85
+scan_shape: (96, 112, 96)
+start_idx: 78 end_idx: 93
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 85
+scan_shape: (96, 112, 96)
+start_idx: 78 end_idx: 93
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 86
+scan_shape: (96, 112, 96)
+start_idx: 79 end_idx: 94
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 86
+scan_shape: (96, 112, 96)
+start_idx: 79 end_idx: 94
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 87
+scan_shape: (96, 112, 96)
+start_idx: 80 end_idx: 95
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 87
+scan_shape: (96, 112, 96)
+start_idx: 80 end_idx: 95
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 88
+scan_shape: (96, 112, 96)
+start_idx: 81 end_idx: 96
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 88
+scan_shape: (96, 112, 96)
+start_idx: 81 end_idx: 96
+neighboring_slices before padding: 15
+direction: axial
+slice_num: 89
+scan_shape: (96, 112, 96)
+start_idx: 82 end_idx: 96
+neighboring_slices before padding: 14
+direction: axial
+slice_num: 89
+scan_shape: (96, 112, 96)
+start_idx: 82 end_idx: 96
+neighboring_slices before padding: 14
+direction: axial
+slice_num: 90
+scan_shape: (96, 112, 96)
+start_idx: 83 end_idx: 96
+neighboring_slices before padding: 13
+direction: axial
+slice_num: 90
+scan_shape: (96, 112, 96)
+start_idx: 83 end_idx: 96
+neighboring_slices before padding: 13
+direction: axial
+slice_num: 91
+scan_shape: (96, 112, 96)
+start_idx: 84 end_idx: 96
+neighboring_slices before padding: 12
+direction: axial
+slice_num: 91
+scan_shape: (96, 112, 96)
+start_idx: 84 end_idx: 96
+neighboring_slices before padding: 12
+direction: axial
+slice_num: 92
+scan_shape: (96, 112, 96)
+start_idx: 85 end_idx: 96
+neighboring_slices before padding: 11
+direction: axial
+slice_num: 92
+scan_shape: (96, 112, 96)
+start_idx: 85 end_idx: 96
+neighboring_slices before padding: 11
+direction: axial
+slice_num: 93
+scan_shape: (96, 112, 96)
+start_idx: 86 end_idx: 96
+neighboring_slices before padding: 10
+direction: axial
+slice_num: 93
+scan_shape: (96, 112, 96)
+start_idx: 86 end_idx: 96
+neighboring_slices before padding: 10
+direction: axial
+slice_num: 94
+scan_shape: (96, 112, 96)
+start_idx: 87 end_idx: 96
+neighboring_slices before padding: 9
+direction: axial
+slice_num: 94
+scan_shape: (96, 112, 96)
+start_idx: 87 end_idx: 96
+neighboring_slices before padding: 9
+direction: axial
+slice_num: 95
+scan_shape: (96, 112, 96)
+start_idx: 88 end_idx: 96
+neighboring_slices before padding: 8
+direction: axial
+slice_num: 95
+scan_shape: (96, 112, 96)
+start_idx: 88 end_idx: 96
+neighboring_slices before padding: 8
+direction: axial
+slice_num: 96
+scan_shape: (96, 112, 96)
+start_idx: 89 end_idx: 96
+neighboring_slices before padding: 7
+direction: axial
+slice_num: 96
+scan_shape: (96, 112, 96)
+start_idx: 89 end_idx: 96
+neighboring_slices before padding: 7
+direction: axial
+slice_num: 97
+scan_shape: (96, 112, 96)
+start_idx: 90 end_idx: 96
+neighboring_slices before padding: 6
+direction: axial
+slice_num: 97
+scan_shape: (96, 112, 96)
+start_idx: 90 end_idx: 96
+neighboring_slices before padding: 6
+direction: axial
+slice_num: 98
+scan_shape: (96, 112, 96)
+start_idx: 91 end_idx: 96
+neighboring_slices before padding: 5
+direction: axial
+slice_num: 98
+scan_shape: (96, 112, 96)
+start_idx: 91 end_idx: 96
+neighboring_slices before padding: 5
+direction: axial
+slice_num: 99
+scan_shape: (96, 112, 96)
+start_idx: 92 end_idx: 96
+neighboring_slices before padding: 4
+direction: axial
+slice_num: 99
+scan_shape: (96, 112, 96)
+start_idx: 92 end_idx: 96
+neighboring_slices before padding: 4
+direction: axial
+slice_num: 100
+scan_shape: (96, 112, 96)
+start_idx: 93 end_idx: 96
+neighboring_slices before padding: 3
+direction: axial
+slice_num: 100
+scan_shape: (96, 112, 96)
+start_idx: 93 end_idx: 96
+neighboring_slices before padding: 3
+direction: axial
+slice_num: 101
+scan_shape: (96, 112, 96)
+start_idx: 94 end_idx: 96
+neighboring_slices before padding: 2
+direction: axial
+slice_num: 101
+scan_shape: (96, 112, 96)
+start_idx: 94 end_idx: 96
+neighboring_slices before padding: 2
+direction: axial
+slice_num: 102
+scan_shape: (96, 112, 96)
+start_idx: 95 end_idx: 96
+neighboring_slices before padding: 1
+direction: axial
+slice_num: 102
+scan_shape: (96, 112, 96)
+start_idx: 95 end_idx: 96
+neighboring_slices before padding: 1
+direction: axial
+slice_num: 103
+scan_shape: (96, 112, 96)
+start_idx: 96 end_idx: 96
+neighboring_slices before padding: 0
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Dec  6 20:37:27 CST 2024 1733539047
+Name                : test
+User                : l.peiwang
+Partition           : tier2_gpu_dev
+Nodes               : gpu04
+Cores               : 9
+State               : FAILED
+Submit              : 2024-12-06T20:33:05
+Start               : 2024-12-06T20:33:09
+End                 : 2024-12-06T20:37:25
+Reserved Walltime   : 05:50:00
+Used Walltime       : 00:04:16
+Used CPU Time       : 00:00:24
+% User (Computation): 67.46%
+% System (I/O)      : 32.54%
+Mem Reserved        : 100G
+Max Mem Used        : 468.13M (490868736.0)
+Max Disk Write      : 133.12K (136314.88)
+Max Disk Read       : 206.62M (216656773.12)
+Max-Mem-Used Node   : gpu04
+Max-Disk-Write Node : gpu04
+Max-Disk-Read Node  : gpu04
+Tesla V100S-PCIE-32GB
+Successfully retrieved statistics for job: 3509831. 
++------------------------------------------------------------------------------+
+| GPU ID: 0                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Dec  6 20:33:09 2024                |
+| End Time                           | Fri Dec  6 20:37:27 2024                |
+| Total Execution Time (sec)         | 258.32                                  |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 5149                                    |
+| Power Usage (Watts)                | Avg: 24.8376, Max: 27.332, Min: 24.412  |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 135, Max: 135, Min: 135            |
+| Memory Clock (MHz)                 | Avg: 1107, Max: 1107, Min: 1107         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
++------------------------------------------------------------------------------+
+| GPU ID: 1                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Fri Dec  6 20:33:09 2024                |
+| End Time                           | Fri Dec  6 20:37:27 2024                |
+| Total Execution Time (sec)         | 258.32                                  |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 5216                                    |
+| Power Usage (Watts)                | Avg: 24.85, Max: 24.85, Min: 24.85      |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 135, Max: 135, Min: 135            |
+| Memory Clock (MHz)                 | Avg: 1107, Max: 1107, Min: 1107         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
+End Slurm Epilogue Fri Dec  6 20:37:27 CST 2024 1733539047
+--------------------------------------------------------------
