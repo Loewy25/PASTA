@@ -70,8 +70,8 @@ class SlicedScanMRI2PETDataset(Dataset):
         tabular_data = []
         mri_uid = []
 
-        PET_shape = (113, 137, 113)
-        MRI_shape = (113, 137, 113)
+        PET_shape = (96, 112, 96)
+        MRI_shape = (96, 112, 96)
 
         if self.data_path is not None and 'h5' in self.data_path:       
             print('loaded from h5 file')
@@ -125,7 +125,7 @@ class SlicedScanMRI2PETDataset(Dataset):
         self._tabular_data = tabular_data
         self._mri_uid = mri_uid
         
-      
+    
         LOG.info("DATASET: %s", self.data_path if self.data_path is not None else self.mri_root_path)
         LOG.info("SAMPLES: %d", self.len_data)
 
