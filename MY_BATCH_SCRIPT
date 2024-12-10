@@ -5,7 +5,7 @@
 #SBATCH --mem=100G                  # Request 100GB memory
 #SBATCH -t 90:50:00                  # Set maximum time limit
 #SBATCH --gres=gpu:nvidia_a100_80:1                # Request 1 GPU
-#SBATCH --partition=tier2_gpu_dev       # Specify GPU partition
+#SBATCH --partition=tier2_gpu       # Specify GPU partition
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02             # Exclude specific nodes
 
