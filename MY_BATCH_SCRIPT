@@ -52,8 +52,8 @@ python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
 python /home/l.peiwang/PASTA/train_mri2pet.py \
-    --data_dir /scratch/l.peiwang/ \
-    --results_folder /scratch/l.peiwang/results/ \
+    --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/ \
+    --results_folder /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/results/ \
     --eval_mode false \
     --synthesis false
 
