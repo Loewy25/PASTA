@@ -17,7 +17,7 @@ module load cuda/11.3
 module load cudnn/8.1.1
 
 # Source Conda
-source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
+source /ceph/chpc/home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 eval "$(conda shell.bash hook)"
 
 # Fixed environment name
