@@ -41,7 +41,7 @@ rescale_intensity: True # rescale intensity to [-1, 1] during training
 ##### Trainer config ####
 
 input_slice_channel: 15
-data_dir: "/scratch/l.peiwang/datasets/"
+data_dir: "/ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets/"
 train_batch_size: 2
 train_lr: !!float 5e-4
 weight_decay: !!float 1e-6
@@ -61,7 +61,7 @@ ROI_mask: null
 model_cycling: true
 with_DTI: false
 dx_labels: ['CN', 'Dementia']
-results_folder: "/scratch/l.peiwang/"
+results_folder: "/ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/results/"
 resume: null
 pretrain: null
 
