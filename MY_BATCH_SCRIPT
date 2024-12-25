@@ -30,7 +30,7 @@ ENV_EXISTS=$?
 if [ $ENV_EXISTS -ne 0 ]; then
     echo "Conda environment $ENV_NAME does not exist. Creating it..."
     # Create the Conda environment from the YAML file
-    conda env create -n $ENV_NAME --file /home/l.peiwang/PASTA/requirements.yaml
+    conda env create -n $ENV_NAME --file /ceph/chpc/home/l.peiwang/PASTA/requirements.yaml
 
     # Activate the Conda environment
     conda activate $ENV_NAME
