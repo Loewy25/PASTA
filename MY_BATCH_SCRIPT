@@ -30,47 +30,36 @@ if [ ! -d "$MINICONDA_DIR" ]; then
 fi
 
 #######################################
-# 3. Initialize Conda in this script
+# 3. Initialize Conda
 #######################################
 source "$MINICONDA_DIR/etc/profile.d/conda.sh"
 eval "$(conda shell.bash hook)"
 
-#######################################
-# 4. (Optional) Remove old environment
-#######################################
 ENV_NAME="pasta_env_new"
 
+#######################################
+# 4. Remove old environment (optional)
+#######################################
 echo "Removing old environment (if it exists)..."
 conda env remove -n "$ENV_NAME" -y 2>/dev/null || true
 
 #######################################
-# 5. Create a Fresh Environment
+# 5. Create environment from YAML
 #######################################
-echo "Creating fresh environment: $ENV_NAME"
-conda create -n "$ENV_NAME" python=3.10 -y
+echo "Creating environment $ENV_NAME from requirements.yaml"
+conda env create -n "$ENV_NAME" --file /ceph/chpc/home/l.peiwang/PASTA/requirements.yaml
 
 #######################################
-# 6. Activate and Install PyTorch + TorchIO
+# 6. Activate and verify
 #######################################
 conda activate "$ENV_NAME"
 
-# Install PyTorch with CUDA 11.3
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
-
-# Install TorchIO from conda-forge
-conda install torchio -c conda-forge -y
-pip install einops
-#######################################
-# 7. Verification
-#######################################
 echo "Using Python from: $(which python)"
 python -c "import sys; print('Python:', sys.version)"
 python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
-python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
-python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
 #######################################
-# 8. Run Your Training Script
+# 7. Run your Python script
 #######################################
 python /home/l.peiwang/PASTA/train_mri2pet.py \
     --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/ \
