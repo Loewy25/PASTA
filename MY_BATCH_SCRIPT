@@ -42,7 +42,7 @@ if [ $? -ne 0 ]; then
     # Otherwise:
     pip install torchio
 fi
-
+pip install einops
 # Verify
 python -c "import sys; print('Python:', sys.version)"
 python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA:', torch.cuda.is_available())"
