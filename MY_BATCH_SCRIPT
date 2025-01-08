@@ -1,70 +1,58 @@
 #!/bin/bash
 
-#SBATCH --job-name=test
-#SBATCH -N 1
-#SBATCH --mem=100G
-#SBATCH -t 135:50:00
-#SBATCH --gres=gpu:nvidia_a100_80:1
-#SBATCH --partition=tier2_gpu
+#SBATCH --job-name=test             # Assign a descriptive job name
+#SBATCH -N 1                        # Request 1 node
+#SBATCH --mem=100G                  # Request 100GB memory
+#SBATCH -t 135:50:00                  # Set maximum time limit
+#SBATCH --gres=gpu:nvidia_a100_80:1                # Request 1 GPU
+#SBATCH --partition=tier2_gpu       # Specify GPU partition
 #SBATCH --account=aristeidis_sotiras
-#SBATCH --exclude=gpu02
+#SBATCH --exclude=gpu02             # Exclude specific nodes
 
-#SBATCH --output=slurm-%A_%a.out
-#SBATCH --error=slurm-%A_%a.err
+#SBATCH --output=slurm-%A_%a.out    # Standard output file
+#SBATCH --error=slurm-%A_%a.err     # Standard error file
 
-#######################################
-# 1. Load HPC Modules for CUDA/CuDNN
-#######################################
+# Load required modules first (if applicable)
 module load cuda/11.3
 module load cudnn/8.1.1
 
-#######################################
-# 2. Install Miniconda if not present
-#######################################
-MINICONDA_DIR="$HOME/miniconda3"
-if [ ! -d "$MINICONDA_DIR" ]; then
-    echo "Miniconda not found in $MINICONDA_DIR. Installing..."
-    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-    bash miniconda.sh -b -p "$MINICONDA_DIR"
-    rm miniconda.sh
-fi
-
-#######################################
-# 3. Initialize Conda
-#######################################
-source "$MINICONDA_DIR/etc/profile.d/conda.sh"
+# Source Conda
+source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 eval "$(conda shell.bash hook)"
 
+# Fixed environment name
 ENV_NAME="pasta_env_new"
 
-#######################################
-# 4. Remove old environment (optional)
-#######################################
-echo "Removing old environment (if it exists)..."
-conda env remove -n "$ENV_NAME" -y 2>/dev/null || true
+# Check if the environment already exists
+conda env list | grep -q "$ENV_NAME"
+ENV_EXISTS=$?
 
-#######################################
-# 5. Create environment from YAML
-#######################################
-echo "Creating environment $ENV_NAME from requirements.yaml"
-conda env create -n "$ENV_NAME" --file /ceph/chpc/home/l.peiwang/PASTA/requirements.yaml
+if [ $ENV_EXISTS -ne 0 ]; then
+    echo "Conda environment $ENV_NAME does not exist. Creating it..."
+    # Create the Conda environment from the YAML file
+    conda env create -n $ENV_NAME --file /home/l.peiwang/PASTA/requirements.yaml
 
-#######################################
-# 6. Activate and verify
-#######################################
-conda activate "$ENV_NAME"
+    # Activate the Conda environment
+    conda activate $ENV_NAME
+    # Install PyTorch and related packages as needed
+    conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+else
+    echo "Conda environment $ENV_NAME already exists. Activating it..."
+    conda activate $ENV_NAME
+fi
 
-pip install torchio
-pip install einops
+# Verify which Python is being used
 echo "Using Python from: $(which python)"
-python -c "import sys; print('Python:', sys.version)"
-python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
 
-#######################################
-# 7. Run your Python script
-#######################################
+# Verify installations
+python -c "import sys; print('Python:', sys.version)"
+python -c "import numpy; print('NumPy:', numpy.__version__)"
+python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
+python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
+python -c "import torchio; print('TorchIO:', torchio.__version__)"
+
 python /home/l.peiwang/PASTA/train_mri2pet.py \
-    --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/ \
-    --results_folder /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/results/ \
+    --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets \
+    --results_folder /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/results \
     --eval_mode false \
     --synthesis false
