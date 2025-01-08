@@ -23,7 +23,7 @@ source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 eval "$(conda shell.bash hook)"
 
 # Name of the conda environment
-ENV_NAME="pasta_env_new"
+ENV_NAME="pasta_env_new_2025"
 
 # (Optional) Prevent using packages in ~/.local/lib if you have pip conflicts
 # export PYTHONNOUSERSITE=1
