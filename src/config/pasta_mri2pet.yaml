@@ -61,7 +61,7 @@ ROI_mask: null
 model_cycling: true
 with_DTI: false
 dx_labels: ['CN', 'Dementia']
-results_folder: "/ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/results/"
+results_folder: "/home/l.peiwang/results"
 resume: null
 pretrain: null
 
