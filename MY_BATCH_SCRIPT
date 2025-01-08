@@ -1,59 +1,62 @@
 #!/bin/bash
 
-#SBATCH --job-name=test             # Assign a descriptive job name
+#SBATCH --job-name=test             # Descriptive job name
 #SBATCH -N 1                        # Request 1 node
-#SBATCH --mem=100G                  # Request 100GB memory
-#SBATCH -t 135:50:00                  # Set maximum time limit
-#SBATCH --gres=gpu:nvidia_a100_80:1                # Request 1 GPU
-#SBATCH --partition=tier2_gpu       # Specify GPU partition
+#SBATCH --mem=100G                  # Request 100GB of memory
+#SBATCH -t 135:50:00                # Maximum time limit
+#SBATCH --gres=gpu:nvidia_a100_80:1 # Request 1 GPU (A100 80GB)
+#SBATCH --partition=tier2_gpu       # GPU partition
 #SBATCH --account=aristeidis_sotiras
-#SBATCH --exclude=gpu02             # Exclude specific nodes
+#SBATCH --exclude=gpu02             # Exclude specific node(s)
 
 #SBATCH --output=slurm-%A_%a.out    # Standard output file
 #SBATCH --error=slurm-%A_%a.err     # Standard error file
 
-# Load required modules first (if applicable)
+# -----------------------------------------------------------------------------
+# Load any required modules for CUDA/CuDNN (adjust if needed on your cluster)
 module load cuda/11.3
 module load cudnn/8.1.1
 
-# Source Conda
+# -----------------------------------------------------------------------------
+# Source Conda functionality
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 eval "$(conda shell.bash hook)"
 
-# Fixed environment name
+# Name of the conda environment
 ENV_NAME="pasta_env_new"
 
+# (Optional) Prevent using packages in ~/.local/lib if you have pip conflicts
+# export PYTHONNOUSERSITE=1
+
+# -----------------------------------------------------------------------------
 # Check if the environment already exists
 conda env list | grep -q "$ENV_NAME"
 ENV_EXISTS=$?
 
 if [ $ENV_EXISTS -ne 0 ]; then
-    echo "Conda environment $ENV_NAME does not exist. Creating it..."
-    # Create the Conda environment from the YAML file
-    conda env create -n $ENV_NAME --file /home/l.peiwang/PASTA/requirements.yaml
-
-    # Activate the Conda environment
-    conda activate $ENV_NAME
-    # Install PyTorch and related packages as needed
-    conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+    echo "Conda environment '$ENV_NAME' does not exist. Creating it..."
+    # Create the environment from your requirements.yaml
+    conda env create -n "$ENV_NAME" --file /home/l.peiwang/PASTA/requirements.yaml
 else
-    echo "Conda environment $ENV_NAME already exists. Activating it..."
-    conda activate $ENV_NAME
+    echo "Conda environment '$ENV_NAME' already exists. Skipping creation."
 fi
-pip install torchio
 
+# Activate the environment
+conda activate "$ENV_NAME"
 
-
-# Verify which Python is being used
+# -----------------------------------------------------------------------------
+# Quick checks (optional, but recommended)
 echo "Using Python from: $(which python)"
+python -c "import sys; print('Python version:', sys.version)"
 
-# Verify installations
-python -c "import sys; print('Python:', sys.version)"
-python -c "import numpy; print('NumPy:', numpy.__version__)"
+# Validate PyTorch installation
 python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
-python -c "import torchvision; print('TorchVision:', torchvision.__version__)"
+
+# Validate TorchIO installation
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
+# -----------------------------------------------------------------------------
+# Run your training script
 python /home/l.peiwang/PASTA/train_mri2pet.py \
     --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets \
     --results_folder /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/results \
