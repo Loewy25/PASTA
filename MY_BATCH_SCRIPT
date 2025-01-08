@@ -1,35 +1,25 @@
 #!/bin/bash
 
-#SBATCH --job-name=test_env_creation    # Descriptive job name
-#SBATCH -N 1                            # Request 1 node
-#SBATCH --mem=100G                      # Request 100GB memory
-#SBATCH -t 135:50:00                    # Set max time limit
-#SBATCH --gres=gpu:nvidia_a100_80:1     # Request 1 GPU (A100 80GB)
-#SBATCH --partition=tier2_gpu           # GPU partition
+#SBATCH --job-name=test_env_creation
+#SBATCH --mem=100G
+#SBATCH -t 135:50:00
+#SBATCH --gres=gpu:nvidia_a100_80:1
+#SBATCH --partition=tier2_gpu
 #SBATCH --account=aristeidis_sotiras
-#SBATCH --exclude=gpu02                 # Exclude specific nodes
+#SBATCH --exclude=gpu02
+#SBATCH --output=slurm-%A_%a.out
+#SBATCH --error=slurm-%A_%a.err
 
-#SBATCH --output=slurm-%A_%a.out        # Stdout file
-#SBATCH --error=slurm-%A_%a.err         # Stderr file
-
-# -----------------------------------------------------------------------------
-# 1) Load required modules (adjust if needed on your cluster)
 module load cuda/11.3
 module load cudnn/8.1.1
 
-# -----------------------------------------------------------------------------
-# 2) Make Conda available
 source /home/l.peiwang/miniconda3/etc/profile.d/conda.sh
 eval "$(conda shell.bash hook)"
 
+export PYTHONNOUSERSITE=1
 ENV_NAME="pasta_env_new_2025"
 
-# -----------------------------------------------------------------------------
-# 3) Prevent Python from using any user-level site-packages
-export PYTHONNOUSERSITE=1
-
-# -----------------------------------------------------------------------------
-# 4) Create the environment if it doesn't exist
+# Check if env exists
 conda env list | grep -q "$ENV_NAME"
 ENV_EXISTS=$?
 
@@ -40,23 +30,25 @@ else
     echo "Conda environment '$ENV_NAME' already exists. Skipping creation."
 fi
 
-# -----------------------------------------------------------------------------
-# 5) Activate the environment
+# Activate
 conda activate "$ENV_NAME"
 
-# -----------------------------------------------------------------------------
-# 6) Verify the environment
-echo "Using Python from: $(which python)"
-python -c "import sys; print('Python version:', sys.version)"
+# -- Force Re-Install TorchIO if not found --
+python -c "import torchio" 2>/dev/null
+if [ $? -ne 0 ]; then
+    echo "TorchIO not found; installing now..."
+    # If conda-forge doesn’t conflict, you could do:
+    # conda install -c conda-forge torchio -y
+    # Otherwise:
+    pip install torchio
+fi
 
-# Confirm PyTorch
-python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
-
-# Confirm TorchIO
+# Verify
+python -c "import sys; print('Python:', sys.version)"
+python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA:', torch.cuda.is_available())"
 python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
-# -----------------------------------------------------------------------------
-# 7) Run your training script
+# Run your script
 python /home/l.peiwang/PASTA/train_mri2pet.py \
     --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets \
     --results_folder /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/results \
