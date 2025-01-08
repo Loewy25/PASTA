@@ -40,7 +40,8 @@ else
     echo "Conda environment $ENV_NAME already exists. Activating it..."
     conda activate $ENV_NAME
 fi
-conda install -c conda-forge torchio
+pip install torchio
+
 
 
 # Verify which Python is being used
