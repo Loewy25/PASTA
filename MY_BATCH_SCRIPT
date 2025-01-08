@@ -43,6 +43,7 @@ if [ $? -ne 0 ]; then
     pip install torchio
 fi
 pip install einops
+pip install ema_pytorch
 # Verify
 python -c "import sys; print('Python:', sys.version)"
 python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA:', torch.cuda.is_available())"
