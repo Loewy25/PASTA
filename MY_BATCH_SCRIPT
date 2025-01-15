@@ -111,5 +111,5 @@ python -c "import torchio; print('TorchIO:', torchio.__version__)"
 python /home/l.peiwang/PASTA/train_mri2pet.py \
     --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets \
     --results_folder /home/l.peiwang/results \
-    --eval_mode false \
-    --synthesis false
+    --eval_mode true \
+    --synthesis true
