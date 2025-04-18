@@ -102,14 +102,13 @@ pip install \
     wandb==0.15.0 \
     werkzeug==2.3.4 \
     wrapt==1.15.0
-# Verify
-python -c "import sys; print('Python:', sys.version)"
-python -c "import torch; print('PyTorch:', torch.__version__, 'CUDA:', torch.cuda.is_available())"
-python -c "import torchio; print('TorchIO:', torchio.__version__)"
 
 # Run your script
-python /home/l.peiwang/PASTA/train_mri2pet.py \
+#python /home/l.peiwang/PASTA/train_mri2pet.py \
     --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets \
     --results_folder /home/l.peiwang/results \
     --eval_mode true \
     --synthesis true
+
+
+python new_process.py
