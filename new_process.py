@@ -1,7 +1,7 @@
 import os, nibabel as nib, numpy as np
 
-input_dir = '/home/scratch/ds002898-1.4.2/'
-output_dir = '/home/scratch/monash_new/'
+input_dir = '/scratch/ds002898-1.4.2/'
+output_dir = '/scratch/monash_new/'
 os.makedirs(output_dir, exist_ok=True)
 
 subjects = [s for s in os.listdir(input_dir) if s.startswith('sub-')]
