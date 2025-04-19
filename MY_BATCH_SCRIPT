@@ -110,7 +110,7 @@ pip install \
     --eval_mode False \
     --synthesis False
 
-python resize.py
+python new_process.py
 
 
 
