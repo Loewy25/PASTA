@@ -61,7 +61,7 @@ ROI_mask: null
 model_cycling: true
 with_DTI: false
 dx_labels: ['CN', 'Dementia']
-results_folder: "/home/l.peiwang/results_monash_fmri"
+results_folder: "/home/l.peiwang/results_monash_fmri_final"
 resume: null
 pretrain: null
 
