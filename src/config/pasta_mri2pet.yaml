@@ -1,6 +1,6 @@
 ##### Unet config ####
 
-image_size: [91, 109]
+image_size: [96, 112]
 model_in_channels: 15
 out_channels_model: 15
 unet_dim: 64
@@ -70,6 +70,6 @@ pretrain: null
 
 test_batch_size: 32
 eval_dataset: ADNI
-eval_resolution: [91, 109, 91]
+eval_resolution: [96, 112, 96]
 eval_mode: False
 synthesis: False
