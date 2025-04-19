@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 
 # Paths setup
 input_dir = '/scratch/l.peiwang/monash_new/'
-output_dir = '/scratch/l.peiwang/hdf5_data_monash_fmri/'
+output_dir = '/scratch/l.peiwang/hdf5_data_monash_fpet/'
 os.makedirs(output_dir, exist_ok=True)
 
 clinical_columns = ['age', 'gender', 'education', 'MMSE', 'ADAS-Cog-13', 'ApoE4']
@@ -50,7 +50,7 @@ for filename, subj_list in datasets.items():
             grp.create_dataset('MRI/T1', data=t1_data, compression='gzip')
 
             # PET/FDG (using fMRI data)
-            fmri_data = nib.load(os.path.join(subj_dir, f'{subj_id}_fMRI_mean_MNI.nii.gz')).get_fdata().astype(np.float32)
+            fmri_data = nib.load(os.path.join(subj_dir, f'{subj_id}_fPET_mean_MNI.nii.gz')).get_fdata().astype(np.float32)
             grp.create_dataset('PET/FDG', data=fmri_data, compression='gzip')
 
             # Tabular dummy data
