@@ -41,11 +41,11 @@ rescale_intensity: True # rescale intensity to [-1, 1] during training
 ##### Trainer config ####
 
 input_slice_channel: 15
-data_dir: "/ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets/"
+data_dir: "/scratch/l.peiwang/hdf5_data_monash_fmri/"
 train_batch_size: 2
 train_lr: !!float 5e-4
 weight_decay: !!float 1e-6
-train_num_steps: 25000
+train_num_steps: 5
 save_and_sample_every: 5
 num_samples: 16
 gradient_accumulate_every: 1
@@ -61,7 +61,7 @@ ROI_mask: null
 model_cycling: true
 with_DTI: false
 dx_labels: ['CN', 'Dementia']
-results_folder: "/home/l.peiwang/results"
+results_folder: "/home/l.peiwang/results_monash_fmri"
 resume: null
 pretrain: null
 
