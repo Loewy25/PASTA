@@ -111,52 +111,7 @@ pip install \
     --synthesis true
 
 
-#python new_process.py
-
-
-
-#!/bin/bash
-
-module load fsl
-
-DATA_DIR="/scratch/l.peiwang/monash_new/"
-MNI_T1=${FSLDIR}/data/standard/MNI152_T1_2mm.nii.gz
-
-for sub in ${DATA_DIR}/sub-*; do
-    sub_id=$(basename ${sub})  # Extract subject ID (e.g., sub-01)
-    echo "Processing ${sub_id}..."
-    cd ${sub}
-
-    # Corrected file references:
-    flirt -in ${sub_id}_fMRI_mean.nii.gz -ref ${sub_id}_T1w.nii.gz \
-          -out ${sub_id}_fMRI_mean_to_T1.nii.gz -omat fmri2t1.mat -dof 6
-          
-    flirt -in ${sub_id}_fPET_mean.nii.gz -ref ${sub_id}_T1w.nii.gz \
-          -out ${sub_id}_fPET_mean_to_T1.nii.gz -omat pet2t1.mat -dof 6
-
-    # Linear registration of T1 to MNI
-    flirt -in ${sub_id}_T1w.nii.gz -ref ${MNI_T1} \
-          -out ${sub_id}_T1w_MNI_linear.nii.gz \
-          -omat t12mni_affine.mat -dof 12
-
-    # Nonlinear registration of T1 to MNI
-    fnirt --in=${sub_id}_T1w.nii.gz --aff=t12mni_affine.mat \
-          --cout=t12mni_warp \
-          --config=T1_2_MNI152_2mm \
-          --ref=${MNI_T1} \
-          --iout=${sub_id}_T1w_MNI.nii.gz
-
-    # Apply warp to fMRI and PET aligned to T1
-    applywarp --ref=${MNI_T1} --in=${sub_id}_fMRI_mean_to_T1.nii.gz \
-              --warp=t12mni_warp --out=${sub_id}_fMRI_mean_MNI.nii.gz
-
-    applywarp --ref=${MNI_T1} --in=${sub_id}_fPET_mean_to_T1.nii.gz \
-              --warp=t12mni_warp --out=${sub_id}_fPET_mean_MNI.nii.gz
-
-    echo "${sub_id} done!"
-done
-
-echo "✅ All registrations complete!"
+python new_process.py
 
 
 
