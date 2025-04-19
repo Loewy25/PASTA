@@ -63,7 +63,7 @@ with_DTI: false
 dx_labels: ['CN', 'Dementia']
 results_folder: "/home/l.peiwang/results_monash_fpet_final_test"
 resume: null
-pretrain: /home/l.peiwang/results/model.pt
+pretrain: /home/l.peiwang/results_monash_fpet/model.pt
 
 
 ###### evaluation config #####
