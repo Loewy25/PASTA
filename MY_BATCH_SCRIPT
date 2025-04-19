@@ -104,12 +104,12 @@ pip install \
     wrapt==1.15.0
 
 # Run your script
-#python /home/l.peiwang/Master/PASTA/train_mri2pet.py \
+python /home/l.peiwang/Master/PASTA/train_mri2pet.py \
     --data_dir /scratch/l.peiwang/hdf5_data_monash_fmri/ \
     --results_folder /home/l.peiwang/results_monash_fmri \
     --eval_mode False \
     --synthesis False
-python new_process.py
+
 
 
 
