@@ -104,14 +104,13 @@ pip install \
     wrapt==1.15.0
 
 # Run your script
-#python /home/l.peiwang/PASTA/train_mri2pet.py \
-    --data_dir /ceph/chpc/shared/aristeidis_sotiras_group/l.peiwang_scratch/datasets \
-    --results_folder /home/l.peiwang/results \
+python /home/l.peiwang/PASTA/train_mri2pet.py \
+    --data_dir /scratch/l.peiwang/hdf5_data_monash_fmri/ \
+    --results_folder /home/l.peiwang/results_monash_fmri \
     --eval_mode true \
     --synthesis true
 
 
-python new_process.py
 
 
 
