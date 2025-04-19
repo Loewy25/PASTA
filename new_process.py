@@ -59,9 +59,11 @@ for filename, subj_list in datasets.items():
             all_tabular_data.append(tabular_data)
 
             # Randomized or placeholder attributes
-            grp.attrs['DX'] = np.random.choice(['CN', 'Dementia', 'MCI'])
+# Randomized or placeholder attributes (fixed encoding)
+            grp.attrs['DX'] = np.random.choice(['CN', 'Dementia', 'MCI']).encode('utf-8')
             grp.attrs['RID'] = int(subj_id.split('-')[1])
-            grp.attrs['VISCODE'] = np.random.choice(['bl', 'm06', 'm12'])
+            grp.attrs['VISCODE'] = np.random.choice(['bl', 'm06', 'm12']).encode('utf-8')
+
 
         # Calculate tabular statistics (mean, std)
         stats_grp = hdf5_file.create_group('stats/tabular')
