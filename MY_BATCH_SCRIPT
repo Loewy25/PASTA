@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=test_pet_fine
+#SBATCH --job-name=test_mri_fine
 #SBATCH --mem=100G
 #SBATCH -t 80:50:00
 #SBATCH --gres=gpu:nvidia_a100_80:1
@@ -105,8 +105,8 @@ pip install \
 
 # Run your script
 python /home/l.peiwang/Master/PASTA/train_mri2pet.py \
-    --data_dir /scratch/l.peiwang/hdf5_data_monash_fpet/ \
-    --results_folder /home/l.peiwang/results_monash_fpet_final_fine \
+    --data_dir /scratch/l.peiwang/hdf5_data_monash_fmri/ \
+    --results_folder /home/l.peiwang/results_monash_fmri_final_fine \
     --eval_mode False \
     --synthesis False
 
