@@ -11,7 +11,7 @@ OBJECTIVE = {'PREVIOUS_X': ModelMeanType.PREVIOUS_X, 'START_X': ModelMeanType.ST
 MODEL_VAR_TYPE = {'LEARNED': ModelVarType.LEARNED, 'FIXED_SMALL': ModelVarType.FIXED_SMALL, 'FIXED_LARGE': ModelVarType.FIXED_LARGE, 'LEARNED_RANGE': ModelVarType.LEARNED_RANGE}
 LOSS_TYPE = {'l1': LossType.MAE, 'l2': LossType.MSE}
 
-config_root = "/home/l.peiwang/PASTA/src/config/"
+config_root = "/home/l.peiwang/Master/PASTA/src/config/"
 config_file = "pasta_mri2pet.yaml"
 config_path = os.path.join(config_root, config_file)
 
