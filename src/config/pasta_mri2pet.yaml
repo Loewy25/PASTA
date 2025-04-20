@@ -62,10 +62,8 @@ model_cycling: true
 with_DTI: false
 dx_labels: ['CN', 'Dementia']
 results_folder: "/home/l.peiwang/result"
-resume: null
-pretrain: /home/l.peiwang/results_monash_fmri_final/model.pt
-
-
+resume: /home/l.peiwang/results_monash_fmri_final/model.pt
+pretrain: null
 ###### evaluation config #####
 
 test_batch_size: 32
