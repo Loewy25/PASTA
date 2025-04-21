@@ -70,4 +70,4 @@ test_batch_size: 32
 eval_dataset: ADNI
 eval_resolution: [96, 112, 96]
 eval_mode: true
-tsynthesis: true
+synthesis: true
