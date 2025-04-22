@@ -105,7 +105,7 @@ pip install \
 
 # Run your script
 python /home/l.peiwang/Master/PASTA/train_mri2pet.py \
-    --data_dir /scratch/l.peiwang/hdf5_data_monash_fpet/ \
+    --data_dir /scratch/l.peiwang/hdf5_data_monash_fmri/ \
     --results_folder /home/l.peiwang/results \
     --eval_mode true \
     --synthesis true
