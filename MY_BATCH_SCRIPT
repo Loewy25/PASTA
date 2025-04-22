@@ -7,8 +7,8 @@
 #SBATCH --partition=tier2_gpu
 #SBATCH --account=aristeidis_sotiras
 #SBATCH --exclude=gpu02
-#SBATCH --output=slurm-%A_pet.out
-#SBATCH --error=slurm-%A_pet.err
+#SBATCH --output=slurm-%A_haha.out
+#SBATCH --error=slurm-%A_haha.err
 
 module load cuda/11.3
 module load cudnn/8.1.1
