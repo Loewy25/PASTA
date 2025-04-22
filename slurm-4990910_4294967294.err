@@ -1,0 +1,7 @@
+/var/spool/slurmd/job4990910/slurm_script: line 108: --data_dir: command not found
+Traceback (most recent call last):
+  File "/home/l.peiwang/Master/PASTA/new_process.py", line 5, in <module>
+    os.makedirs(output_dir, exist_ok=True)
+  File "/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/scratch/monash_new/'

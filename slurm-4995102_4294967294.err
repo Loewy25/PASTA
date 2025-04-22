@@ -1,0 +1,76 @@
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/accelerate/accelerator.py:416: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(**kwargs)
+  0%|          | 0/19 [00:00<?, ?it/s]  5%|▌         | 1/19 [00:00<00:00, 233.74it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:139 in <module>                │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:95 in main                     │
+│                                                                              │
+│    92 │   │   rescale_intensity = args.rescale_intensity,                    │
+│    93 │   )                                                                  │
+│    94 │                                                                      │
+│ ❱  95 │   trainer = Trainer(                                                 │
+│    96 │   │   diffusion,                                                     │
+│    97 │   │   folder = args.data_dir,                                        │
+│    98 │   │   input_slice_channel = args.input_slice_channel,                │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/trainer/trainer.py:136 in __init__          │
+│                                                                              │
+│   133 │   │   │   │   train_data = folder + 'train.h5'                       │
+│   134 │   │   │   │   valid_data = folder + 'valid.h5'                       │
+│   135 │   │   │   │                                                          │
+│ ❱ 136 │   │   │   │   self.ds = MRI2PET_2_5D_Dataset(self.image_size, data_p │
+│   137 │   │   │   │   │   direction = image_direction, num_slices = num_slic │
+│   138 │   │   │   │   │   random_flip = False, random_affine = False,        │
+│   139 │   │   │   │   │   ROI_mask = ROI_mask, dx_labels = dx_labels)        │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/datasets/dataset.py:278 in __init__         │
+│                                                                              │
+│   275 │   │   self.ROI_mask = ROI_mask                                       │
+│   276 │   │   self.dx_labels = dx_labels                                     │
+│   277 │   │                                                                  │
+│ ❱ 278 │   │   self._load()                                                   │
+│   279 │                                                                      │
+│   280 │   def _load(self):                                                   │
+│   281 │   │   mri_data = []                                                  │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/datasets/dataset.py:314 in _load            │
+│                                                                              │
+│   311 │   │   │   │   │   │   │   input_pet_data = group['PET/FDG/data'][:]  │
+│   312 │   │   │   │   │   │                                                  │
+│   313 │   │   │   │   │   │   else:                                          │
+│ ❱ 314 │   │   │   │   │   │   │   input_mri_data = group['MRI/T1/data'][:]   │
+│   315 │   │   │   │   │   │   │   input_pet_data = group['PET/FDG/data'][:]  │
+│   316                                                                        │
+│   317                                                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packa │
+│ ges/h5py/_hl/group.py:357 in __getitem__                                     │
+│                                                                              │
+│   354 │   │   │   if oid is None:                                            │
+│   355 │   │   │   │   raise ValueError("Invalid HDF5 object reference")      │
+│   356 │   │   elif isinstance(name, (bytes, str)):                           │
+│ ❱ 357 │   │   │   oid = h5o.open(self.id, self._e(name), lapl=self._lapl)    │
+│   358 │   │   else:                                                          │
+│   359 │   │   │   raise TypeError("Accessing a group is done with bytes or s │
+│   360 │   │   │   │   │   │   │   "not {}".format(type(name)))               │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ in h5py.h5o.open:190                                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+KeyError: 'Unable to open object (message type not found)'

@@ -1,0 +1,14 @@
+/var/spool/slurmd/job4995011/slurm_script: line 108: --data_dir: command not found
+Traceback (most recent call last):
+  File "/home/l.peiwang/Master/PASTA/new_process.py", line 62, in <module>
+    grp.attrs['DX'] = np.random.choice(['CN', 'Dementia', 'MCI'])
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/h5py/_hl/attrs.py", line 104, in __setitem__
+    self.create(name, data=value)
+  File "/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/h5py/_hl/attrs.py", line 181, in create
+    htype = h5t.py_create(original_dtype, logical=True)
+  File "h5py/h5t.pyx", line 1664, in h5py.h5t.py_create
+  File "h5py/h5t.pyx", line 1688, in h5py.h5t.py_create
+  File "h5py/h5t.pyx", line 1754, in h5py.h5t.py_create
+TypeError: No conversion path for dtype: dtype('<U3')

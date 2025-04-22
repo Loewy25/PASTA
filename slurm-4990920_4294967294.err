@@ -1,0 +1,946 @@
+/var/spool/slurmd/job4990920/slurm_script: line 108: --data_dir: command not found
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-01_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-01_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2894950 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2894966 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-02_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-02_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895040 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895055 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-03_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-03_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895128 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895143 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-04_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-04_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895216 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895231 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-05_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-05_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895308 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895324 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-06_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-06_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895431 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895447 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-07_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-07_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895523 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895545 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-08_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-08_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895622 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895642 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-09_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-09_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895716 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895731 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-10_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-10_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895804 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895819 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-11_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-11_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895892 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895907 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-12_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-12_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895980 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2895995 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-13_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-13_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896068 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896083 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-14_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-14_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896156 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896171 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-15_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-15_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896244 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896259 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-16_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-16_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896332 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896347 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-17_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-17_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896420 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896435 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-18_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-18_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896508 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896523 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-19_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-19_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896596 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896611 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-20_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-20_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896684 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896699 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-21_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-21_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896772 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896787 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-22_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-22_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896860 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896875 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-23_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-23_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896948 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2896963 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-24_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-24_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897036 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897051 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-25_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-25_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897124 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897140 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-26_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-26_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897213 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897228 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #63 :: No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #22 :: Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Error occured when parsing the command line
+Exception thrown with message: Failed to read volume /scratch/l.peiwang/monash_new//sub-27_T1w.nii.gz
+Error : No image files match: /scratch/l.peiwang/monash_new//sub-27_T1w
+Image Exception : #63 :: No image files match: fmri_to_t1
+Image Exception : #22 :: Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume fmri_to_t1.nii.gz
+Error : No image files match: fmri_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897301 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=fmri_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fMRI_mean_MNI.nii.gz
+Image Exception : #63 :: No image files match: pet_to_t1
+Image Exception : #22 :: Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume pet_to_t1.nii.gz
+Error : No image files match: pet_to_t1
+/var/spool/slurmd/job4990920/slurm_script: line 125: 2897316 Aborted                 (core dumped) applywarp --ref=${MNI_T1} --in=pet_to_t1.nii.gz --warp=t12mni_warp --out=${sub}_fPET_mean_MNI.nii.gz

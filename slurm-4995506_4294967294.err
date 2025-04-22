@@ -1,0 +1,130 @@
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/accelerate/accelerator.py:416: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(**kwargs)
+  0%|          | 0/19 [00:00<?, ?it/s] 11%|█         | 2/19 [00:00<00:01, 11.05it/s] 21%|██        | 4/19 [00:00<00:02,  7.15it/s] 26%|██▋       | 5/19 [00:00<00:02,  6.68it/s] 32%|███▏      | 6/19 [00:00<00:02,  6.45it/s] 37%|███▋      | 7/19 [00:01<00:01,  6.38it/s] 42%|████▏     | 8/19 [00:01<00:01,  5.94it/s] 47%|████▋     | 9/19 [00:01<00:01,  5.51it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.34it/s] 58%|█████▊    | 11/19 [00:01<00:01,  5.56it/s] 63%|██████▎   | 12/19 [00:02<00:01,  5.33it/s] 68%|██████▊   | 13/19 [00:02<00:01,  5.30it/s] 74%|███████▎  | 14/19 [00:02<00:00,  5.31it/s] 79%|███████▉  | 15/19 [00:02<00:00,  5.35it/s] 84%|████████▍ | 16/19 [00:02<00:00,  5.20it/s] 89%|████████▉ | 17/19 [00:02<00:00,  5.38it/s] 95%|█████████▍| 18/19 [00:03<00:00,  5.28it/s]100%|██████████| 19/19 [00:03<00:00,  5.20it/s]100%|██████████| 19/19 [00:03<00:00,  5.68it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 40%|████      | 2/5 [00:00<00:00,  9.04it/s] 60%|██████    | 3/5 [00:00<00:00,  6.78it/s] 80%|████████  | 4/5 [00:00<00:00,  5.89it/s]100%|██████████| 5/5 [00:00<00:00,  5.57it/s]100%|██████████| 5/5 [00:00<00:00,  6.05it/s]
+  0%|          | 0/5 [00:00<?, ?it/s]/home/l.peiwang/Master/PASTA/src/trainer/trainer.py:320: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(self.fp16, dtype=torch.float16):
+/home/l.peiwang/Master/PASTA/src/diffusion/gaussian_diffusion.py:987: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(self.use_fp16):
+/home/l.peiwang/Master/PASTA/src/diffusion/gaussian_diffusion.py:787: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(self.use_fp16):
+  0%|          | 0/5 [00:02<?, ?it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:139 in <module>                │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:135 in main                    │
+│                                                                              │
+│   132 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│   133 │   │   │   trainer.evaluate(eval_model, eval_folder)                  │
+│   134 │   else:                                                              │
+│ ❱ 135 │   │   trainer.train()                                                │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/trainer/trainer.py:337 in train             │
+│                                                                              │
+│   334 │   │   │   │   │   │   │   slice_index = _train_data[4]               │
+│   335 │   │   │   │   │   │   │   loss_weight_mask = _train_data[5]          │
+│   336 │   │   │   │   │   │   │                                              │
+│ ❱ 337 │   │   │   │   │   │   │   model_output = self.model(pet_data, cond = │
+│   338 │   │   │   │   │   │   │   │   │   │   │   │   │   loss_weight_mask = │
+│   339 │   │   │   │   │   │   │   loss_dif = model_output['loss'].mean()     │
+│   340 │   │   │   │   │   │   │   self.writer.add_scalar('train/train_loss_d │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packa │
+│ ges/torch/nn/modules/module.py:1736 in _wrapped_call_impl                    │
+│                                                                              │
+│   1733 │   │   if self._compiled_call_impl is not None:                      │
+│   1734 │   │   │   return self._compiled_call_impl(*args, **kwargs)  # type: │
+│   1735 │   │   else:                                                         │
+│ ❱ 1736 │   │   │   return self._call_impl(*args, **kwargs)                   │
+│   1737 │                                                                     │
+│   1738 │   # torchrec tests the code consistency with the following code     │
+│   1739 │   # fmt: off                                                        │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packa │
+│ ges/torch/nn/modules/module.py:1747 in _call_impl                            │
+│                                                                              │
+│   1744 │   │   if not (self._backward_hooks or self._backward_pre_hooks or s │
+│   1745 │   │   │   │   or _global_backward_pre_hooks or _global_backward_hoo │
+│   1746 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1747 │   │   │   return forward_call(*args, **kwargs)                      │
+│   1748 │   │                                                                 │
+│   1749 │   │   result = None                                                 │
+│   1750 │   │   called_always_called_hooks = set()                            │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/diffusion/gaussian_diffusion.py:993 in      │
+│ forward                                                                      │
+│                                                                              │
+│    990 │   │   │   │   │   │   cond = cond, tab_cond = tab_cond, loss_weight │
+│    991 │   │   │   │   │   │   *args, **kwargs)                              │
+│    992 │   │   │   else:                                                     │
+│ ❱  993 │   │   │   │   return self.training_losses(model = self.model, encod │
+│    994 │   │   │   │   │   │   cond = cond, tab_cond = tab_cond, loss_weight │
+│    995 │   │   │   │   │   │   *args, **kwargs)                              │
+│    996                                                                       │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/diffusion/respace.py:96 in training_losses  │
+│                                                                              │
+│    93 │   def training_losses(                                               │
+│    94 │   │   self, model, *args, **kwargs                                   │
+│    95 │   ):  # pylint: disable=signature-differs                            │
+│ ❱  96 │   │   return super().training_losses(self._wrap_model(model), *args, │
+│    97 │                                                                      │
+│    98 │   def condition_mean(self, cond_fn, *args, **kwargs):                │
+│    99 │   │   return super().condition_mean(self._wrap_model(cond_fn), *args │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/diffusion/gaussian_diffusion.py:789 in      │
+│ training_losses                                                              │
+│                                                                              │
+│    786 │   │   if encoder is not None and cond is not None:                  │
+│    787 │   │   │   with autocast(self.use_fp16):                             │
+│    788 │   │   │   │   if isinstance(encoder, UNetModel):                    │
+│ ❱  789 │   │   │   │   │   recon_cond, cond = encoder(x = cond, return_featu │
+│    790 │   │   │   │   │   assert isinstance(cond, List)                     │
+│    791 │   │   │   │   else:                                                 │
+│    792 │   │   │   │   │   cond = encoder(x = cond)                          │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packa │
+│ ges/torch/nn/modules/module.py:1736 in _wrapped_call_impl                    │
+│                                                                              │
+│   1733 │   │   if self._compiled_call_impl is not None:                      │
+│   1734 │   │   │   return self._compiled_call_impl(*args, **kwargs)  # type: │
+│   1735 │   │   else:                                                         │
+│ ❱ 1736 │   │   │   return self._call_impl(*args, **kwargs)                   │
+│   1737 │                                                                     │
+│   1738 │   # torchrec tests the code consistency with the following code     │
+│   1739 │   # fmt: off                                                        │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packa │
+│ ges/torch/nn/modules/module.py:1747 in _call_impl                            │
+│                                                                              │
+│   1744 │   │   if not (self._backward_hooks or self._backward_pre_hooks or s │
+│   1745 │   │   │   │   or _global_backward_pre_hooks or _global_backward_hoo │
+│   1746 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1747 │   │   │   return forward_call(*args, **kwargs)                      │
+│   1748 │   │                                                                 │
+│   1749 │   │   result = None                                                 │
+│   1750 │   │   called_always_called_hooks = set()                            │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/model/unet.py:1017 in forward               │
+│                                                                              │
+│   1014 │   │   │   h = th.cat([h, self.tab_cond_embedding], dim=1)           │
+│   1015 │   │                                                                 │
+│   1016 │   │   for num, module in enumerate(self.output_blocks):             │
+│ ❱ 1017 │   │   │   h = th.cat([h, hs.pop()], dim=1)                          │
+│   1018 │   │   │                                                             │
+│   1019 │   │   │   if isinstance(cond, List):                                │
+│   1020 │   │   │   │   h = module(h, emb, decoder_cond[num], tab_condition)  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 
+24 but got size 23 for tensor number 1 in the list.

@@ -1,0 +1,25 @@
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/accelerate/accelerator.py:416: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(**kwargs)
+  0%|          | 0/6 [00:00<?, ?it/s] 33%|███▎      | 2/6 [00:00<00:00,  7.05it/s] 50%|█████     | 3/6 [00:00<00:00,  5.96it/s] 83%|████████▎ | 5/6 [00:00<00:00,  7.52it/s]100%|██████████| 6/6 [00:00<00:00,  7.54it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:139 in <module>                │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:126 in main                    │
+│                                                                              │
+│   123 │   )                                                                  │
+│   124 │                                                                      │
+│   125 │   if trainer.eval_mode:                                              │
+│ ❱ 126 │   │   if args.synthesis:                                             │
+│   127 │   │   │   synth_folder = os.path.join(trainer.results_folder, 'syn_p │
+│   128 │   │   │   eval_model = os.path.join(trainer.results_folder, 'model.p │
+│   129 │   │   │   trainer.evaluate(eval_model, synth_folder, synthesis=True, │
+╰──────────────────────────────────────────────────────────────────────────────╯
+AttributeError: 'Namespace' object has no attribute 'synthesis'

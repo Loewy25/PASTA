@@ -1,0 +1,85 @@
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages/accelerate/accelerator.py:416: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(**kwargs)
+  0%|          | 0/19 [00:00<?, ?it/s] 11%|█         | 2/19 [00:00<00:01, 10.65it/s] 21%|██        | 4/19 [00:00<00:02,  7.04it/s] 26%|██▋       | 5/19 [00:00<00:02,  6.68it/s] 32%|███▏      | 6/19 [00:00<00:02,  6.45it/s] 37%|███▋      | 7/19 [00:01<00:01,  6.37it/s] 42%|████▏     | 8/19 [00:01<00:01,  6.02it/s] 47%|████▋     | 9/19 [00:01<00:01,  5.70it/s] 53%|█████▎    | 10/19 [00:01<00:01,  5.61it/s] 58%|█████▊    | 11/19 [00:01<00:01,  5.76it/s] 63%|██████▎   | 12/19 [00:01<00:01,  5.49it/s] 68%|██████▊   | 13/19 [00:02<00:01,  5.34it/s] 74%|███████▎  | 14/19 [00:02<00:00,  5.32it/s] 79%|███████▉  | 15/19 [00:02<00:00,  5.32it/s] 84%|████████▍ | 16/19 [00:02<00:00,  5.25it/s] 89%|████████▉ | 17/19 [00:02<00:00,  5.44it/s] 95%|█████████▍| 18/19 [00:03<00:00,  5.48it/s]100%|██████████| 19/19 [00:03<00:00,  5.47it/s]100%|██████████| 19/19 [00:03<00:00,  5.80it/s]
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:139 in <module>                │
+│                                                                              │
+│   136                                                                        │
+│   137 if __name__ == "__main__":                                             │
+│   138 │   set_seed_everywhere(666)                                           │
+│ ❱ 139 │   main()                                                             │
+│   140                                                                        │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/train_mri2pet.py:95 in main                     │
+│                                                                              │
+│    92 │   │   rescale_intensity = args.rescale_intensity,                    │
+│    93 │   )                                                                  │
+│    94 │                                                                      │
+│ ❱  95 │   trainer = Trainer(                                                 │
+│    96 │   │   diffusion,                                                     │
+│    97 │   │   folder = args.data_dir,                                        │
+│    98 │   │   input_slice_channel = args.input_slice_channel,                │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/trainer/trainer.py:141 in __init__          │
+│                                                                              │
+│   138 │   │   │   │   │   random_flip = False, random_affine = False,        │
+│   139 │   │   │   │   │   ROI_mask = ROI_mask, dx_labels = dx_labels)        │
+│   140 │   │   │   │                                                          │
+│ ❱ 141 │   │   │   │   self.ds_valid = MRI2PET_2_5D_Dataset(self.image_size,  │
+│   142 │   │   │   │   │   direction = image_direction, num_slices = num_slic │
+│   143 │   │   │   │   │   random_flip = False, random_affine = False,        │
+│   144 │   │   │   │   │   dx_labels = dx_labels)                             │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/datasets/dataset.py:278 in __init__         │
+│                                                                              │
+│   275 │   │   self.ROI_mask = ROI_mask                                       │
+│   276 │   │   self.dx_labels = dx_labels                                     │
+│   277 │   │                                                                  │
+│ ❱ 278 │   │   self._load()                                                   │
+│   279 │                                                                      │
+│   280 │   def _load(self):                                                   │
+│   281 │   │   mri_data = []                                                  │
+│                                                                              │
+│ /home/l.peiwang/Master/PASTA/src/datasets/dataset.py:296 in _load            │
+│                                                                              │
+│   293 │   │   if 'h5' in self.data_path:                                     │
+│   294 │   │   │   print('loaded from h5 file')                               │
+│   295 │   │   │                                                              │
+│ ❱ 296 │   │   │   with h5py.File(self.data_path, mode='r') as file:          │
+│   297 │   │   │   │   for name, group in tqdm(file.items(), total=len(file)) │
+│   298 │   │   │   │   │                                                      │
+│   299 │   │   │   │   │   if name == "stats":                                │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packa │
+│ ges/h5py/_hl/files.py:567 in __init__                                        │
+│                                                                              │
+│   564 │   │   │   │   fcpl = make_fcpl(track_order=track_order, fs_strategy= │
+│   565 │   │   │   │   │   │   │   │    fs_persist=fs_persist, fs_threshold=f │
+│   566 │   │   │   │   │   │   │   │    fs_page_size=fs_page_size)            │
+│ ❱ 567 │   │   │   │   fid = make_fid(name, mode, userblock_size, fapl, fcpl, │
+│   568 │   │   │                                                              │
+│   569 │   │   │   if isinstance(libver, tuple):                              │
+│   570 │   │   │   │   self._libver = libver                                  │
+│                                                                              │
+│ /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packa │
+│ ges/h5py/_hl/files.py:231 in make_fid                                        │
+│                                                                              │
+│   228 │   │   flags = h5f.ACC_RDONLY                                         │
+│   229 │   │   if swmr and swmr_support:                                      │
+│   230 │   │   │   flags |= h5f.ACC_SWMR_READ                                 │
+│ ❱ 231 │   │   fid = h5f.open(name, flags, fapl=fapl)                         │
+│   232 │   elif mode == 'r+':                                                 │
+│   233 │   │   fid = h5f.open(name, h5f.ACC_RDWR, fapl=fapl)                  │
+│   234 │   elif mode in ['w-', 'x']:                                          │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:54                                        │
+│                                                                              │
+│ in h5py._objects.with_phil.wrapper:55                                        │
+│                                                                              │
+│ in h5py.h5f.open:106                                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] Unable to open file (unable to open file: name = 
+'/scratch/l.peiwang/hdf5_data_monash_fmri/valid.h5', errno = 2, error message = 
+'No such file or directory', flags = 0, o_flags = 0)

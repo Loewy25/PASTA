@@ -1,0 +1,321 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Sat Apr 19 00:13:21 CDT 2025 1745039601
+Job ID:		4995882
+Username:	l.peiwang
+Partition:	tier2_gpu
+End Slurm Prologue Sat Apr 19 00:13:21 CDT 2025 1745039601
+--------------------------------------------------------------
+Conda environment 'pasta_env_new_2025' already exists. Skipping creation.
+Requirement already satisfied: absl-py==1.4.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.4.0)
+Requirement already satisfied: accelerate==0.18.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.18.0)
+Requirement already satisfied: appdirs==1.4.4 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.4.4)
+Requirement already satisfied: blobfile==2.0.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.0.2)
+Requirement already satisfied: cachetools==5.3.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (5.3.1)
+Requirement already satisfied: certifi==2022.12.7 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2022.12.7)
+Requirement already satisfied: click==8.1.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (8.1.3)
+Requirement already satisfied: colorama==0.4.6 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.4.6)
+Requirement already satisfied: deprecated==1.2.13 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.2.13)
+Requirement already satisfied: docker-pycreds==0.4.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.4.0)
+Requirement already satisfied: einops==0.6.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.6.1)
+Requirement already satisfied: ema-pytorch==0.2.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.2.3)
+Requirement already satisfied: gitdb==4.0.10 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (4.0.10)
+Requirement already satisfied: gitpython==3.1.31 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (3.1.31)
+Requirement already satisfied: google-auth==2.19.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.19.1)
+Requirement already satisfied: google-auth-oauthlib==1.0.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.0.0)
+Requirement already satisfied: grpcio==1.54.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.54.2)
+Requirement already satisfied: h5py==3.8.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (3.8.0)
+Requirement already satisfied: humanize==4.6.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (4.6.0)
+Requirement already satisfied: joblib==1.2.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.2.0)
+Requirement already satisfied: lxml==4.9.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (4.9.2)
+Requirement already satisfied: markdown==3.4.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (3.4.3)
+Requirement already satisfied: markdown-it-py==2.2.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.2.0)
+Requirement already satisfied: mdurl==0.1.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.1.2)
+Requirement already satisfied: monai==1.1.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.1.0)
+Requirement already satisfied: mpmath==1.2.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.2.1)
+Requirement already satisfied: nibabel==5.1.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (5.1.0)
+Requirement already satisfied: oauthlib==3.2.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (3.2.2)
+Requirement already satisfied: packaging==23.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (23.1)
+Requirement already satisfied: pandas==2.0.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.0.1)
+Requirement already satisfied: pathtools==0.1.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.1.2)
+Requirement already satisfied: protobuf==4.22.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (4.22.3)
+Requirement already satisfied: psutil==5.9.5 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (5.9.5)
+Requirement already satisfied: pyasn1==0.5.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.5.0)
+Requirement already satisfied: pyasn1-modules==0.3.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.3.0)
+Requirement already satisfied: pycryptodomex==3.17 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (3.17)
+Requirement already satisfied: pygments==2.15.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.15.1)
+Requirement already satisfied: python-dateutil==2.8.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.8.2)
+Requirement already satisfied: pytorch-fid==0.3.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.3.0)
+Requirement already satisfied: pytz==2023.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2023.3)
+Requirement already satisfied: pyyaml==6.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (6.0)
+Requirement already satisfied: requests-oauthlib==1.3.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.3.1)
+Requirement already satisfied: rich==13.3.5 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (13.3.5)
+Requirement already satisfied: rsa==4.9 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (4.9)
+Requirement already satisfied: scipy==1.10.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.10.1)
+Requirement already satisfied: sentry-sdk==1.21.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.21.0)
+Requirement already satisfied: setproctitle==1.3.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.3.2)
+Requirement already satisfied: shellingham==1.5.0.post1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.5.0.post1)
+Requirement already satisfied: simpleitk==2.2.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.2.1)
+Requirement already satisfied: smmap==5.0.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (5.0.0)
+Requirement already satisfied: tensorboard==2.13.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.13.0)
+Requirement already satisfied: tensorboard-data-server==0.7.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.7.0)
+Requirement already satisfied: torchio==0.18.91 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.18.91)
+Requirement already satisfied: tqdm==4.65.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (4.65.0)
+Requirement already satisfied: typer==0.9.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.9.0)
+Requirement already satisfied: tzdata==2023.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2023.3)
+Requirement already satisfied: wandb==0.15.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (0.15.0)
+Requirement already satisfied: werkzeug==2.3.4 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (2.3.4)
+Requirement already satisfied: wrapt==1.15.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (1.15.0)
+Requirement already satisfied: numpy>=1.17 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from accelerate==0.18.0) (1.23.5)
+Requirement already satisfied: torch>=1.4.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from accelerate==0.18.0) (2.5.1)
+Requirement already satisfied: urllib3<3,>=1.25.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from blobfile==2.0.2) (1.26.15)
+Requirement already satisfied: filelock~=3.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from blobfile==2.0.2) (3.9.0)
+Requirement already satisfied: six>=1.4.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from docker-pycreds==0.4.0) (1.16.0)
+Requirement already satisfied: pillow in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from pytorch-fid==0.3.0) (9.4.0)
+Requirement already satisfied: torchvision>=0.2.2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from pytorch-fid==0.3.0) (0.15.0)
+Requirement already satisfied: requests>=2.0.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from requests-oauthlib==1.3.1) (2.28.1)
+Requirement already satisfied: setuptools>=41.0.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from tensorboard==2.13.0) (66.0.0)
+Requirement already satisfied: wheel>=0.26 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from tensorboard==2.13.0) (0.38.4)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from typer==0.9.0) (4.12.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from werkzeug==2.3.4) (2.1.1)
+Requirement already satisfied: charset-normalizer<3,>=2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from requests>=2.0.0->requests-oauthlib==1.3.1) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from requests>=2.0.0->requests-oauthlib==1.3.1) (3.4)
+Requirement already satisfied: networkx in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (2.8.4)
+Requirement already satisfied: jinja2 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (3.1.2)
+Requirement already satisfied: fsspec in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (2024.12.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (12.4.127)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (12.4.127)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (12.4.5.8)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (11.2.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (10.3.5.147)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (11.6.1.9)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (12.3.1.170)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (12.4.127)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (12.4.127)
+Requirement already satisfied: triton==3.1.0 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (3.1.0)
+Requirement already satisfied: sympy==1.13.1 in /home/l.peiwang/miniconda3/envs/pasta_env_new_2025/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0) (1.13.1)
+Calculated beta available
+loaded from h5 file
+2025-04-19 00:13:49,194 - DATASET: /scratch/l.peiwang/hdf5_data_monash_fmri/train.h5
+2025-04-19 00:13:49,195 - SAMPLES: 1536
+2025-04-19 00:13:49,195 - Input Shape: (15, 96, 112)
+2025-04-19 00:13:49,198 - Classes: CN          672
+Dementia    864
+dtype: int64
+loaded from h5 file
+2025-04-19 00:13:50,275 - DATASET: /scratch/l.peiwang/hdf5_data_monash_fmri/valid.h5
+2025-04-19 00:13:50,275 - SAMPLES: 384
+2025-04-19 00:13:50,275 - Input Shape: (15, 96, 112)
+2025-04-19 00:13:50,276 - Classes: CN          288
+Dementia     96
+dtype: int64
+Number of parameters: 89095710
+model size: 339.873MB
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+valid loss: 15.602884
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 29.746170
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 39.964863
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 2.011262
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 16.234158
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 16.127342
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 1.950886
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 22.806231
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 45.280266
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 46.766136
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+valid loss: 16.233387
+valid_pet_shape: torch.Size([2, 15, 96, 112])
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+No ROI mask is used, loss weight mask is all ones
+sample_pet_shape: torch.Size([2, 15, 96, 112])
+data_shape: torch.Size([330, 1, 96, 112])
+all_images_shape: torch.Size([330, 1, 96, 112])
+valid recon L2 loss: 5822.77148
+valid recon L1 loss: 9.98959
+fid_score: 26631.922689085743
+psnr_score: -14.986878
+ssim_score: 0.0003713759
+se_score: tensor([2.2064e-01, 2.5377e-01, 1.4114e+00, 5.1857e+00, 3.8101e+01, 6.4231e+01,
+        1.0297e+02, 5.4698e+02, 2.3555e+03, 6.3961e+03, 1.1605e+04, 1.6439e+04,
+        2.0240e+04, 2.2974e+04, 2.5391e+04, 2.2064e-01, 2.2064e-01, 2.2064e-01,
+        2.2064e-01, 2.2062e-01, 2.2025e-01, 2.1969e-01, 2.1914e-01, 2.1862e-01,
+        2.1865e-01, 2.1925e-01, 2.2030e-01, 2.2123e-01, 2.2177e-01, 2.2183e-01,
+        2.2065e-01, 2.2065e-01, 2.2064e-01, 2.2064e-01, 2.2062e-01, 2.2025e-01,
+        2.1970e-01, 2.1915e-01, 2.1863e-01, 2.1865e-01, 2.1926e-01, 2.2031e-01,
+        2.2124e-01, 2.2178e-01, 2.2184e-01, 1.3127e+03, 4.6467e+03, 8.5410e+03,
+        1.1916e+04, 1.4606e+04, 1.7118e+04, 1.9154e+04, 2.0625e+04, 2.1811e+04,
+        2.3415e+04, 2.3357e+04, 2.1781e+04, 1.9328e+04, 1.7765e+04, 1.7100e+04,
+        1.7447e+04, 1.8915e+04, 2.0679e+04, 2.1470e+04, 2.1940e+04, 2.3468e+04,
+        2.5649e+04, 2.6988e+04, 2.7245e+04, 2.7312e+04, 2.7056e+04, 2.5926e+04,
+        2.4528e+04, 2.2972e+04, 2.1960e+04, 2.2065e-01, 2.2065e-01, 2.2065e-01,
+        2.2065e-01, 2.2063e-01, 2.2025e-01, 2.1983e-01, 2.2838e-01, 2.8054e-01,
+        3.6915e-01, 6.0775e-01, 9.7307e-01, 1.5403e+00, 2.3800e+00, 3.7540e+00,
+        2.2065e-01, 2.2065e-01, 2.2064e-01, 2.2065e-01, 2.2061e-01, 2.2038e-01,
+        2.2893e-01, 2.8105e-01, 3.6914e-01, 6.0721e-01, 9.7222e-01, 1.5397e+00,
+        2.3798e+00, 3.7542e+00, 6.2478e+00, 2.2065e-01, 2.2065e-01, 2.2065e-01,
+        2.2064e-01, 2.2062e-01, 2.2025e-01, 2.1970e-01, 2.1915e-01, 2.1863e-01,
+        2.1865e-01, 2.1926e-01, 2.2031e-01, 2.2124e-01, 2.2178e-01, 2.2184e-01,
+        2.2314e-01, 2.2641e-01, 3.7118e-01, 2.3307e+00, 1.8248e+01, 1.1604e+02,
+        1.3127e+03, 4.6467e+03, 8.5410e+03, 1.1916e+04, 1.4606e+04, 1.7118e+04,
+        1.9154e+04, 2.0625e+04, 2.1810e+04, 2.2065e-01, 2.2064e-01, 2.2064e-01,
+        2.2064e-01, 2.2062e-01, 2.2025e-01, 2.1970e-01, 2.1915e-01, 2.1863e-01,
+        2.1865e-01, 2.1926e-01, 2.2031e-01, 2.2124e-01, 2.2178e-01, 2.2184e-01,
+        2.2065e-01, 2.2064e-01, 2.2064e-01, 2.2064e-01, 2.2062e-01, 2.2025e-01,
+        2.1969e-01, 2.1914e-01, 2.1862e-01, 2.1865e-01, 2.1926e-01, 2.2030e-01,
+        2.2123e-01, 2.2178e-01, 2.2183e-01, 1.3498e+04, 1.2154e+04, 1.0998e+04,
+        9.8966e+03, 8.7468e+03, 7.9918e+03, 7.1982e+03, 6.1802e+03, 5.1726e+03,
+        4.5447e+03, 3.5203e+03, 2.0358e+03, 8.6171e+02, 3.9614e+02, 2.7973e+02,
+        2.2065e-01, 2.2064e-01, 2.2064e-01, 2.2064e-01, 2.2062e-01, 2.2025e-01,
+        2.1969e-01, 2.1914e-01, 2.1863e-01, 2.1865e-01, 2.1926e-01, 2.2030e-01,
+        2.2123e-01, 2.2178e-01, 2.2183e-01, 2.2069e-01, 2.2064e-01, 2.2065e-01,
+        2.2064e-01, 2.2062e-01, 2.2025e-01, 2.1969e-01, 2.1914e-01, 2.1862e-01,
+        2.1865e-01, 2.1926e-01, 2.2030e-01, 2.2123e-01, 2.2178e-01, 2.2183e-01,
+        2.5376e-01, 1.4114e+00, 5.1856e+00, 3.8101e+01, 6.4230e+01, 1.0296e+02,
+        5.4698e+02, 2.3555e+03, 6.3961e+03, 1.1605e+04, 1.6440e+04, 2.0240e+04,
+        2.2974e+04, 2.5391e+04, 2.7612e+04, 1.0006e+04, 7.6925e+03, 5.1176e+03,
+        2.7129e+03, 7.0241e+02, 5.7901e+01, 9.0749e+00, 7.8827e-01, 2.1980e-01,
+        2.1865e-01, 2.1927e-01, 2.2031e-01, 2.2124e-01, 2.2178e-01, 2.2184e-01,
+        1.2154e+04, 1.0998e+04, 9.8966e+03, 8.7468e+03, 7.9918e+03, 7.1982e+03,
+        6.1802e+03, 5.1726e+03, 4.5447e+03, 3.5203e+03, 2.0358e+03, 8.6172e+02,
+        3.9615e+02, 2.7973e+02, 1.4204e+02, 1.7485e+04, 1.7714e+04, 1.8777e+04,
+        1.9172e+04, 1.9922e+04, 2.0622e+04, 2.0044e+04, 2.0060e+04, 2.0336e+04,
+        2.0164e+04, 1.9501e+04, 1.8229e+04, 1.6695e+04, 1.4450e+04, 1.1568e+04,
+        2.9002e+04, 2.4918e+04, 2.1567e+04, 1.8429e+04, 1.4034e+04, 1.1098e+04,
+        1.0006e+04, 7.6925e+03, 5.1177e+03, 2.7129e+03, 7.0242e+02, 5.7902e+01,
+        9.0758e+00, 7.9076e-01, 2.2300e-01, 5.6606e+03, 8.0239e+03, 9.6120e+03,
+        1.1507e+04, 1.3750e+04, 1.5894e+04, 1.7119e+04, 1.7275e+04, 1.7485e+04,
+        1.7714e+04, 1.8777e+04, 1.9173e+04, 1.9922e+04, 2.0622e+04, 2.0044e+04,
+        2.0930e+04, 1.9423e+04, 1.7833e+04, 1.5618e+04, 1.2540e+04, 1.0063e+04,
+        7.7877e+03, 5.5846e+03, 2.6888e+03, 4.6282e+02, 5.2188e+01, 3.8635e+01,
+        2.3074e+01, 1.4825e+01, 8.7277e+00, 2.2065e-01, 2.2065e-01, 2.2064e-01,
+        2.2064e-01, 2.2062e-01, 2.2025e-01, 2.1970e-01, 2.1915e-01, 2.1863e-01,
+        2.1865e-01, 2.1926e-01, 2.2031e-01, 2.2124e-01, 2.2178e-01, 2.2184e-01],
+       device='cuda:0')
+training complete
+--------------------------------------------------------------
+Begin Slurm Epilogue Sat Apr 19 00:15:05 CDT 2025 1745039705
+Name                : test_env_creation
+User                : l.peiwang
+Partition           : tier2_gpu
+Nodes               : gpua804
+Cores               : 14
+State               : COMPLETED
+Submit              : 2025-04-19T00:13:20
+Start               : 2025-04-19T00:13:21
+End                 : 2025-04-19T00:15:02
+Reserved Walltime   : 5-15:50:00
+Used Walltime       :   00:01:41
+Used CPU Time       :   00:03:03
+% User (Computation): 70.85%
+% System (I/O)      : 29.15%
+Mem Reserved        : 100G
+Max Mem Used        : 3.65G (3918778368.0)
+Max Disk Write      : 245.76K (251658.24)
+Max Disk Read       : 359.27M (376721899.52)
+Max-Mem-Used Node   : gpua804
+Max-Disk-Write Node : gpua804
+Max-Disk-Read Node  : gpua804
+NVIDIA A100-SXM4-80GB
+Error: Unable to retrieve job statistics. Return: No data is available.
+End Slurm Epilogue Sat Apr 19 00:15:05 CDT 2025 1745039705
+--------------------------------------------------------------
