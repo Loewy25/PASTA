@@ -4,7 +4,7 @@
 #SBATCH --mem=100G
 #SBATCH -t 10:50:00
 #SBATCH --gres=gpu:1
-#SBATCH --partition=tier1_gpu
+#SBATCH --partition=tier2_gpu
 #SBATCH --account=shinjini_kundu
 #SBATCH --exclude=gpu02
 #SBATCH --output=slurm-%A_haha.out
