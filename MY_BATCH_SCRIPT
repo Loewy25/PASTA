@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=test_pet_fine
 #SBATCH --mem=100G
-#SBATCH -t 80:50:00
+#SBATCH -t 10:50:00
 #SBATCH --gres=gpu:nvidia_a100_80:1
 #SBATCH --partition=tier2_gpu
 #SBATCH --account=shinjini_kundu
